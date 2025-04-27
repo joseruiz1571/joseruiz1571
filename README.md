@@ -32,7 +32,7 @@ ISC2 Certified in Cybersecurity
 CompTIA Security+
 
 # Trainings
-Active Defense and Cyber Deception with John Strand
+Active Defense and Cyber Deception with John Strand  
 Antisyphon Training
 
 Assets, Threats, and Vulnerabilities
