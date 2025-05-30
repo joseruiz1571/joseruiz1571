@@ -110,6 +110,10 @@ Hands-on experiences gained through virtual internships on The Forage platform:
 
 ## 🧠 Trainings
 
+### SANS
+- AIS247: AI Security for Business Leaders - Frank Kim & Dan DeBeaubien
+- SEC366: CIS Implementation Group 1 - Brian Ventura
+
 ### Antisyphon Training
 - Getting Started in Packet Decoding — Chris Brenton  
 - SOC Core Skills — John Strand  
@@ -134,7 +138,7 @@ Hands-on experiences gained through virtual internships on The Forage platform:
 - **Oracle** – OCI AI Foundations Associate (2023)  
 - **LinkedIn Learning** – OSINT, Cloud GRC, AWS Threat Detection, Cert Prep  
 - **Simply Cyber Academy** – Cyber Resilience, Hacking Methodology  
-- **arcX** – Cyber Threat Intelligence 101  
+- **arcX** – Cyber Threat Intelligence 101, Cyber Threat intelligence practitioner  
 - **TryHackMe** – Pre Security and Introduction to Cybersecurity Paths  
 - **TCM Security Academy** – Linux 101, Python 101, AI Programming, Soft Skills  
 - **IriusRisk** – Threat Modeling Champion  
