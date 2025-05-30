@@ -116,4 +116,6 @@ Specialized Learning: Focused studies in OSINT, Cloud GRC, AWS Threat Detection 
 Practical Skills Development: Engaged in platforms like TryHackMe (Pre Security, Intro to Cybersecurity) and TCM Security Academy (Linux 101, Python 101) to build foundational technical skills.
 
 👋 Let's Connect!
-linkedin.com/in/joseruiz1571
+[LinkedIn Profile Link]
+
+[Email Address (Optional)]
