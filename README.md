@@ -143,3 +143,63 @@ Hands-on experiences gained through virtual internships on The Forage platform:
 - **TCM Security Academy** – Linux 101, Python 101, AI Programming, Soft Skills  
 - **IriusRisk** – Threat Modeling Champion  
 - **Qualys** – Vulnerability Management – Foundation
+
+# 🧠 Cybersecurity Virtual Experience Projects
+
+These projects were completed through **Forage** virtual job simulations, providing hands-on experience in risk assessment, control evaluation, incident response, and security awareness. Each simulation reflects practical exposure to real-world cybersecurity challenges across leading global organizations.
+
+---
+
+## 🧩 PwC US Cyber Security Consulting Job Simulation  
+**Forage | September 2025**
+
+Conducted a cybersecurity risk assessment for a PwC client, evaluating processes against Sarbanes-Oxley (SOX) requirements. Identified control gaps, assessed associated risks, and documented both the **Test of Design** and **Test of Operating Effectiveness**. Concluded the engagement by preparing a one-slide executive summary of findings.
+
+**Key Skills:** Risk Assessment · SOX Compliance · Control Testing · Gap Analysis · Professional Communication · Business Judgment
+
+---
+
+## 🔍 Deloitte Australia Cyber Job Simulation  
+**Forage | May 2025**
+
+Participated in a cybersecurity incident investigation, analyzing web activity logs to detect anomalies and identify suspicious user behavior. Supported a client in tracing the likely source of a data breach, strengthening skills in analytical reasoning and threat investigation.
+
+**Key Skills:** Log Analysis · Incident Response · Threat Investigation · Web Security · Network Analysis
+
+---
+
+## 🧮 PwC US Digital Assurance & Transparency Job Simulation  
+**Forage | May 2025**
+
+Assessed a client’s **user access provisioning** process for control effectiveness within PwC’s Digital Assurance & Transparency team. Used standardized workpapers to test sample items, document audit evidence, and complete a deficiency analysis to determine remediation requirements.
+
+**Key Skills:** Audit Documentation · Internal Controls · Control Testing · Deficiency Analysis · Results Communication
+
+---
+
+## 🏦 Commonwealth Bank Introduction to Cybersecurity Job Simulation  
+**Forage | May 2025**
+
+Performed the role of a cybersecurity generalist focusing on fraud detection and prevention. Developed **Splunk dashboards** to visualize customer transaction data, uncovering fraud patterns and anomalies. Conducted **penetration testing** on simulated web applications, created incident response documentation, and designed a password security infographic based on Australian Cybersecurity Centre guidance.
+
+**Key Skills:** Splunk · Data Visualization · Incident Management · Penetration Testing · Fraud Detection · Security Awareness
+
+---
+
+## 💳 Mastercard Cybersecurity Virtual Experience Program  
+**Forage | October 2024**
+
+Supported Mastercard’s **Security Awareness Team** by investigating simulated phishing attacks and identifying areas of the organization requiring enhanced training. Analyzed behavioral trends, recommended targeted awareness programs, and contributed to strengthening organizational resilience through improved security culture.
+
+**Key Skills:** Phishing Analysis · Security Awareness · Training Program Design · Data Analysis · Communication Strategy
+
+---
+
+## 🛡️ AIG “Shields Up” Cybersecurity Virtual Experience  
+**Forage | February 2024**
+
+Executed a **threat analysis** for AIG’s Cyber Defense Unit, reviewing recent CISA advisories and researching vulnerabilities. Authored remediation guidance for internal teams and developed a **Python script** to simulate ethical brute-force decryption, highlighting automation and analytical problem-solving skills.
+
+**Key Skills:** Vulnerability Management · Threat Analysis · Python Scripting · Security Consulting · Problem Solving · Communication
+
+---
