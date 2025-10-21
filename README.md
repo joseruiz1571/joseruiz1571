@@ -12,10 +12,9 @@ I'm an aspiring **Cybersecurity GRC Professional** based in the **Greater Austin
 ---
 
 ## 🛡️ Certifications
-
-- **GRC Mastery ISO/IEC 27001:2022 Lead Auditor**
+ 
 - **CompTIA Security+**
-- **ISC2 Certified in Cybersecurity+**
+- **ISC2 Certified in Cybersecurity (CC)**
 
 ---
 
@@ -59,40 +58,6 @@ _Skills: Incident Response, Threat Analysis, Wireshark, tcpdump, VirusTotal, Doc
 
 Created a **Python script** to securely import and parse an allow list from a text file using the `with` statement for robust file handling. Ensured the script efficiently managed data for further security analysis or enforcement logic. This project demonstrates my ability to apply **Python programming** to automate and streamline data management tasks in cybersecurity contexts.  
 _Skills: Python, File Parsing, Automation, Data Handling, Scripting_
-
----
-
-### The Forage Security Job Simulations
-
-**PwC US – Cybersecurity Consulting**
-
-Conducted a **cybersecurity risk assessment** to identify control gaps and evaluate enterprise risk exposure. Produced a formal **Test of Design and Operating Effectiveness** document and a concise executive summary for stakeholders. This project demonstrates my capability to translate complex technical findings into clear, business-oriented risk insights.  
-_Skills: Risk Assessment, Controls Testing, Audit Documentation, Business Communication_
-
-**Deloitte Australia – Cyber Analyst Simulation**
-
-Investigated a simulated **cyber breach** by performing forensic analysis on web activity logs to identify suspicious patterns and attack vectors. Mapped the incident timeline, assessed impact scope, and contributed actionable insights for containment. This project underscores my skills in **digital forensics** and structured investigative reporting.  
-_Skills: Digital Forensics, Log Analysis, Incident Investigation, Threat Hunting_
-
-**PwC US – Digital Assurance & Transparency**
-
-Assessed the effectiveness of digital process controls within a simulated client engagement using structured workpapers and sample testing. Documented findings in a **deficiency analysis** outlining control design weaknesses and operational risks. This project highlights my understanding of **internal controls** and evidence-based audit methodologies.  
-_Skills: Internal Controls, Audit Testing, Risk Analysis, Process Assessment_
-
-**Commonwealth Bank – Introduction to Cybersecurity**
-
-Developed **Splunk dashboards** to visualize fraud detection data and identify key behavioral trends. Conducted basic **penetration testing** and created actionable remediation recommendations to address identified vulnerabilities. This project emphasizes my applied skills in **threat detection**, incident response, and cybersecurity awareness communication.  
-_Skills: Splunk, Data Visualization, Penetration Testing, Incident Response, Awareness Training_
-
-**Mastercard – Security Awareness Analysis**
-
-Analyzed **phishing campaign data** to identify organizational vulnerabilities and knowledge gaps in security awareness. Designed and proposed targeted **training initiatives** to strengthen user resilience against social engineering threats. This project highlights my ability to combine **threat intelligence** with **human-factor risk management**strategies.  
-_Skills: Phishing Analysis, Security Awareness, Threat Intelligence, Training Design_
-
-**AIG – Shields Up Cyber Defense Simulation**
-
-Executed a **cyber threat analysis** leveraging **CISA** advisories to document system vulnerabilities and propose mitigations. Used **Python** to develop an ethical hacking script simulating brute-force decryption for data recovery, reinforcing hands-on technical skills. This project demonstrates my capability to blend **threat research**, automation, and clear incident communication for effective defense.  
-_Skills: Threat Analysis, Python, Vulnerability Research, Automation, Cyber Defense_
 
 ---
 
@@ -154,6 +119,41 @@ Completed the **ISO 27001 Lead Auditor Training** through GRC Mastery, develop
 _Skills: ISO 27001, ISMS Development, Risk Assessment, Statement of Applicability (SoA), ISO 31000, ISO 19011, Audit Management, Policy Development_
 
 ---
+
+### The Forage Security Job Simulations
+
+**PwC US – Cybersecurity Consulting**
+
+Conducted a **cybersecurity risk assessment** to identify control gaps and evaluate enterprise risk exposure. Produced a formal **Test of Design and Operating Effectiveness** document and a concise executive summary for stakeholders. This project demonstrates my capability to translate complex technical findings into clear, business-oriented risk insights.  
+_Skills: Risk Assessment, Controls Testing, Audit Documentation, Business Communication_
+
+**Deloitte Australia – Cyber Analyst Simulation**
+
+Investigated a simulated **cyber breach** by performing forensic analysis on web activity logs to identify suspicious patterns and attack vectors. Mapped the incident timeline, assessed impact scope, and contributed actionable insights for containment. This project underscores my skills in **digital forensics** and structured investigative reporting.  
+_Skills: Digital Forensics, Log Analysis, Incident Investigation, Threat Hunting_
+
+**PwC US – Digital Assurance & Transparency**
+
+Assessed the effectiveness of digital process controls within a simulated client engagement using structured workpapers and sample testing. Documented findings in a **deficiency analysis** outlining control design weaknesses and operational risks. This project highlights my understanding of **internal controls** and evidence-based audit methodologies.  
+_Skills: Internal Controls, Audit Testing, Risk Analysis, Process Assessment_
+
+**Commonwealth Bank – Introduction to Cybersecurity**
+
+Developed **Splunk dashboards** to visualize fraud detection data and identify key behavioral trends. Conducted basic **penetration testing** and created actionable remediation recommendations to address identified vulnerabilities. This project emphasizes my applied skills in **threat detection**, incident response, and cybersecurity awareness communication.  
+_Skills: Splunk, Data Visualization, Penetration Testing, Incident Response, Awareness Training_
+
+**Mastercard – Security Awareness Analysis**
+
+Analyzed **phishing campaign data** to identify organizational vulnerabilities and knowledge gaps in security awareness. Designed and proposed targeted **training initiatives** to strengthen user resilience against social engineering threats. This project highlights my ability to combine **threat intelligence** with **human-factor risk management**strategies.  
+_Skills: Phishing Analysis, Security Awareness, Threat Intelligence, Training Design_
+
+**AIG – Shields Up Cyber Defense Simulation**
+
+Executed a **cyber threat analysis** leveraging **CISA** advisories to document system vulnerabilities and propose mitigations. Used **Python** to develop an ethical hacking script simulating brute-force decryption for data recovery, reinforcing hands-on technical skills. This project demonstrates my capability to blend **threat research**, automation, and clear incident communication for effective defense.  
+_Skills: Threat Analysis, Python, Vulnerability Research, Automation, Cyber Defense_
+
+---
+
 
 ### SANS AIS247: AI Security Essentials for Business Leaders Portfolio Project
 
@@ -268,9 +268,6 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 - Phishing Analysis 2
 
 **Coursera**
-- Google Cloud Cybersecurity Certificate
-  - Introduction to Security Principles in Cloud Computing
-  - Strategies for Cloud Security Risk Management
 - Google Cybersecurity Certificate
   - Foundations of Cybersecurity
   - Play It Safe: Manage Security Risks
@@ -280,6 +277,9 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
   - Sound the Alarm: Detection and Response
   - Automate Cybersecurity Tasks with Python
   - Put It to Work: Prepare for Cybersecurity Jobs
+- Google Cloud Cybersecurity Certificate
+  - Introduction to Security Principles in Cloud Computing
+  - Strategies for Cloud Security Risk Management
 
 **Fortified Logic**
 - ICS101 - Introduction to ICS
@@ -301,13 +301,10 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 - Advanced SOC 2 Auditing: Proven Strategies for Auditing the Security, Availability and Confidentiality TSCs
 - SOC 2 Compliance Essential Training
 - Cybersecurity Foundations: Governance, Risk, and Compliance (GRC)
-- Mental Health Awareness for Cybersecurity Professionals
 - Navigate SOC 2 Compliance in the Cloud
 - Introduction to AWS Threat Detection
 - Governance, Risk, and Compliance (GRC) for the Cloud-Native Revolution
 - Deep Dive into Open-Source Intelligence
-- CompTIA Data+ (DA0-001) Exam Tips
-- Develop Your Skills as a New Manager
 - Cyber Asset Management: Securing Digital Resources in the Modern Enterprise
 - Leveraging AI for Governance, Risk, and Compliance
 - Building a HIPAA Compliance Program
@@ -341,20 +338,19 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
   - Security Controls: CIS Controls
 
 **Qualys**
-- Vulnerability Management Detection and Response
 - Vulnerability Management - Foundation
+- Vulnerability Management Detection and Response
 
 **SANS Institute**
-- SEC366: CIS Implementation Group 1
 - AIS247: AI Security Essentials for Business Leaders
+- SEC366: CIS Implementation Group 1
 
 **Simply Cyber**
-- Cyber Resilience Fundamentals
-- GRC Jumpstart: GRC Foundations in Modern Cybersecurity
 - Introduction to Hacking Methodology
+- GRC Jumpstart: GRC Foundations in Modern Cybersecurity
+- Cyber Resilience Fundamentals
 
 **TCM Security**
-- Soft Skills for the Job Market
 - Linux 101
 - Python 101 for Hackers
 - Programming with AI - Mini Course
