@@ -1,84 +1,6 @@
 ## 👋 Hi, I'm Jose
 
-I'm an aspiring **Cybersecurity GRC professional** based in **Austin, TX**, transitioning from a leadership role in public libraries to a career in **cyber risk, strategy, and governance**.
-
-🎓 I recently completed the **Cybersecurity GRC Mastery** training, where I:
-- Conducted a **cybersecurity maturity assessment** using the **NIST Cybersecurity Framework**
-- Led a **risk assessment** of a web application using the **CIA Triad**
-
-🔍 With a background in public service and team management, I bring strong **analytical**, **communication**, and **leadership** skills to my cybersecurity journey.
-
-💡 I'm especially interested in opportunities in:
-- **Cyber Risk Management**
-- **Privacy & Compliance**
-- **Security Strategy**
-
----
-
-## 🔐 Core Skills in Cybersecurity GRC
-
-### 📊 GRC & Risk Management
-- Maturity assessment using the NIST Cybersecurity Framework (CSF)
-- Cybersecurity risk management
-- Cybersecurity assessment using the CIA Triad
-- Third-party and supply chain risk assessments
-
-### 🛡️ Governance, Audit & Controls
-- Auditing across the three lines of defense
-- Asset management
-- Identity and access management (IAM)
-- Security awareness and training
-
----
-
-## 💼 Projects
-
-### GRC Mastery Practical Assessments  
-These projects represent hands-on experience from my Cybersecurity GRC Mastery training course:
-
-- **CIA Triad Assessment for Sensitive R&D Data**  
-  Assessed risks to confidentiality, integrity, and availability; recommended encryption, access controls, and backup strategies.
-
-- **Cybersecurity Audit Program Using the Three Lines of Defense Model**  
-  Defined audit roles, integrated cybersecurity audits, and established reporting protocols.
-
-- **Asset Management & CMDB Strategy**  
-  Proposed automated CMDB tools, asset classification standards, and regular audit schedules.
-
-- **IAM Improvements for SQL Server**  
-  Applied Least Privilege, implemented RBAC and MFA, and recommended PAM tools.
-
-- **Security Awareness Program Evaluation**  
-  Recommended phishing simulations, role-based training, and behavior monitoring.
-
-- **Insider Threat Program & DLP Strategy**  
-  Designed DLP policies, behavior monitoring systems, and post-incident reviews.
-
-- **Enterprise Cyber Incident Response Plan**  
-  Developed escalation paths, roles, and communications plans; included incident simulations.
-
-- **3-Year Cybersecurity Roadmap**  
-  Aligned with NIST CSF; defined milestones, data protection initiatives, and KPIs.
-
----
-
-### The Forage Job Simulations  
-Hands-on experiences gained through virtual internships on The Forage platform:
-
-- **Deloitte Australia Cyber Job Simulation**  
-  Incident response and log analysis to identify suspicious activity in a breach scenario.
-
-- **PwC US Digital Assurance & Transparency**  
-  Tested digital process controls, workpapers, and deficiency analysis.
-
-- **Commonwealth Bank Cybersecurity Simulation**  
-  Built Splunk dashboards, responded to incidents, and performed web app testing.
-
-- **Mastercard Cybersecurity Program**  
-  Identified phishing threats, assessed training needs, and implemented awareness courses.
-
-- **AIG Shields Up**  
-  Performed threat analysis, researched vulnerabilities, and built a Python ethical hacking script.
+I'm an aspiring **Cybersecurity GRC Professional** based in the **Greater Austin Area**, transitioning from a leadership role in public libraries.
 
 ---
 
@@ -91,301 +13,353 @@ Hands-on experiences gained through virtual internships on The Forage platform:
 
 ## 🛡️ Certifications
 
-- **Google Cybersecurity Certificate**  
-  Foundations in network security, threat detection, Python, Linux, and SIEM tools.
+- **GRC Mastery ISO/IEC 27001:2022 Lead Auditor**
+- **CompTIA Security+**
+- **ISC2 Certified in Cybersecurity+**
 
-- **CompTIA Security+**  
-  Covered threats, architecture, operations, and GRC.
+---
 
-- **ISC2 Certified in Cybersecurity (CC)**  
-  Validated knowledge of network security, access controls, cryptography, and risk.
+## 💼 Projects
 
-- **Cybersecurity GRC Mastery (GRC Mastery)**  
-  Governance frameworks, audits, policies, and risk assessments.
+---
 
-- **Antisyphon ACE-T Core**  
-  Hands-on experience in cryptography, forensics, pen testing, and web exploitation.
+### Google Cybersecurity Professional Certificate Portfolio Projects
+
+**Controls and Compliance Auditing**
+
+Executed a comprehensive **security audit** assessing an organization’s controls and compliance posture against **PCI DSS**, **GDPR**, and **SOC** frameworks. Identified key deficiencies such as weak access controls and lack of encryption, then delivered actionable recommendations including implementing an **IDS** and strengthening **password management**. This project demonstrates my ability to evaluate and enhance organizational compliance and risk posture through structured auditing practices.  
+_Skills: Security Audit, Compliance Frameworks, Risk Assessment, PCI DSS, GDPR, SOC, Controls Testing_
+
+**NIST CSF Incident Response Analysis (DDoS)**
+
+Applied the **NIST Cybersecurity Framework (CSF)** to analyze and respond to a **Distributed Denial of Service (DDoS)** incident caused by an unconfigured firewall. Developed a structured action plan across all five CSF functions to strengthen network resilience, including improved firewall rules, traffic monitoring, and recovery protocols. This project highlights my ability to transform an incident into a comprehensive strategy for proactive defense and response.  
+_Skills: NIST CSF, Incident Response, Network Security, Firewall Configuration, DDoS Mitigation_
+
+**Linux File Authorization Management**
+
+Ensured secure file and directory permissions for a research team by auditing access rights and enforcing the **Principle of Least Privilege** using Linux CLI tools. Utilized commands such as `ls -la` and `chmod` in both symbolic and octal notation to precisely manage file authorization. This project showcases my foundational skills in endpoint security and user access control within a Linux environment.  
+_Skills: Linux Security, Access Control, Least Privilege, File Permissions, CLI Tools_
+
+**Security Monitoring with SQL Filtering**
+
+Developed and executed an **SQL query** to detect after-hours failed login attempts, addressing a critical security monitoring requirement. Leveraged SQL filtering techniques to isolate potential indicators of compromise within large datasets. This project demonstrates my ability to use data-driven methods for **incident detection and analysis** in support of cybersecurity operations.  
+_Skills: SQL, Log Analysis, Incident Detection, Data Analytics, Security Monitoring_
+
+**Proactive Risk Management**
+
+Performed a full **vulnerability assessment** on a Linux/MySQL environment following the **NIST SP 800-30 Rev. 1**methodology. Identified open access permissions as a major risk and proposed layered mitigation strategies, including **MFA**, **RBAC**, **TLS encryption**, and **IP allow-listing**. This project illustrates my competence in proactive risk management and control design to minimize potential data exposure. 
+_Skills: Risk Management, Vulnerability Assessment, NIST SP 800-30, Access Control, Encryption, MFA_
+
+**Incident Detection, Analysis, and Documentation**
+
+Simulated the **Incident Response Lifecycle** by documenting and analyzing multiple security incidents, including a ransomware attack. Employed **Wireshark**, **tcpdump**, and **VirusTotal** to detect, analyze, and classify threats across different security domains. This project highlights my proficiency in applying structured response frameworks and leveraging technical tools for threat analysis and documentation.  
+_Skills: Incident Response, Threat Analysis, Wireshark, tcpdump, VirusTotal, Documentation_
+
+**Python File Parsing**
+
+Created a **Python script** to securely import and parse an allow list from a text file using the `with` statement for robust file handling. Ensured the script efficiently managed data for further security analysis or enforcement logic. This project demonstrates my ability to apply **Python programming** to automate and streamline data management tasks in cybersecurity contexts.  
+_Skills: Python, File Parsing, Automation, Data Handling, Scripting_
+
+---
+
+### The Forage Security Job Simulations
+
+**PwC US – Cybersecurity Consulting**
+
+Conducted a **cybersecurity risk assessment** to identify control gaps and evaluate enterprise risk exposure. Produced a formal **Test of Design and Operating Effectiveness** document and a concise executive summary for stakeholders. This project demonstrates my capability to translate complex technical findings into clear, business-oriented risk insights.  
+_Skills: Risk Assessment, Controls Testing, Audit Documentation, Business Communication_
+
+**Deloitte Australia – Cyber Analyst Simulation**
+
+Investigated a simulated **cyber breach** by performing forensic analysis on web activity logs to identify suspicious patterns and attack vectors. Mapped the incident timeline, assessed impact scope, and contributed actionable insights for containment. This project underscores my skills in **digital forensics** and structured investigative reporting.  
+_Skills: Digital Forensics, Log Analysis, Incident Investigation, Threat Hunting_
+
+**PwC US – Digital Assurance & Transparency**
+
+Assessed the effectiveness of digital process controls within a simulated client engagement using structured workpapers and sample testing. Documented findings in a **deficiency analysis** outlining control design weaknesses and operational risks. This project highlights my understanding of **internal controls** and evidence-based audit methodologies.  
+_Skills: Internal Controls, Audit Testing, Risk Analysis, Process Assessment_
+
+**Commonwealth Bank – Introduction to Cybersecurity**
+
+Developed **Splunk dashboards** to visualize fraud detection data and identify key behavioral trends. Conducted basic **penetration testing** and created actionable remediation recommendations to address identified vulnerabilities. This project emphasizes my applied skills in **threat detection**, incident response, and cybersecurity awareness communication.  
+_Skills: Splunk, Data Visualization, Penetration Testing, Incident Response, Awareness Training_
+
+**Mastercard – Security Awareness Analysis**
+
+Analyzed **phishing campaign data** to identify organizational vulnerabilities and knowledge gaps in security awareness. Designed and proposed targeted **training initiatives** to strengthen user resilience against social engineering threats. This project highlights my ability to combine **threat intelligence** with **human-factor risk management**strategies.  
+_Skills: Phishing Analysis, Security Awareness, Threat Intelligence, Training Design_
+
+**AIG – Shields Up Cyber Defense Simulation**
+
+Executed a **cyber threat analysis** leveraging **CISA** advisories to document system vulnerabilities and propose mitigations. Used **Python** to develop an ethical hacking script simulating brute-force decryption for data recovery, reinforcing hands-on technical skills. This project demonstrates my capability to blend **threat research**, automation, and clear incident communication for effective defense.  
+_Skills: Threat Analysis, Python, Vulnerability Research, Automation, Cyber Defense_
+
+---
+
+### GRC Mastery Portfolio Projects
+
+**CIA Triad Practical Assessment**
+
+Conducted a **Confidentiality, Integrity, and Availability (CIA) assessment** for a high-value R&D project at Oscorp involving a sensitive medication formula. Developed targeted interview questions for the Chief Scientist to evaluate access control, file protection, version management, and system resilience. Provided actionable recommendations such as implementing **encryption, password protection, access restrictions**, and **regular backups** to strengthen the document’s security posture.  
+_Skills: GRC, CIA Triad, Information Security, Risk Assessment, Data Protection, Security Controls_
+
+**Cybersecurity Audit Program Design**
+
+Developed a **cybersecurity audit program** for Oscorp based on the **Three Lines of Defense model**, ensuring periodic and structured testing of cybersecurity controls. Proposed role alignment where the internal team conducts self-audits (Line 1), a dedicated **Cybersecurity Auditor** provides independent oversight (Line 2), and an external audit firm performs comprehensive control testing (Line 3). This project demonstrates my ability to design sustainable audit governance frameworks that strengthen accountability and continuous improvement in cybersecurity assurance.  
+_Skills: GRC, Cybersecurity Auditing, Three Lines of Defense, Internal Controls, Audit Program Design, Governance Frameworks_
+
+**Asset Management Process Design**
+
+Advised Oscorp on developing a structured **Asset Management process** to address audit findings and improve oversight of IT and research assets. Recommended evolving the existing spreadsheet into a formal **Configuration Management Database (CMDB)** through **asset discovery, validation with IT and research stakeholders**, and data classification by sensitivity and criticality. Established governance steps for periodic CMDB reviews, defined ownership by the IT team, and emphasized senior management support to maintain long-term accuracy and accountability.  
+_Skills: GRC, Asset Management, CMDB, IT Governance, Risk Management, Data Classification, Audit Remediation_
+
+**Identity and Access Management (IAM) Recommendations**
+
+Performed an **IAM assessment** for Oscorp’s SQL database containing the organization’s most sensitive intellectual property — the proprietary medication formula. Identified excessive access permissions among research staff and concentrated administrative privileges. Proposed a comprehensive **IAM improvement plan** featuring **multi-factor authentication (MFA)**, **role-based access control (RBAC)**, **principle of least privilege**, and **separation of duties**, along with periodic access reviews to maintain compliance and oversight.  
+_Skills: Identity and Access Management (IAM), RBAC, Principle of Least Privilege, Multi-Factor Authentication (MFA), Separation of Duties, Access Governance, Security Assessment_
+
+**Cybersecurity Education and Awareness Program Evaluation**
+
+Evaluated a **security awareness and phishing simulation platform** proposed to Oscorp’s CEO to strengthen defense against social engineering threats. Recommended **modernizing Oscorp’s outdated training module**, implementing **annual mandatory training**, and supplementing it with regular intranet articles on phishing, password hygiene, and malware. Advised conducting a **vendor comparison** process to assess multiple providers for functionality, cost, and user engagement before purchase.  
+_Skills: Security Awareness, Phishing Simulation, Vendor Evaluation, Training Program Design, Human Risk Management, Cybersecurity Culture_
+
+**Data Loss Prevention (DLP) and Insider Threat Program Design**
+
+Developed a comprehensive **Insider Threat and Data Loss Prevention (DLP)** strategy for Oscorp following a suspected internal data leak. Recommended **blocking USB devices**, performing **data discovery and classification**using Microsoft Azure AIP, and implementing **Microsoft DLP policies** across SQL databases and SharePoint. Integrated DLP measures with existing IAM controls and promoted a culture of accountability to prevent insider threats.  
+_Skills: Data Loss Prevention (DLP), Insider Threat Management, Data Classification, Azure Information Protection (AIP), IAM, Risk Mitigation, Security Governance_
+
+**Cyber Incident Response Plan Development**
+
+Created an enterprise-wide **Cyber Incident Response Plan (CIRP)** for Oscorp to formalize procedures for managing cyber crises. Leveraged the **VicGov Cyber Incident Response Plan template** and aligned it with **NIST incident handling phases**—detection, containment, eradication, recovery, and lessons learned. Defined stakeholder engagement, escalation, and communication workflows to establish a repeatable, tested framework for coordinated incident management.  
+_Skills: Incident Response, NIST Framework, Crisis Management, Communication Planning, Stakeholder Engagement, Cybersecurity Governance, Policy Development_
+
+**Third-Party Risk Management (TPRM) Assessment**
+
+Performed a **third-party security assessment** of Horizon Labs, a SaaS provider supporting Oscorp’s scientific data analysis operations. Identified critical deficiencies including lack of a **dedicated cybersecurity function**, **vulnerability management**, and **incident response capability**, along with weak **IAM** practices. Summarized high-risk findings and presented mitigation recommendations to Oscorp’s senior leadership for strategic vendor risk oversight.  
+_Skills: Third-Party Risk Management (TPRM), Vendor Risk Assessment, SaaS Security, Risk Analysis, IAM, Vulnerability Management, Incident Response_
+
+**Vulnerability Management Program Enhancement**
+
+Reviewed Oscorp’s recurring **vulnerability scan reports** and identified repeated findings in **Adobe**, **Chrome**, and **Safari** software across end-user systems. Recommended implementing a **software rationalization policy**, restricting application installations, and requiring business justification for exceptions. Strengthened the **vulnerability management lifecycle** through proactive patching, least privilege enforcement, and continuous compliance monitoring.  
+_Skills: Vulnerability Management, Patch Management, Endpoint Security, Policy Development, Risk Mitigation, Access Control_
+
+**Cybersecurity Program Design – NIST Framework Capstone**
+
+Designed a comprehensive **three-year cybersecurity program** for Oscorp using the **NIST Cybersecurity Framework (CSF)** to address organizational gaps and maturity needs. Conducted a full current-state assessment revealing critical deficiencies in governance, risk management, IAM, and detection capabilities, then prioritized recommendations including establishing a **CISO role**, implementing **MFA**, deploying a **SIEM**, and launching **TPRM**and **data governance** initiatives. Delivered a structured roadmap aligning security objectives with NIST CSF functions (Identify, Protect, Detect, Respond, Recover).  
+_Skills: NIST Cybersecurity Framework (CSF), Program Development, Risk Management, Governance, IAM, SIEM, Roadmap Planning, Cybersecurity Strategy_
+
+**ISO 27001 Lead Auditor Training**
+
+Completed the **ISO 27001 Lead Auditor Training** through GRC Mastery, developing a full **Information Security Management System (ISMS)** from the ground up. Built all core certification artifacts, including **risk assessments**, the **Statement of Applicability (SoA)**, and comprehensive **security policies and procedures** aligned with ISO 27001 clauses and Annex A controls. Gained hands-on experience applying **ISO 31000 Risk Management** and **ISO 19011 Audit Guidelines** while conducting simulated audits and achieving certification readiness.  
+_Skills: ISO 27001, ISMS Development, Risk Assessment, Statement of Applicability (SoA), ISO 31000, ISO 19011, Audit Management, Policy Development_
+
+---
+
+### SANS AIS247: AI Security Essentials for Business Leaders Portfolio Project
+
+This project applies the governance and risk management principles from **SANS AIS247: AI Security Essentials for Business Leaders™** to the public library context. It explores how responsible AI adoption can align with public sector ethics, privacy, and transparency. The portfolio emphasizes **AI governance, data protection, and organizational readiness**, bridging the worlds of cybersecurity GRC and library information ethics.
+
+**Responsible AI Governance in Public Libraries**
+
+Developed a **Responsible AI Governance Framework** inspired by the **SANS AIS247: AI Security Essentials for Business Leaders™** course, applying AI risk and ethics principles to public library environments. Designed policies and risk controls aligned with the **NIST AI Risk Management Framework** to guide ethical AI adoption, focusing on data privacy, transparency, and public trust. Produced practical deliverables including an **AI Acceptable Use Policy**, risk register, and maturity model to help libraries implement secure and equitable AI governance.  
+_Skills: AI Governance, Responsible AI, NIST AI RMF, Policy Development, Data Ethics, Risk Management, Public Sector GRC_
+
+**Deliverables Summary:**
+
+- **Responsible AI Governance Framework** mapped to NIST AI RMF principles
+- **AI Acceptable Use Policy (AUP)** for staff and patron AI tool usage
+- **AI Risk Register & Maturity Model** for assessing readiness and control effectiveness
+
+---
+
+### SANS SEC366: CIS Implementation Group 1 Portfolio Projects
+
+This portfolio showcases a series of **hands-on cybersecurity projects** completed as part of the **SANS SEC366: CIS Implementation Group 1™** course. Each project focuses on implementing and validating foundational **CIS Critical Security Controls**, demonstrating practical experience across governance, protection, detection, response, and recovery functions. Together, these projects highlight my ability to apply structured, risk-informed approaches to cybersecurity management in **resource-constrained and public sector environments**, bridging operational controls with strategic GRC principles.
+
+**CIS Control 01–02: Foundational Asset Management**
+
+Implemented **CIS Controls 01 and 02** by building a structured **hardware and software asset inventory** to improve visibility and reduce unmanaged risk in a small organizational environment. Leveraged automated discovery tools to identify unauthorized devices, created standardized naming conventions, and aligned results with CIS IG1 Safeguards for asset tracking and configuration control. This project demonstrates practical skills in establishing **baseline configuration management**, governance reporting, and risk reduction through accurate asset visibility.  
+_Skills: CIS Controls, Asset Management, Baseline Configuration, Governance, Risk Reduction, Cyber Hygiene, IT Asset Inventory_
+
+**Deliverables Summary:**
+
+- **Hardware and Software Asset Inventory Spreadsheet** with key attributes (owner, system type, last verified)
+- **Configuration Baseline Checklist** aligned with CIS IG1 Safeguards
+- **Governance Report** summarizing asset discovery findings and remediation priorities
+
+**CIS Control 04–07: Secure Configuration and Access Management**
+
+Implemented **CIS Controls 04 through 07** to strengthen endpoint and account security through **secure configuration management** and **access control enforcement**. Developed baseline configuration templates for common systems, enforced **least privilege principles**, and established a workflow for privileged access requests and periodic account reviews. This project demonstrates the practical application of CIS IG1 safeguards to harden environments against common attacks and reduce risk from misconfiguration and excessive user permissions.  
+_Skills: CIS Controls, Secure Configuration, Access Management, Least Privilege, Privileged Access, Risk Mitigation, System Hardening_
+
+**Deliverables Summary:**
+
+- **System Configuration Baseline Template** documenting secure settings for endpoints and servers
+- **Access Control Policy** defining least-privilege standards and approval workflows
+- **User Access Review Checklist** for periodic privilege validation and compliance reporting
+
+**CIS Control 08: Audit Log Management**
+
+Implemented **CIS Control 08** by establishing centralized **audit log collection, retention, and analysis** processes to enhance visibility into system and user activity. Configured endpoint and server logs to forward critical security events to a central repository and developed review procedures to identify anomalies such as unauthorized access or failed logins. This project demonstrates the ability to operationalize **detection and monitoring controls** that improve threat visibility and support incident response readiness in resource-constrained environments.  
+_Skills: CIS Controls, Audit Log Management, Monitoring, Detection, Incident Response, Security Operations, Governance_
+
+**Deliverables Summary:**
+
+- **Centralized Log Collection Procedure** detailing configuration, retention, and review frequency
+- **Audit Log Review Template** for documenting findings and escalation paths
+- **Anomaly Detection Checklist** identifying high-priority events for investigation
+
+**CIS Control 17: Incident Response Readiness**
+
+Implemented **CIS Control 17** by developing a structured **incident response plan (IRP)** tailored for small organizations with limited security resources. Created clear procedures for incident identification, escalation, containment, and communication, aligned with the **NIST Incident Response Lifecycle**. This project demonstrates practical experience in establishing repeatable response workflows, defining stakeholder roles, and enabling timely decision-making during security events.  
+_Skills: CIS Controls, Incident Response, NIST Framework, Crisis Management, Escalation Procedures, Communication Planning, Governance_
+
+**Deliverables Summary:**
+
+- **Incident Response Plan (IRP) Document** outlining detection, response, and recovery phases
+- **Incident Reporting Form** with defined escalation contacts and timeframes
+- **Tabletop Exercise Script** for testing and improving organizational readiness
+
+**CIS Controls 11 & 12: Data Recovery and Backup Management**
+
+Implemented **CIS Controls 11 and 12** by developing a structured **backup and data recovery program** to ensure business continuity and minimize data loss risks. Designed and tested automated backup routines for critical data, verified restoration integrity, and documented clear recovery time objectives (RTOs) and recovery point objectives (RPOs). This project demonstrates the ability to operationalize CIS IG1 safeguards for resilience, ensuring that essential information and systems can be restored reliably after incidents.  
+_Skills: CIS Controls, Data Recovery, Backup Management, Business Continuity, Disaster Recovery, Resilience, Governance_
+
+**Deliverables Summary:**
+
+- **Backup and Recovery Policy** outlining frequency, storage locations, and validation procedures
+- **Backup Verification Checklist** confirming successful restoration tests and data integrity
+- **Recovery Time/Point Objective (RTO/RPO) Matrix** documenting critical system recovery priorities
+
+**CIS IG1 Metrics Dashboard and Reporting**
+
+Developed a **CIS Implementation Group 1 (IG1) metrics dashboard** to measure control implementation progress and communicate cybersecurity posture to leadership. Designed quantitative and qualitative indicators across the **Govern, Identify, Protect, Detect, Respond, and Recover** functions, using visual scoring to highlight maturity and residual risk. This project demonstrates the ability to translate technical control data into **business-focused reporting**for informed decision-making and continuous improvement.  
+_Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Maturity, Governance, Executive Communication_
+
+**Deliverables Summary:**
+
+- **CIS IG1 Metrics Dashboard (Spreadsheet or Visualization Tool)** tracking safeguard completion and risk reduction
+- **Executive Summary Report** presenting control maturity and recommended next steps
+- **Continuous Improvement Tracker** documenting periodic reassessments and score updates
 
 ---
 
 ## 🧠 Trainings
 
-### SANS
-- AIS247: AI Security for Business Leaders - Frank Kim & Dan DeBeaubien
-- SEC366: CIS Implementation Group 1 - Brian Ventura
-
-### Antisyphon Training
-- Getting Started in Packet Decoding — Chris Brenton  
-- SOC Core Skills — John Strand  
-- Getting Started in Security / MITRE ATT&CK — John Strand  
-- Active Defense and Cyber Deception — John Strand  
-- MITRE ATT&CK Framework and Tools — Carrie Roberts  
-- Application Security Workshop — Bill McCauley  
-- Introduction to Cloud Security — Beau Bullock  
-- Exploiting AI — Ben Bowman
-
-### Coursera (Google Cybersecurity Certificate)
-- Foundations of Cybersecurity  
-- Manage Security Risks  
-- Networks and Network Security  
-- Linux and SQL  
-- Assets, Threats, and Vulnerabilities  
-- Detection and Response  
-- Automate Cybersecurity Tasks with Python  
-- Prepare for Cybersecurity Jobs
-
-### Other Platforms
-- **Oracle** – OCI AI Foundations Associate (2023)  
-- **LinkedIn Learning** – OSINT, Cloud GRC, AWS Threat Detection, Cert Prep  
-- **Simply Cyber Academy** – Cyber Resilience, Hacking Methodology  
-- **arcX** – Cyber Threat Intelligence 101, Cyber Threat intelligence practitioner  
-- **TryHackMe** – Pre Security and Introduction to Cybersecurity Paths  
-- **TCM Security Academy** – Linux 101, Python 101, AI Programming, Soft Skills  
-- **IriusRisk** – Threat Modeling Champion  
-- **Qualys** – Vulnerability Management – Foundation
-
-# 🧠 Cybersecurity Virtual Experience Projects
-
-These projects were completed through **Forage** virtual job simulations, providing hands-on experience in risk assessment, control evaluation, incident response, and security awareness. Each simulation reflects practical exposure to real-world cybersecurity challenges across leading global organizations.
-
----
-
-## 🧩 PwC US Cyber Security Consulting Job Simulation  
-**Forage | September 2025**
-
-Conducted a cybersecurity risk assessment for a PwC client, evaluating processes against Sarbanes-Oxley (SOX) requirements. Identified control gaps, assessed associated risks, and documented both the **Test of Design** and **Test of Operating Effectiveness**. Concluded the engagement by preparing a one-slide executive summary of findings.
-
-**Key Skills:** Risk Assessment · SOX Compliance · Control Testing · Gap Analysis · Professional Communication · Business Judgment
-
----
-
-## 🔍 Deloitte Australia Cyber Job Simulation  
-**Forage | May 2025**
-
-Participated in a cybersecurity incident investigation, analyzing web activity logs to detect anomalies and identify suspicious user behavior. Supported a client in tracing the likely source of a data breach, strengthening skills in analytical reasoning and threat investigation.
-
-**Key Skills:** Log Analysis · Incident Response · Threat Investigation · Web Security · Network Analysis
-
----
-
-## 🧮 PwC US Digital Assurance & Transparency Job Simulation  
-**Forage | May 2025**
-
-Assessed a client’s **user access provisioning** process for control effectiveness within PwC’s Digital Assurance & Transparency team. Used standardized workpapers to test sample items, document audit evidence, and complete a deficiency analysis to determine remediation requirements.
-
-**Key Skills:** Audit Documentation · Internal Controls · Control Testing · Deficiency Analysis · Results Communication
-
----
-
-## 🏦 Commonwealth Bank Introduction to Cybersecurity Job Simulation  
-**Forage | May 2025**
-
-Performed the role of a cybersecurity generalist focusing on fraud detection and prevention. Developed **Splunk dashboards** to visualize customer transaction data, uncovering fraud patterns and anomalies. Conducted **penetration testing** on simulated web applications, created incident response documentation, and designed a password security infographic based on Australian Cybersecurity Centre guidance.
-
-**Key Skills:** Splunk · Data Visualization · Incident Management · Penetration Testing · Fraud Detection · Security Awareness
-
----
-
-## 💳 Mastercard Cybersecurity Virtual Experience Program  
-**Forage | October 2024**
-
-Supported Mastercard’s **Security Awareness Team** by investigating simulated phishing attacks and identifying areas of the organization requiring enhanced training. Analyzed behavioral trends, recommended targeted awareness programs, and contributed to strengthening organizational resilience through improved security culture.
-
-**Key Skills:** Phishing Analysis · Security Awareness · Training Program Design · Data Analysis · Communication Strategy
-
----
-
-## 🛡️ AIG “Shields Up” Cybersecurity Virtual Experience  
-**Forage | February 2024**
-
-Executed a **threat analysis** for AIG’s Cyber Defense Unit, reviewing recent CISA advisories and researching vulnerabilities. Authored remediation guidance for internal teams and developed a **Python script** to simulate ethical brute-force decryption, highlighting automation and analytical problem-solving skills.
-
-**Key Skills:** Vulnerability Management · Threat Analysis · Python Scripting · Security Consulting · Problem Solving · Communication
-
----
-
-## 🐧 File Permissions in Linux  
-**Google Cybersecurity Certificate Project | 2025**
-
-This project focused on managing file and directory permissions within a Linux environment to align system authorization levels with organizational policy. Using common Linux commands, file permissions were reviewed, analyzed, and updated to strengthen system security.
-
-### 🔧 Key Tasks and Process
-- **Checked existing permissions:** Used `ls -la` to list files, including hidden ones, and examine permission strings for each file and directory.  
-- **Analyzed permission strings:** Interpreted 10-character permission codes to understand file type and access rights for user, group, and others.  
-- **Modified permissions with `chmod`:**  
-  - Removed write access for *others* on specific project files (e.g., `project_k.txt`).  
-  - Adjusted permissions on hidden files (e.g., `.project_x.txt`) to restrict write access while maintaining read access for authorized users.  
-  - Updated directory permissions to ensure only the designated user (`researcher2`) had execute access to the `drafts` directory.  
-- **Validated updates:** Re-ran `ls -la` to confirm that permissions accurately reflected intended access levels.
-
-### 🧠 Outcome
-File and directory permissions were successfully updated to enforce the organization’s authorization model, mitigating unauthorized modification risks and aligning system configuration with security best practices.
-
-**Key Skills:** Linux Administration · File Permissions · Access Control · Command Line Operations · Security Hardening · System Auditing
-
-## 🧮 Apply Filters to SQL Queries  
-**Google Cybersecurity Certificate Project | 2025**
-
-This project focused on using SQL filters to investigate potential security incidents and manage system updates. Queries were developed to extract specific information related to login attempts and employee records, supporting the organization’s goal of strengthening access control and endpoint security.
-
-### 🔧 Key Tasks and Process
-- **Investigated after-hours failed logins:** Queried the `log_in_attempts` table to identify all unsuccessful logins occurring after 18:00 using the `WHERE` clause with the `AND` operator.  
-- **Analyzed suspicious date activity:** Retrieved login attempts that occurred on or around a specific incident date (`2022-05-09`) using conditional filters and logical `OR`.  
-- **Flagged foreign login attempts:** Filtered records for all login attempts outside of Mexico using `NOT LIKE 'MEX%'` to capture both `MEX` and `MEXICO` entries.  
-- **Isolated Marketing department devices:** Queried the `employees` table to identify Marketing staff in the East building using `AND` and the `LIKE` operator for pattern matching.  
-- **Selected Finance and Sales employees:** Used `OR` logic to return employees belonging to either the Finance or Sales departments for a separate update cycle.  
-- **Excluded IT personnel:** Applied the `NOT` operator to filter out employees in the Information Technology department from a security patch deployment.
-
-### 🧠 Outcome
-SQL filtering techniques were effectively applied to extract targeted datasets from organizational tables, enabling precise investigation of security incidents and structured system updates. This process improved operational efficiency and data-driven decision-making within the security team.
-
-**Key Skills:** SQL · Data Filtering · Query Logic (AND/OR/NOT) · Pattern Matching · Incident Investigation · Access Management · Data Analysis
-
-## 🚨 Incident Report Analysis  
-**Google Cybersecurity Certificate Project | 2025**
-
-This project applied the **NIST Cybersecurity Framework (CSF)** to analyze and document a network disruption caused by a Distributed Denial of Service (DDoS) attack. The incident involved a flood of ICMP packets that caused all network services to become unresponsive. The cybersecurity team identified, contained, and mitigated the attack while prioritizing the restoration of critical systems.
-
-### 🔍 Summary of the Incident
-A malicious actor launched an ICMP flood attack targeting the organization’s internal network, resulting in the loss of availability for all network services. The cybersecurity team responded by blocking the attack, halting non-critical services, and restoring core network functionality.
-
-### 🧭 Application of the NIST CSF
-
-**Identify:**  
-- Determined that a DDoS attack using ICMP flooding had targeted the organization.  
-- Assessed the impact on internal systems and prioritized securing and restoring critical services.  
-
-**Protect:**  
-- Implemented new firewall rules to limit the rate of ICMP traffic.  
-- Deployed an Intrusion Detection and Prevention System (IDS/IPS) to identify and filter malicious packets.  
-
-**Detect:**  
-- Configured source IP verification on the firewall to prevent spoofed IP traffic.  
-- Established continuous network monitoring to identify abnormal traffic patterns in real time.  
-
-**Respond:**  
-- Developed a response plan to isolate affected systems, restore critical services, and analyze logs for post-incident investigation.  
-- Established reporting procedures for escalation to management and legal authorities when required.  
-
-**Recover:**  
-- Restored normal access to network services through phased recovery steps.  
-- Documented procedures to block external ICMP flood attacks at the firewall and restore non-critical services only after the attack subsided.
-
-### 🧠 Outcome
-This analysis reinforced incident response planning and operational recovery aligned with the NIST CSF. The exercise improved the ability to contain denial-of-service threats, restore business continuity, and document lessons learned for future prevention.
-
-**Key Skills:** NIST CSF · Incident Response · DDoS Mitigation · Network Security · Firewall Configuration · IDS/IPS Implementation · Log Analysis · Business Continuity Planning
-
-## ✅ Controls and Compliance Checklist Analysis  
-**Google Cybersecurity Certificate Project | 2025**
-
-This project involved evaluating Botium Toys’ security posture through a structured controls and compliance checklist. The assessment identified control gaps and compliance deficiencies related to **PCI DSS**, **GDPR**, and **SOC 1/2** best practices. Findings were used to provide recommendations for improving the organization’s information security maturity and risk management processes.
-
-### 🧩 Controls Assessment Summary
-
-**Areas Requiring Improvement:**
-- **Least Privilege:** All employees currently have access to customer data; permissions must be restricted to reduce breach risk.  
-- **Disaster Recovery Planning:** No recovery plans are in place to ensure business continuity following a disruption.  
-- **Password Policies:** Weak password standards could allow unauthorized access to sensitive systems.  
-- **Separation of Duties:** The CEO’s involvement in both operations and payroll increases fraud and access risks.  
-- **Intrusion Detection System (IDS):** Absent; should be deployed to detect potential intrusions.  
-- **Backups:** Critical data backups are missing; these are necessary for recovery from security incidents.  
-- **Legacy System Maintenance:** Monitoring and maintenance lack defined schedules or procedures.  
-- **Encryption:** Not currently used, leaving sensitive data unprotected.  
-- **Password Management System:** Lacking; should be implemented to improve password hygiene and user productivity.
-
-**Existing Controls:**
-- Firewall with defined security rules.  
-- Antivirus software deployed and maintained.  
-- Physical security controls including locks, CCTV, and fire detection systems.
-
-### 🧭 Compliance Checklist Summary
-
-**PCI DSS Gaps:**
-- Inadequate access restrictions for credit card data.  
-- Absence of encryption for customer financial information.  
-- Weak password and identity management practices.  
-
-**GDPR Gaps:**
-- Lack of encryption for EU customers’ data.  
-- Assets inventoried but not classified.  
-- Privacy policies exist but require broader enforcement and documentation.  
-
-**SOC 1/2 Gaps:**
-- Missing least privilege and separation of duties controls.  
-- No encryption protecting PII/SPII.  
-- Data availability not properly restricted to authorized users.  
-- Data integrity maintained through validation practices.
-
-### 🧠 Recommendations
-
-To improve Botium Toys’ security posture and compliance alignment:
-- Implement **Least Privilege** and **Separation of Duties** to limit internal access risks.  
-- Deploy **encryption** for sensitive and financial data to enhance confidentiality.  
-- Establish **disaster recovery** and **data backup** processes to ensure business continuity.  
-- Introduce an **Intrusion Detection System (IDS)** for proactive threat monitoring.  
-- Formalize **password management** and **policy enforcement** organization-wide.  
-- Develop a **classification framework** for assets to align with GDPR and SOC data handling requirements.
-
-### 🧾 Outcome
-The assessment provided a detailed roadmap for implementing foundational controls and achieving compliance with major frameworks (PCI DSS, GDPR, SOC 1/2). The resulting recommendations strengthen confidentiality, integrity, and availability across the organization’s information assets.
-
-**Key Skills:** Security Controls Assessment · Compliance Analysis · PCI DSS · GDPR · SOC 1/2 · Risk Mitigation · Policy Development · Encryption · Access Control · Business Continuity Planning
-
-
-## 🛡️ Vulnerability Assessment Report  
-**Google Cybersecurity Certificate Project | 2025**
-
-This project focused on conducting a vulnerability assessment of a Linux-based MySQL database server, following the **NIST SP 800-30 Rev. 1** risk assessment methodology. The assessment evaluated potential threats, likelihoods, and impacts to determine the overall risk posture and recommend mitigation strategies aligned with secure system administration best practices.
-
-### 💻 System Description
-The assessed system consists of:
-- A high-performance **server** with a multi-core CPU and **128GB of memory**
-- The **latest Linux operating system**
-- A **MySQL** database management system
-- Networked connections via **IPv4**
-- **SSL/TLS**-encrypted communications with other internal servers
-
-The server hosts critical customer, campaign, and analytics data used in marketing operations, making it a vital asset requiring confidentiality, integrity, and availability protections.
-
-### 🧭 Scope
-The assessment focused on **access control mechanisms** of the database system, covering a three-month evaluation period (June–August 20XX).  
-Risk identification, analysis, and evaluation were guided by the principles in **NIST SP 800-30 Rev. 1**.
-
-### 🎯 Purpose
-The objective of this assessment was to identify vulnerabilities related to user access permissions and potential data exposure risks. The analysis informed control improvements designed to reduce the probability and impact of security incidents, ensuring secure data management and operational continuity.
-
-### ⚠️ Risk Assessment
-
-| Threat Source | Threat Event | Likelihood | Severity | Risk Score |
-|----------------|---------------|-------------|-----------|-------------|
-| Hacker | Obtain sensitive information via exfiltration | 3 | 3 | 9 |
-| Employee | Disrupt mission-critical operations | 2 | 3 | 6 |
-| Customer | Alter or delete critical information | 1 | 3 | 3 |
-
-**Interpretation:**  
-- The **highest risk** stems from potential **external data exfiltration** by malicious actors.  
-- **Insider threats** present a **moderate risk**, primarily through disruption or misuse of privileged access.  
-- **Customer-related risks** are lower but still relevant, requiring policy-based control measures.
-
-### 🔍 Approach
-Risks were assessed based on:
-- Data storage and access management practices  
-- Open access permissions and potential attack vectors  
-- Operational dependencies on data availability and integrity  
-
-Each threat scenario was evaluated for **likelihood** and **impact**, producing quantitative risk scores to guide mitigation priorities.
-
-### 🧠 Remediation Strategy
-To strengthen access control and reduce exposure:
-- **Implement robust authentication, authorization, and auditing** mechanisms to enforce least privilege.  
-- Require **strong passwords** and **multi-factor authentication (MFA)** for all database users.  
-- Adopt **role-based access control (RBAC)** to segment permissions by job function.  
-- **Migrate from SSL to TLS** to ensure modern encryption standards for data in motion.  
-- Enforce **IP allow-listing** for corporate networks to block unauthorized external connections.  
-- Conduct **regular access reviews** and monitor logs for anomalous authentication activity.
-
-### 🧾 Outcome
-The vulnerability assessment identified critical weaknesses in access control and data protection. The recommended remediation plan provided actionable steps to enhance authentication strength, data encryption, and network-level protections in alignment with NIST SP 800-30 and industry best practices.
-
-**Key Skills:** Vulnerability Assessment · Risk Analysis · NIST SP 800-30 · Access Control · Encryption · Threat Modeling · Remediation Planning · Database Security
+**Antisyphon Training**
+- Getting Started in Packet Decoding with Chris Brenton
+- SOC Core Skills with John Strand
+- Getting Started in Security with BHIS and MITRE ATT&CK with John Strand
+- Active Defense and Cyber Deception with John Strand
+- MITRE ATT&CK Framework and Tools with Carrie Roberts
+- Foundational Application Security Training (FAST) with Bill McCauley
+- Professionally Evil ICS & OT Fundamentals with Giovanni Cofre 
+- Workshop: Introduction to Cloud Security with Beau Bullock
+- Workshop: Exploiting AI with Ben Bowman
+- Workshop: Investigating M365 Business Email Compromise with Patterson Cake
+- Workshop: Intro to Virtualization with Daniel Lowrie
+- Workshop: Introduction to IP Network with John Strand
+
+**arcX**
+- Cyber Threat Intelligence 101
+
+**Blue Team Labs Online**
+- Phishing Analysis
+- Phishing Analysis 2
+
+**Coursera**
+- Google Cloud Cybersecurity Certificate
+  - Introduction to Security Principles in Cloud Computing
+  - Strategies for Cloud Security Risk Management
+- Google Cybersecurity Certificate
+  - Foundations of Cybersecurity
+  - Play It Safe: Manage Security Risks
+  - Connect and Protect: Networks and Network Security
+  - Tools of the Trade: Linux and SQL
+  - Assets, Threats, and Vulnerabilities
+  - Sound the Alarm: Detection and Response
+  - Automate Cybersecurity Tasks with Python
+  - Put It to Work: Prepare for Cybersecurity Jobs
+
+**Fortified Logic**
+- ICS101 - Introduction to ICS
+
+**GRC Mastery**
+- GRC Mastery
+- ISO/IEC 27001:2022 Lead Auditor
+
+**IriusRisk**
+- IriusRisk - Threat Modeling Champion (IR-TMC)
+
+**Kase Scenarios**
+- Orkla: Dragon Con
+
+**LetsDefend**
+- Phishing Analyzer
+
+**LinkedIn Learning**
+- Advanced SOC 2 Auditing: Proven Strategies for Auditing the Security, Availability and Confidentiality TSCs
+- SOC 2 Compliance Essential Training
+- Cybersecurity Foundations: Governance, Risk, and Compliance (GRC)
+- Mental Health Awareness for Cybersecurity Professionals
+- Navigate SOC 2 Compliance in the Cloud
+- Introduction to AWS Threat Detection
+- Governance, Risk, and Compliance (GRC) for the Cloud-Native Revolution
+- Deep Dive into Open-Source Intelligence
+- CompTIA Data+ (DA0-001) Exam Tips
+- Develop Your Skills as a New Manager
+- Cyber Asset Management: Securing Digital Resources in the Modern Enterprise
+- Leveraging AI for Governance, Risk, and Compliance
+- Building a HIPAA Compliance Program
+- Cybersecurity Audit and Assessment Fundamentals for GRC Analysts: From Vendor Risk to Incident Coordination
+- Cybersecurity Careers: Become an Identity and Access Management Manager
+
+**My OSINT Training**
+- Introduction to OSINT
+
+**Oracle**
+- Oracle Cloud Infrastructure 2023 AI Certified Foundations Associate
+
+**Pluralsight**
+- Governance, Risk and Compliance (GRC) Skill Path
+  - Security Compliance, Governance, and Frameworks
+  - Security Compliance: ISO 27001
+  - Security Compliance: SOC 2
+  - Security Compliance: ISO/IEC 27000 Series
+  - Security Compliance: CMMC
+  - Information Governance: GDPR
+  - Information Security: CCPA
+  - Information Governance: CDPA
+  - Information Governance: COPPA
+  - Information Governance: GLBA
+  - Information Governance: HIPAA
+  - Security Governance: FISMA
+  - Information Governance: SOX
+  - Compliance Framework: PCI DSS
+  - Security Framework: NIST RMF
+  - Security Framework: NIST CSF
+  - Security Controls: CIS Controls
+
+**Qualys**
+- Vulnerability Management Detection and Response
+- Vulnerability Management - Foundation
+
+**SANS Institute**
+- SEC366: CIS Implementation Group 1
+- AIS247: AI Security Essentials for Business Leaders
+
+**Simply Cyber**
+- Cyber Resilience Fundamentals
+- GRC Jumpstart: GRC Foundations in Modern Cybersecurity
+- Introduction to Hacking Methodology
+
+**TCM Security**
+- Soft Skills for the Job Market
+- Linux 101
+- Python 101 for Hackers
+- Programming with AI - Mini Course
+- The Definitive GRC Analyst Master Class
+
+**TryHackMe**
+- Introduction to Cyber Security Learning Path
+- Pre Security Learning Path
