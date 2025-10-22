@@ -424,3 +424,166 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 **TryHackMe**
 - Introduction to Cyber Security Learning Path
 - Pre Security Learning Path
+
+___
+
+## Experience
+
+___
+
+## Austin Public Library
+
+**Library Assistant Manager**
+*May 2023 – Present (2 years, 6 months)*
+
+* Supervise daily operations and an 8-person team, ensuring adherence to internal procedures and data-handling standards.
+* Lead digital literacy programs that strengthen community awareness of cybersecurity and data privacy practices.
+* Maintain secure facility and system environments aligned with access control, risk management, and incident response principles.
+* Champion transparency and accountability in operations—values directly applicable to information governance and compliance culture.
+
+**Administrative Senior**
+*May 2016 – May 2023 (7 years, 1 month)*
+
+* Oversaw scheduling, vendor coordination, and system workflows, ensuring policy compliance, audit-readiness, and documentation of internal controls.
+* Managed sensitive patron and staff data across internal systems, prioritizing integrity, confidentiality, and availability.
+* Served as point of contact for vendor management and incident resolution, incorporating third-party risk awareness.
+* Implemented documentation and internal control improvements that enhanced operational continuity and compliance tracking.
+
+---
+
+## Kyle Public Library
+
+**Library Assistant**
+*October 2015 – May 2016*
+
+* Developed and taught technology classes to the public, acting as a primary educator for digital tools and safe online practices.
+* Managed social media content and the library homepage, implementing content strategies to manage reputation and communication risk.
+* Assisted patrons, handled circulation tasks, and contributed to collection management.
+
+---
+
+## Health Tech Hatch
+
+**Editor**
+*December 2012 – July 2015*
+*(Content Policy, Quality Assurance, and Third-Party Management)*
+
+* Led the curation and publishing process for online content, ensuring quality, tone, and compliance with editorial policy.
+* Managed relationships with content contributors and advertisers, demonstrating contract coordination and communication skills essential for third-party risk assessment.
+* Executed SEO and website maintenance tasks focused on site health, performance, and digital hygiene best practices.
+
+---
+
+## Iowa City Public Library
+
+**Reference & Instruction Assistant**
+*January 2012 – May 2013*
+*(Compliance, Instruction, and Information Access)*
+
+* Designed and delivered technology training programs focused on digital literacy and online safety.
+* Coordinated distribution of tax forms and assistance, handling sensitive and high-compliance documentation.
+* Managed Interlibrary Loan (ILL) processes in strict adherence to external protocols and standards.
+
+---
+
+## The WiderNet Project
+
+**Digital Librarian**
+*January 2012 – September 2012*
+*(Information Governance and Legal Compliance)*
+
+* Identified, selected, and curated digital resources for wide distribution, ensuring content quality and relevance.
+* Conducted copyright and permissions acquisition, mitigating legal risk and ensuring proper licensing.
+* Implemented systematic methods for cataloging and organizing complex digital assets for global access.
+
+---
+
+## Texas Legislative Council
+
+**Proofreader**
+*September 2004 – May 2009 (intermittent)*
+*(Auditing, Quality Control, and Policy Adherence)*
+
+* Performed proofreading and quality assurance on legislative documents, ensuring fidelity to grammar, content, and legal standards.
+* Operated within a three-person review system to ensure accuracy of lengthy documents.
+* Frequently served as the senior member of the proofreading team, mentoring colleagues.
+* Gained in-depth knowledge of legislative processes and collaborated with law librarians and editors.
+
+---
+
+## 802 NE 1st
+
+**Project Manager / Litigation & Research Consultant**
+*June 2005 – March 2011 (intermittent)*
+*(TPRM, Risk Management, and Project Coordination)*
+
+* Conducted complex research in environmental policy and natural resource litigation.
+* Managed construction of a specialized research facility, aligning safety and scientific requirements.
+* Built and maintained databases for litigation support and performed legal research.
+* Provided English–Spanish translation and live interpretation for legal teams.
+* Performed bookkeeping and payroll functions, ensuring financial accuracy and transparency.
+
+---
+
+## Mind Matters Toys
+
+**Cashier / Operations Support**
+*March 2001 – July 2003*
+*(Retail Management, Training, and Inventory Control)*
+
+* Oversaw inventory management, scheduling, and cash handling operations.
+* Trained and onboarded new employees, emphasizing system proficiency and workplace culture.
+* Initiated and executed security improvements, including camera installation.
+* Participated in hiring and team-building decisions.
+
+---
+
+## MCI WorldCom
+
+**Telemarketer**
+*December 2000 – March 2001*
+*(Sales, Resilience, and Communication)*
+
+* Managed high-volume outbound calls while maintaining professionalism and persistence.
+* Consistently met daily quotas in a high-pressure sales environment.
+* Developed persuasive communication and rapid information delivery skills.
+
+---
+
+## Lindhart Labs (Iowa Biosciences Advantage Program)
+
+**Laboratory Assistant**
+*May 1999 – May 2000*
+*(Technical Acumen, Research Support, and Information Access)*
+
+* Provided lab assistance on research focused on heparin chemistry.
+* Acted as liaison between lab and university libraries for research retrieval.
+* Located and delivered essential research materials from specialized collections.
+* Developed early digital research and presentation skills.
+
+---
+
+## Private Chemistry Tutor
+
+**Independent Tutor**
+*1997 – 1998 School Years*
+*(Instructional Design, Mentorship, and Gap Analysis)*
+
+* Developed and delivered personalized one-on-one chemistry instruction.
+* Diagnosed learning gaps and tailored lessons accordingly.
+* Operated a sole-proprietor tutoring service based on client referrals.
+
+---
+
+## Jane Stern Dorado Community Library
+
+**Library Aide**
+*June 1998 – July 1998*
+*(Customer Service, Organization, and Operational Support)*
+
+* Staffed the circulation desk, assisting patrons and processing transactions.
+* Shelved materials accurately and maintained physical organization.
+* Repaired and preserved library materials.
+* Completed a structured municipal summer work program demonstrating reliability.
+
+---
