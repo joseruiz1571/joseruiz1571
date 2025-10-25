@@ -1,21 +1,19 @@
 ## 👋 Hi, I'm Jose
 
-I'm an aspiring **Cybersecurity GRC Professional** based in the **Greater Austin Area**, transitioning from a leadership role in public libraries.
-
+I'm a Librarian in Austin, Texas learning about Information Security and Privacy.  
+<!--
 ---
 
 ## 🎓 Education
 
-- **BA in English**
 - **MA in Library and Information Science**
 
+- **BA in English**
+-->
 ---
 
-## 🛡️ Certifications
- 
-- **CompTIA Security+**
-- **ISC2 Certified in Cybersecurity (CC)**
-
+## 🛡️ Certifications & Trainings
+<!-- 
 ---
 
 ## 💼 Projects
@@ -310,20 +308,20 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 ---
 
 ## 🧠 Trainings
-
+-->
 **Antisyphon Training**
-- Getting Started in Packet Decoding with Chris Brenton
-- SOC Core Skills with John Strand
-- Getting Started in Security with BHIS and MITRE ATT&CK with John Strand
-- Active Defense and Cyber Deception with John Strand
-- MITRE ATT&CK Framework and Tools with Carrie Roberts
-- Foundational Application Security Training (FAST) with Bill McCauley
-- Professionally Evil ICS & OT Fundamentals with Giovanni Cofre 
-- Workshop: Introduction to Cloud Security with Beau Bullock
-- Workshop: Exploiting AI with Ben Bowman
-- Workshop: Investigating M365 Business Email Compromise with Patterson Cake
-- Workshop: Intro to Virtualization with Daniel Lowrie
-- Workshop: Introduction to IP Network with John Strand
+- Getting Started in Packet Decoding
+- SOC Core Skills
+- Getting Started in Security with BHIS and MITRE ATT&CK
+- Active Defense and Cyber Deception
+- MITRE ATT&CK Framework and Tools
+- Foundational Application Security Training
+- Professionally Evil ICS & OT Fundamentals
+- Workshop: Introduction to Cloud Security
+- Workshop: Exploiting AI
+- Workshop: Investigating M365 Business Email Compromise
+- Workshop: Intro to Virtualization
+- Workshop: Introduction to IP Network
 
 **arcX**
 - Cyber Threat Intelligence 101
@@ -332,19 +330,11 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 - Phishing Analysis
 - Phishing Analysis 2
 
+**CompTIA**
+- CompTIA Security+
+
 **Coursera**
 - Google Cybersecurity Certificate
-  - Foundations of Cybersecurity
-  - Play It Safe: Manage Security Risks
-  - Connect and Protect: Networks and Network Security
-  - Tools of the Trade: Linux and SQL
-  - Assets, Threats, and Vulnerabilities
-  - Sound the Alarm: Detection and Response
-  - Automate Cybersecurity Tasks with Python
-  - Put It to Work: Prepare for Cybersecurity Jobs
-- Google Cloud Cybersecurity Certificate
-  - Introduction to Security Principles in Cloud Computing
-  - Strategies for Cloud Security Risk Management
 
 **Fortified Logic**
 - ICS101 - Introduction to ICS
@@ -355,6 +345,9 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 
 **IriusRisk**
 - IriusRisk - Threat Modeling Champion (IR-TMC)
+
+**ISC2**
+- Certified in Cybersecurity (CC)
 
 **Kase Scenarios**
 - Orkla: Dragon Con
@@ -384,27 +377,10 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 
 **Pluralsight**
 - Governance, Risk and Compliance (GRC) Skill Path
-  - Security Compliance, Governance, and Frameworks
-  - Security Compliance: ISO 27001
-  - Security Compliance: SOC 2
-  - Security Compliance: ISO/IEC 27000 Series
-  - Security Compliance: CMMC
-  - Information Governance: GDPR
-  - Information Security: CCPA
-  - Information Governance: CDPA
-  - Information Governance: COPPA
-  - Information Governance: GLBA
-  - Information Governance: HIPAA
-  - Security Governance: FISMA
-  - Information Governance: SOX
-  - Compliance Framework: PCI DSS
-  - Security Framework: NIST RMF
-  - Security Framework: NIST CSF
-  - Security Controls: CIS Controls
 
 **Qualys**
-- Vulnerability Management - Foundation
-- Vulnerability Management Detection and Response
+- Vulnerability Management Foundation
+- Vulnerability Management, Detection, and Response
 
 **SANS Institute**
 - AIS247: AI Security Essentials for Business Leaders
@@ -426,7 +402,7 @@ _Skills: CIS Controls, Metrics and Reporting, GRC, Risk Measurement, Program Mat
 - Pre Security Learning Path
 
 ___
-
+<!--
 ## Experience
 
 ___
@@ -587,3 +563,4 @@ ___
 * Completed a structured municipal summer work program demonstrating reliability.
 
 ---
+-->
