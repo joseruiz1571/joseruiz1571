@@ -21,7 +21,7 @@ While the vendor shows awareness of security practices, the absence of formal fr
 
 ## 📊 Risk Visualization
 
-![Horizon Labs TPRM Heatmap](Horizon_Labs_TPRM_Heatmap.png)
+![Horizon Labs TPRM Heatmap](Images/Horizon_Labs_TPRM_Heatmap.png)
 
 **Figure: Horizon Labs Third-Party Risk Heatmap**  
 This heatmap visualizes the distribution of identified vendor risks by their corresponding **NIST CSF** and **CIS Controls** references.  
