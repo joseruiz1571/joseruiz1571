@@ -162,4 +162,4 @@ This project reinforced several key principles:
 
 **Portfolio Project by Jose Ruiz-Vazquez**  
 *GRC & Third-Party Risk Professional | ISO 27001 & 42001 Lead Auditor*  
-[LinkedIn](https://linkedin.com/in/yourprofile) | [GitHub Portfolio](https://github.com/yourusername/portfolio)
+[LinkedIn](https://linkedin.com/in/joseruiz1571) | [GitHub](https://github.com/joseruiz1571)
