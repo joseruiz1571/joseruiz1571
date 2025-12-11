@@ -9,7 +9,7 @@ With 15+ years in information governance and operations leadership, I help organ
 - AI governance roles in financial services, healthcare, or technology sectors
 - Building risk management programs that enable safe AI adoption
 - Part-time AI Trainer at DataAnnotation (evaluating LLM outputs for safety and accuracy)
-- Austin Public Library AI Implementation Team (Jan 2026) - establishing AI adoption guidelines
+- Austin Public Library AI Implementation Team (Oct 2025) - establishing AI adoption guidelines
 
 ## 📁 Featured Projects
 
@@ -18,25 +18,25 @@ Comprehensive risk assessment for customer-facing AI chatbot using TIAG methodol
 
 **Skills:** AI Risk Management · NIST AI RMF · ISO 42001 · Threat Modeling · Financial Services Compliance
 
-### [Cybersecurity Program Design – NIST Framework](link)
+### [Cybersecurity Program Design – NIST Framework](projects/nist-program-design)
 Three-year security program roadmap built on NIST CSF to mature governance, risk, and incident response capabilities. Strategic planning for SIEM implementation, MFA deployment, and CISO role creation.
 
 **Skills:** Program Design · NIST CSF · Risk Assessment · Strategic Planning
 
-### [Third-Party Risk Management Assessment](link)
+### [Third-Party Risk Management Assessment](projects/tprm-assessment)
 Vendor risk assessment applying NIST CSF and CIS Controls to evaluate SaaS provider security posture, with focus on identity and access management controls.
 
 **Skills:** Vendor Due Diligence · TPRM · Risk Reporting
 
-### [ISO 27001 ISMS Development](link)
+### [ISO 27001 ISMS Development](projects/iso27001-isms)
 Complete Information Security Management System including risk register, Statement of Applicability, security policies, and internal audit program.
 
 **Skills:** ISO 27001 · Audit Readiness · Compliance Documentation
 
 ## 🎓 Certifications
-- **ISO/IEC 42001:2023 Lead Auditor** – AI Management Systems (Nov 2024)
-- **Threat Modeling for AI/ML Systems** – LinkedIn Learning (Dec 2024)
-- **Auditing Generative AI** – ISACA (Nov 2024)
+- **ISO/IEC 42001:2023 Lead Auditor** – AI Management Systems
+- **Threat Modeling for AI/ML Systems** – LinkedIn Learning
+- **Auditing Generative AI** – ISACA
 - **ISO/IEC 27001:2022 Lead Auditor** – Information Security
 - **CompTIA Security+**
 - **SANS AIS247** – AI Security Essentials for Business Leaders
