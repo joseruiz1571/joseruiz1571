@@ -1,8 +1,8 @@
 # AI Chatbot Risk Assessment – Financial Services
-
 **Analyst:** Jose Ruiz-Vazquez  
-**Date:** November 23, 2025  
-**Frameworks:** NIST AI Risk Management Framework (AI RMF) 1.0, ISO/IEC 42001:2023  
+**Date:** November 2024  
+**Frameworks:** NIST AI RMF 1.0, ISO/IEC 42001:2023, MITRE ATLAS  
+**Methodology:** Threat-Informed AI Governance (TIAG) 
 
 ---
 
