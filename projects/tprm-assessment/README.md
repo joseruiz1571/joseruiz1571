@@ -3,6 +3,7 @@
 **Focus:** Vendor Risk · Compliance Governance · Assurance Reporting  
 
 Performed a **third-party risk assessment** for a SaaS vendor supporting research operations.  
+
 The assessment applied the **NIST CSF** and **CIS Controls** to evaluate vendor governance, access management, and incident response practices.
 
 ---
