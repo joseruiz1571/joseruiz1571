@@ -3,6 +3,7 @@
 **Focus:** Audit Readiness · Compliance Architecture · Policy Design  
 
 Developed a complete **Information Security Management System (ISMS)** from the ground up as part of ISO/IEC 27001:2022 Lead Auditor training.  
+
 This project simulated a full certification cycle, from scope definition to the Statement of Applicability.
 
 ---
