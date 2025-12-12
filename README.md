@@ -1,5 +1,5 @@
 # Jose Ruiz-Vazquez
-**AI Governance & Risk Professional | Threat-Informed AI Risk Management (TIAG)**
+**AI Governance & Risk Professional | Threat-Informed AI Governance (TIAG)**
 
 I design AI governance frameworks that balance innovation with risk management.
 
@@ -23,7 +23,7 @@ Three-year security program roadmap built on NIST CSF to mature governance, risk
 
 **Skills:** Program Design · NIST CSF · Risk Assessment · Strategic Planning
 
-### [Third-Party Risk Management Assessment](projects/tprm-assessment)
+### [Third-Party Risk Management (TPRM) Assessment](projects/tprm-assessment)
 Vendor risk assessment applying NIST CSF and CIS Controls to evaluate SaaS provider security posture, with focus on identity and access management controls.
 
 **Skills:** Vendor Due Diligence · TPRM · Risk Reporting
