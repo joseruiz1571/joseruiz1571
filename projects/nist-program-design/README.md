@@ -3,6 +3,7 @@
 **Focus:** Governance · Risk Management · Incident Response · Strategic Planning  
 
 This capstone project applied the **NIST Cybersecurity Framework (CSF)** to design a three-year cybersecurity program roadmap for a mid-sized organization.  
+
 The goal was to strengthen governance, risk management, and incident response capabilities through a structured, maturity-based approach.
 
 ---
