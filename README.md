@@ -18,6 +18,11 @@ Comprehensive risk assessment for customer-facing AI chatbot using TIAG methodol
 
 **Skills:** AI Risk Management · NIST AI RMF · ISO 42001 · Threat Modeling · Financial Services Compliance
 
+### [ISO 42001 to AWS Services Mapping](projects/iso42001-aws-mapping)
+Python script mapping ISO/IEC 42001:2023 AI Management System controls to 52 AWS services. Demonstrates practical control implementation using cloud-native capabilities across AI/ML platform (SageMaker), data governance (Lake Formation), security (IAM, KMS, Macie), and monitoring (CloudWatch, Audit Manager). Generates compliance mappings in JSON, CSV, and Markdown formats.
+
+**Skills:** ISO 42001 · AWS Architecture · Cloud Compliance · AI Governance · Python
+
 ### [Cybersecurity Program Design – NIST Framework](projects/nist-program-design)
 Three-year security program roadmap built on NIST CSF to mature governance, risk, and incident response capabilities. Strategic planning for SIEM implementation, MFA deployment, and CISO role creation.
 

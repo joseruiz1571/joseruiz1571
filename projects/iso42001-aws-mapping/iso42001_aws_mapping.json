@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "title": "ISO 42001 to AWS Services Mapping",
+    "version": "1.0",
+    "date": "2025-12-27",
+    "author": "Jose Ruiz-Vazquez",
+    "description": "Comprehensive mapping of ISO/IEC 42001:2023 controls to AWS services"
+  },
+  "mappings": [
+    {
+      "control_id": "6.1.2",
+      "control_name": "Understanding AI System Risks and Opportunities",
+      "control_description": "Organization shall determine risks and opportunities related to AI systems",
+      "iso_clause": "6 - Planning",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Model Monitor",
+          "implementation": "Monitor ML models for data drift, model quality degradation, and bias detection to identify risks in production AI systems",
+          "control_support": "Continuous monitoring and alerting on model performance and data quality"
+        },
+        {
+          "service": "AWS Security Hub",
+          "implementation": "Centralized security findings and compliance checks across AWS resources used for AI/ML workloads",
+          "control_support": "Risk identification and security posture assessment"
+        },
+        {
+          "service": "Amazon CloudWatch",
+          "implementation": "Monitor AI system performance metrics, set alarms for anomalies, and track operational risks",
+          "control_support": "Real-time visibility into AI system health and performance"
+        }
+      ]
+    },
+    {
+      "control_id": "7.5",
+      "control_name": "Documented Information and Data Management",
+      "control_description": "Organization shall determine documented information necessary for effectiveness of AI management system",
+      "iso_clause": "7 - Support",
+      "aws_services": [
+        {
+          "service": "Amazon S3",
+          "implementation": "Store training data, model artifacts, and documentation with versioning, lifecycle policies, and encryption",
+          "control_support": "Secure, versioned storage for AI system documentation and data"
+        },
+        {
+          "service": "AWS Lake Formation",
+          "implementation": "Centralized data governance for AI training data with fine-grained access controls and data catalog",
+          "control_support": "Data governance, lineage tracking, and access management"
+        },
+        {
+          "service": "AWS Glue Data Catalog",
+          "implementation": "Metadata management and data discovery for AI/ML datasets",
+          "control_support": "Data documentation, classification, and discovery"
+        },
+        {
+          "service": "Amazon Macie",
+          "implementation": "Automated discovery and classification of sensitive data in training datasets",
+          "control_support": "Data privacy and sensitive data identification"
+        }
+      ]
+    },
+    {
+      "control_id": "A.2",
+      "control_name": "AI System Impact Assessment",
+      "control_description": "Assess potential impacts of AI systems on individuals, society, and environment",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Clarify",
+          "implementation": "Detect bias in training data and models, generate explainability reports for impact assessment",
+          "control_support": "Bias detection, fairness metrics, and model explainability"
+        },
+        {
+          "service": "AWS Audit Manager",
+          "implementation": "Automate evidence collection for impact assessment processes and compliance audits",
+          "control_support": "Audit trail and compliance evidence management"
+        },
+        {
+          "service": "Amazon SageMaker Model Cards",
+          "implementation": "Document model characteristics, intended use, performance metrics, and ethical considerations",
+          "control_support": "Model documentation and impact transparency"
+        }
+      ]
+    },
+    {
+      "control_id": "A.3",
+      "control_name": "Data for AI System",
+      "control_description": "Ensure data quality, relevance, and suitability for AI system purposes",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS Glue DataBrew",
+          "implementation": "Data quality profiling, cleansing, and normalization for ML training data",
+          "control_support": "Data quality assessment and transformation"
+        },
+        {
+          "service": "Amazon SageMaker Data Wrangler",
+          "implementation": "Visual data preparation and quality checks for ML workflows",
+          "control_support": "Data quality validation and feature engineering"
+        },
+        {
+          "service": "Amazon SageMaker Ground Truth",
+          "implementation": "High-quality data labeling with built-in quality controls and validation",
+          "control_support": "Training data quality and labeling accuracy"
+        },
+        {
+          "service": "AWS Glue Data Quality",
+          "implementation": "Define and monitor data quality rules, detect anomalies in data pipelines",
+          "control_support": "Automated data quality monitoring and validation"
+        }
+      ]
+    },
+    {
+      "control_id": "A.4",
+      "control_name": "AI System Design and Development",
+      "control_description": "Establish processes for AI system design, development, and acquisition",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker",
+          "implementation": "End-to-end ML development platform with built-in security, governance, and MLOps capabilities",
+          "control_support": "Standardized ML development lifecycle"
+        },
+        {
+          "service": "AWS CodePipeline",
+          "implementation": "Automated CI/CD pipelines for ML model training and deployment with approval gates",
+          "control_support": "Controlled and auditable model deployment process"
+        },
+        {
+          "service": "Amazon SageMaker Pipelines",
+          "implementation": "Define, orchestrate, and manage ML workflows with versioning and lineage tracking",
+          "control_support": "Reproducible and traceable ML development"
+        },
+        {
+          "service": "AWS CodeCommit",
+          "implementation": "Version control for ML code, models, and configurations",
+          "control_support": "Code versioning and change management"
+        }
+      ]
+    },
+    {
+      "control_id": "A.5",
+      "control_name": "AI System Verification and Validation",
+      "control_description": "Verify and validate AI systems meet specified requirements and perform as intended",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Model Monitor",
+          "implementation": "Continuous validation of model quality, data drift, and model drift in production",
+          "control_support": "Automated model validation and performance monitoring"
+        },
+        {
+          "service": "Amazon SageMaker Experiments",
+          "implementation": "Track, compare, and evaluate ML experiments and model performance",
+          "control_support": "Model validation and performance comparison"
+        },
+        {
+          "service": "AWS Step Functions",
+          "implementation": "Orchestrate automated testing workflows for AI systems with error handling",
+          "control_support": "Automated validation workflows"
+        }
+      ]
+    },
+    {
+      "control_id": "A.6",
+      "control_name": "AI System Operation",
+      "control_description": "Operate AI systems in accordance with intended use and monitor performance",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Endpoints",
+          "implementation": "Scalable, managed model hosting with auto-scaling and blue/green deployments",
+          "control_support": "Reliable and controlled model deployment"
+        },
+        {
+          "service": "Amazon CloudWatch",
+          "implementation": "Monitor AI system metrics, logs, and set alarms for operational issues",
+          "control_support": "Operational monitoring and alerting"
+        },
+        {
+          "service": "AWS X-Ray",
+          "implementation": "Distributed tracing for AI/ML applications to identify performance bottlenecks",
+          "control_support": "Application performance monitoring and debugging"
+        },
+        {
+          "service": "Amazon EventBridge",
+          "implementation": "Event-driven automation for AI system operations and incident response",
+          "control_support": "Automated operational responses"
+        }
+      ]
+    },
+    {
+      "control_id": "A.7",
+      "control_name": "Human Oversight",
+      "control_description": "Implement appropriate human oversight of AI system operation",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon A2I (Augmented AI)",
+          "implementation": "Human review workflows for ML predictions requiring oversight or low-confidence scenarios",
+          "control_support": "Human-in-the-loop AI systems"
+        },
+        {
+          "service": "Amazon SageMaker Clarify",
+          "implementation": "Generate explainability reports to support human understanding and oversight",
+          "control_support": "Model explainability for human reviewers"
+        },
+        {
+          "service": "AWS Step Functions",
+          "implementation": "Workflow orchestration with manual approval steps for critical AI decisions",
+          "control_support": "Human approval gates in AI workflows"
+        }
+      ]
+    },
+    {
+      "control_id": "A.8",
+      "control_name": "Transparency and Communication",
+      "control_description": "Provide transparency about AI system capabilities, limitations, and operation",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Model Cards",
+          "implementation": "Document and share model information including intended use, limitations, and performance",
+          "control_support": "Model transparency documentation"
+        },
+        {
+          "service": "Amazon SageMaker Clarify",
+          "implementation": "Generate bias reports and feature importance explanations for stakeholders",
+          "control_support": "Explainability and transparency reporting"
+        },
+        {
+          "service": "AWS Systems Manager Documents",
+          "implementation": "Document AI system operational procedures and runbooks",
+          "control_support": "Operational transparency and documentation"
+        }
+      ]
+    },
+    {
+      "control_id": "A.9",
+      "control_name": "Information Security",
+      "control_description": "Implement information security controls for AI systems and data",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS IAM",
+          "implementation": "Fine-grained access control for AI/ML resources using roles and policies",
+          "control_support": "Identity and access management"
+        },
+        {
+          "service": "AWS KMS",
+          "implementation": "Encryption key management for data at rest and in transit for AI workloads",
+          "control_support": "Data encryption and key management"
+        },
+        {
+          "service": "Amazon Macie",
+          "implementation": "Automated sensitive data discovery and protection in AI training data",
+          "control_support": "Data privacy and protection"
+        },
+        {
+          "service": "AWS Secrets Manager",
+          "implementation": "Secure storage and rotation of API keys, credentials used by AI systems",
+          "control_support": "Credential management and rotation"
+        },
+        {
+          "service": "AWS PrivateLink",
+          "implementation": "Private connectivity between VPC and AI/ML services without internet exposure",
+          "control_support": "Network security and isolation"
+        }
+      ]
+    },
+    {
+      "control_id": "A.10",
+      "control_name": "Privacy",
+      "control_description": "Protect privacy of individuals in AI system data processing",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon Macie",
+          "implementation": "Identify and protect personally identifiable information (PII) in training data",
+          "control_support": "PII discovery and classification"
+        },
+        {
+          "service": "AWS Lake Formation",
+          "implementation": "Cell-level and column-level security for sensitive data in data lakes",
+          "control_support": "Fine-grained data access controls"
+        },
+        {
+          "service": "AWS Glue DataBrew",
+          "implementation": "Data masking and anonymization for privacy-preserving ML",
+          "control_support": "Data de-identification and pseudonymization"
+        },
+        {
+          "service": "AWS Clean Rooms",
+          "implementation": "Collaborative analytics without sharing underlying sensitive data",
+          "control_support": "Privacy-preserving data collaboration"
+        }
+      ]
+    },
+    {
+      "control_id": "A.11",
+      "control_name": "AI System Incident Management",
+      "control_description": "Manage incidents related to AI system operation and failures",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS Systems Manager Incident Manager",
+          "implementation": "Incident response automation, escalation, and post-incident analysis for AI systems",
+          "control_support": "Structured incident response process"
+        },
+        {
+          "service": "Amazon CloudWatch Alarms",
+          "implementation": "Automated alerting on AI system anomalies and failures",
+          "control_support": "Incident detection and notification"
+        },
+        {
+          "service": "Amazon SNS",
+          "implementation": "Multi-channel incident notification and escalation",
+          "control_support": "Incident communication and alerting"
+        },
+        {
+          "service": "AWS CloudTrail",
+          "implementation": "Audit logs for incident investigation and root cause analysis",
+          "control_support": "Forensic analysis and audit trail"
+        }
+      ]
+    },
+    {
+      "control_id": "A.12",
+      "control_name": "Logging and Monitoring",
+      "control_description": "Maintain logs of AI system activities for audit and compliance",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS CloudTrail",
+          "implementation": "Comprehensive API logging for all AWS AI/ML service interactions",
+          "control_support": "Audit trail and compliance logging"
+        },
+        {
+          "service": "Amazon CloudWatch Logs",
+          "implementation": "Centralized log aggregation and retention for AI system operations",
+          "control_support": "Log management and retention"
+        },
+        {
+          "service": "AWS Audit Manager",
+          "implementation": "Automated evidence collection and audit report generation",
+          "control_support": "Compliance auditing and reporting"
+        },
+        {
+          "service": "Amazon S3 with Object Lock",
+          "implementation": "Immutable log storage for regulatory compliance",
+          "control_support": "Tamper-proof log retention"
+        }
+      ]
+    },
+    {
+      "control_id": "A.13",
+      "control_name": "AI System Lifecycle Management",
+      "control_description": "Manage AI systems throughout their lifecycle from development to decommissioning",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "Amazon SageMaker Model Registry",
+          "implementation": "Centralized model versioning, approval workflows, and deployment tracking",
+          "control_support": "Model lifecycle and governance"
+        },
+        {
+          "service": "Amazon SageMaker Pipelines",
+          "implementation": "End-to-end ML workflow automation with lineage tracking",
+          "control_support": "Reproducible ML lifecycle management"
+        },
+        {
+          "service": "AWS Service Catalog",
+          "implementation": "Standardized, approved ML infrastructure and project templates",
+          "control_support": "Governance through approved patterns"
+        },
+        {
+          "service": "AWS Config",
+          "implementation": "Track configuration changes and compliance of AI/ML resources",
+          "control_support": "Configuration management and compliance"
+        }
+      ]
+    },
+    {
+      "control_id": "A.14",
+      "control_name": "Third-Party AI Systems and Services",
+      "control_description": "Manage risks associated with third-party AI systems, components, and services",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS Marketplace",
+          "implementation": "Curated ML models and algorithms from verified vendors with security scanning",
+          "control_support": "Vetted third-party AI components"
+        },
+        {
+          "service": "Amazon SageMaker JumpStart",
+          "implementation": "Pre-built, tested ML solutions and models from AWS and partners",
+          "control_support": "Managed third-party model integration"
+        },
+        {
+          "service": "AWS Artifact",
+          "implementation": "Access compliance reports and agreements for AWS services",
+          "control_support": "Vendor compliance documentation"
+        },
+        {
+          "service": "AWS Security Hub",
+          "implementation": "Security assessment of third-party integrations and dependencies",
+          "control_support": "Third-party security monitoring"
+        }
+      ]
+    },
+    {
+      "control_id": "A.15",
+      "control_name": "Business Continuity for AI Systems",
+      "control_description": "Ensure continuity of AI system operations during disruptions",
+      "iso_clause": "Annex A",
+      "aws_services": [
+        {
+          "service": "AWS Backup",
+          "implementation": "Automated backup of ML models, training data, and configurations",
+          "control_support": "Data and model backup/recovery"
+        },
+        {
+          "service": "Amazon S3 Cross-Region Replication",
+          "implementation": "Geographic redundancy for critical AI system data and models",
+          "control_support": "Disaster recovery and redundancy"
+        },
+        {
+          "service": "AWS Elastic Disaster Recovery",
+          "implementation": "Fast recovery of AI system infrastructure and applications",
+          "control_support": "Business continuity and disaster recovery"
+        },
+        {
+          "service": "Amazon SageMaker Multi-AZ",
+          "implementation": "High availability model endpoints across availability zones",
+          "control_support": "Service availability and resilience"
+        }
+      ]
+    },
+    {
+      "control_id": "9.1",
+      "control_name": "Monitoring, Measurement, Analysis and Evaluation",
+      "control_description": "Monitor and measure AI management system performance",
+      "iso_clause": "9 - Performance Evaluation",
+      "aws_services": [
+        {
+          "service": "Amazon CloudWatch Dashboards",
+          "implementation": "Custom dashboards for AI system KPIs and performance metrics",
+          "control_support": "Performance visualization and reporting"
+        },
+        {
+          "service": "Amazon QuickSight",
+          "implementation": "Business intelligence and analytics for AI system performance data",
+          "control_support": "Advanced analytics and insights"
+        },
+        {
+          "service": "AWS Cost Explorer",
+          "implementation": "Track and analyze costs of AI/ML workloads for ROI assessment",
+          "control_support": "Cost monitoring and optimization"
+        },
+        {
+          "service": "Amazon SageMaker Model Monitor",
+          "implementation": "Automated model performance monitoring with baseline comparisons",
+          "control_support": "ML-specific performance monitoring"
+        }
+      ]
+    },
+    {
+      "control_id": "9.2",
+      "control_name": "Internal Audit",
+      "control_description": "Conduct internal audits of AI management system",
+      "iso_clause": "9 - Performance Evaluation",
+      "aws_services": [
+        {
+          "service": "AWS Audit Manager",
+          "implementation": "Automated audit evidence collection with pre-built and custom frameworks",
+          "control_support": "Continuous audit readiness"
+        },
+        {
+          "service": "AWS Config Rules",
+          "implementation": "Automated compliance checking against AI governance policies",
+          "control_support": "Continuous compliance monitoring"
+        },
+        {
+          "service": "AWS CloudTrail Insights",
+          "implementation": "Anomaly detection in AWS API usage for audit investigations",
+          "control_support": "Audit trail analysis"
+        },
+        {
+          "service": "Amazon Detective",
+          "implementation": "Security investigation and analysis for audit findings",
+          "control_support": "Forensic analysis for audits"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "total_controls": 18,
+    "total_aws_services": 52,
+    "aws_services": [
+      "AWS Artifact",
+      "AWS Audit Manager",
+      "AWS Backup",
+      "AWS Clean Rooms",
+      "AWS CloudTrail",
+      "AWS CloudTrail Insights",
+      "AWS CodeCommit",
+      "AWS CodePipeline",
+      "AWS Config",
+      "AWS Config Rules",
+      "AWS Cost Explorer",
+      "AWS Elastic Disaster Recovery",
+      "AWS Glue Data Catalog",
+      "AWS Glue Data Quality",
+      "AWS Glue DataBrew",
+      "AWS IAM",
+      "AWS KMS",
+      "AWS Lake Formation",
+      "AWS Marketplace",
+      "AWS PrivateLink",
+      "AWS Secrets Manager",
+      "AWS Security Hub",
+      "AWS Service Catalog",
+      "AWS Step Functions",
+      "AWS Systems Manager Documents",
+      "AWS Systems Manager Incident Manager",
+      "AWS X-Ray",
+      "Amazon A2I (Augmented AI)",
+      "Amazon CloudWatch",
+      "Amazon CloudWatch Alarms",
+      "Amazon CloudWatch Dashboards",
+      "Amazon CloudWatch Logs",
+      "Amazon Detective",
+      "Amazon EventBridge",
+      "Amazon Macie",
+      "Amazon QuickSight",
+      "Amazon S3",
+      "Amazon S3 Cross-Region Replication",
+      "Amazon S3 with Object Lock",
+      "Amazon SNS",
+      "Amazon SageMaker",
+      "Amazon SageMaker Clarify",
+      "Amazon SageMaker Data Wrangler",
+      "Amazon SageMaker Endpoints",
+      "Amazon SageMaker Experiments",
+      "Amazon SageMaker Ground Truth",
+      "Amazon SageMaker JumpStart",
+      "Amazon SageMaker Model Cards",
+      "Amazon SageMaker Model Monitor",
+      "Amazon SageMaker Model Registry",
+      "Amazon SageMaker Multi-AZ",
+      "Amazon SageMaker Pipelines"
+    ]
+  }
+}
