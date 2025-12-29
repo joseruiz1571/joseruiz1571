@@ -1,0 +1,299 @@
+{
+  "$schema": "./iso42001-control-schema.json",
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-12-29",
+    "standard": "ISO/IEC 42001:2023",
+    "section": "Section 5 - Leadership",
+    "description": "ISO 42001 Leadership controls mapped to NIST AI RMF 1.0"
+  },
+  "controls": [
+    {
+      "controlId": "5.1",
+      "title": "Leadership and Commitment",
+      "section": "Leadership",
+      "purpose": "Top management demonstrates leadership and commitment to the AI management system by taking accountability for its effectiveness, establishing AI policy and objectives, ensuring integration into business processes, and promoting continual improvement.",
+      "implementationGuidance": "Top management should: (1) Take accountability for the AIMS effectiveness; (2) Ensure AI policy and objectives are established and compatible with strategic direction; (3) Ensure AIMS requirements are integrated into organizational processes; (4) Promote use of process approach and risk-based thinking; (5) Ensure resources are available; (6) Communicate importance of effective AI management; (7) Ensure AIMS achieves intended outcomes; (8) Direct and support persons to contribute to AIMS effectiveness; (9) Promote continual improvement; (10) Support other management roles.",
+      "aiLifecycleStages": [
+        "Planning and Design",
+        "Operation and Monitoring",
+        "Continuous Improvement"
+      ],
+      "riskCategories": [
+        "Accountability and Governance",
+        "Legal and Regulatory Compliance",
+        "Ethical Considerations"
+      ],
+      "nistAiRmfMappings": [
+        {
+          "function": "GOVERN",
+          "category": "GV-1.1",
+          "categoryTitle": "Legal and Regulatory Requirements",
+          "mappingRationale": "Leadership commitment ensures compliance with legal and regulatory requirements related to AI systems through policy establishment and resource allocation.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.2",
+          "categoryTitle": "Roles and Responsibilities",
+          "mappingRationale": "Top management defines and communicates organizational roles and responsibilities for AI governance.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.6",
+          "categoryTitle": "Policies and Procedures",
+          "mappingRationale": "Leadership ensures AI policies are established, documented, and integrated into organizational processes.",
+          "alignmentStrength": "Direct"
+        }
+      ],
+      "relatedControls": ["5.2", "5.3"],
+      "implementationNotes": [
+        "Document management review meetings and decisions regarding AI systems",
+        "Establish clear communication channels for AI-related concerns",
+        "Create mechanisms for continuous feedback on AIMS effectiveness",
+        "Ensure executive sponsorship for AI initiatives"
+      ],
+      "evidenceExamples": [
+        "Board meeting minutes showing AI strategy discussions",
+        "Executive directives on AI governance",
+        "Resource allocation records for AI management activities",
+        "Management review reports on AIMS performance"
+      ]
+    },
+    {
+      "controlId": "5.2",
+      "title": "AI Policy",
+      "section": "Leadership",
+      "purpose": "Establish, document, communicate, and maintain an AI policy that provides a framework for setting AI objectives, includes commitments to satisfy applicable requirements, and commits to continual improvement of the AI management system.",
+      "implementationGuidance": "The AI policy should: (1) Be appropriate to the purpose and context of the organization; (2) Provide framework for setting AI objectives; (3) Include commitment to satisfy applicable requirements (legal, regulatory, contractual, ethical); (4) Include commitment to continual improvement; (5) Be documented, communicated, and understood within organization; (6) Be available to relevant interested parties; (7) Be reviewed and updated as needed. The policy should address responsible AI principles including fairness, transparency, accountability, privacy, and safety.",
+      "aiLifecycleStages": [
+        "Planning and Design",
+        "Data Collection and Processing",
+        "Model Development",
+        "Verification and Validation",
+        "Deployment",
+        "Operation and Monitoring",
+        "Continuous Improvement",
+        "Decommissioning"
+      ],
+      "riskCategories": [
+        "Accountability and Governance",
+        "Ethical Considerations",
+        "Legal and Regulatory Compliance",
+        "Transparency and Explainability",
+        "Bias and Fairness",
+        "Privacy and Data Protection"
+      ],
+      "nistAiRmfMappings": [
+        {
+          "function": "GOVERN",
+          "category": "GV-1.6",
+          "categoryTitle": "Policies, Processes, and Procedures",
+          "mappingRationale": "The AI policy establishes organizational governance framework and procedures for responsible AI development and deployment.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.3",
+          "categoryTitle": "Organizational AI Risk Tolerance",
+          "mappingRationale": "AI policy defines the organization's risk appetite and acceptable use boundaries for AI systems.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.5",
+          "categoryTitle": "Organizational Values and Principles",
+          "mappingRationale": "Policy codifies organizational values regarding responsible AI, ethics, fairness, and transparency.",
+          "alignmentStrength": "Direct"
+        }
+      ],
+      "relatedControls": ["5.1", "5.3", "6.2"],
+      "implementationNotes": [
+        "Align AI policy with existing information security and privacy policies",
+        "Include specific commitments to responsible AI principles (fairness, transparency, accountability)",
+        "Define prohibited uses of AI within the organization",
+        "Establish policy review cycle (annual or trigger-based)",
+        "Ensure policy is accessible to all employees and relevant stakeholders"
+      ],
+      "evidenceExamples": [
+        "Published AI policy document signed by executive leadership",
+        "Policy acknowledgment records from employees",
+        "Communication materials explaining AI policy to stakeholders",
+        "Policy review and update history",
+        "Integration of AI policy into employee onboarding materials"
+      ]
+    },
+    {
+      "controlId": "5.3",
+      "title": "Organizational Roles, Responsibilities, and Authorities",
+      "section": "Leadership",
+      "purpose": "Ensure relevant roles are assigned and communicated with appropriate responsibilities and authorities for the AI management system, including conformance to requirements, reporting on AIMS performance, and ensuring focus on interested parties.",
+      "implementationGuidance": "Top management should assign and communicate responsibilities and authorities to: (1) Ensure AIMS conforms to ISO 42001 requirements; (2) Ensure AI system processes deliver intended outputs; (3) Report on AIMS performance and improvement opportunities; (4) Ensure promotion of focus on applicable requirements and interested parties throughout organization; (5) Ensure AIMS integrity is maintained during changes. Organizations should designate AI-specific roles such as AI Ethics Officer, AI Risk Manager, Data Scientists, and Model Validators with clearly defined responsibilities.",
+      "aiLifecycleStages": [
+        "Planning and Design",
+        "Data Collection and Processing",
+        "Model Development",
+        "Verification and Validation",
+        "Deployment",
+        "Operation and Monitoring",
+        "Continuous Improvement",
+        "Decommissioning"
+      ],
+      "riskCategories": [
+        "Accountability and Governance",
+        "Human Oversight and Control",
+        "Legal and Regulatory Compliance"
+      ],
+      "nistAiRmfMappings": [
+        {
+          "function": "GOVERN",
+          "category": "GV-1.2",
+          "categoryTitle": "Roles and Responsibilities",
+          "mappingRationale": "Directly establishes and communicates roles and responsibilities for AI governance, development, and oversight.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.4",
+          "categoryTitle": "Organizational Teams",
+          "mappingRationale": "Defines team structures and collaboration mechanisms for AI system development and governance.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "MANAGE",
+          "category": "MG-2.3",
+          "categoryTitle": "Mechanisms for Tracking and Responding",
+          "mappingRationale": "Assigns accountability for monitoring AI systems and responding to issues through defined roles.",
+          "alignmentStrength": "Partial"
+        }
+      ],
+      "relatedControls": ["5.1", "5.2", "7.2", "7.3"],
+      "implementationNotes": [
+        "Create RACI matrix for AI management activities",
+        "Document job descriptions for AI-specific roles (AI Ethics Officer, AI Risk Manager, etc.)",
+        "Establish reporting lines and escalation paths for AI-related issues",
+        "Define authority levels for AI system approval and deployment decisions",
+        "Ensure separation of duties between development and validation teams"
+      ],
+      "evidenceExamples": [
+        "Organizational charts showing AI governance structure",
+        "Job descriptions with AI-specific responsibilities",
+        "RACI matrix for AI management processes",
+        "Delegation of authority documentation",
+        "Communication records announcing role assignments"
+      ]
+    },
+    {
+      "controlId": "5.1.a",
+      "title": "Leadership Accountability for AIMS Effectiveness",
+      "section": "Leadership",
+      "purpose": "Ensure top management takes direct accountability for the effectiveness of the AI management system, including setting direction, allocating resources, and monitoring outcomes.",
+      "implementationGuidance": "Top management should demonstrate accountability by: (1) Personally championing the AIMS; (2) Making final decisions on AI risk acceptance; (3) Allocating adequate budget and personnel for AI governance; (4) Reviewing AIMS performance metrics regularly; (5) Taking corrective action when objectives are not met; (6) Ensuring organizational culture supports responsible AI practices. This includes participating in management reviews, approving significant AI initiatives, and being informed about AI-related incidents.",
+      "aiLifecycleStages": [
+        "Planning and Design",
+        "Operation and Monitoring",
+        "Continuous Improvement"
+      ],
+      "riskCategories": [
+        "Accountability and Governance",
+        "Legal and Regulatory Compliance",
+        "Safety and Reliability"
+      ],
+      "nistAiRmfMappings": [
+        {
+          "function": "GOVERN",
+          "category": "GV-1.1",
+          "categoryTitle": "Legal and Regulatory Requirements",
+          "mappingRationale": "Executive accountability ensures organizational compliance with AI-related legal obligations and regulatory requirements.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.7",
+          "categoryTitle": "Processes for Continuous Improvement",
+          "mappingRationale": "Leadership accountability drives continual improvement through regular review and corrective action.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "MANAGE",
+          "category": "MG-1.1",
+          "categoryTitle": "AI Risks and Benefits Management",
+          "mappingRationale": "Top management oversight ensures comprehensive management of AI risks and benefits across the organization.",
+          "alignmentStrength": "Direct"
+        }
+      ],
+      "relatedControls": ["5.1", "5.2", "9.3"],
+      "implementationNotes": [
+        "Schedule regular management review meetings (quarterly minimum)",
+        "Define key performance indicators (KPIs) for AIMS effectiveness",
+        "Establish executive-level AI governance committee",
+        "Create incident escalation protocols to executive leadership",
+        "Document management decisions on AI risk acceptance"
+      ],
+      "evidenceExamples": [
+        "Management review meeting minutes with AI metrics and decisions",
+        "Executive approval records for AI projects and budgets",
+        "AI risk register with executive sign-off on accepted risks",
+        "Performance dashboards reviewed by leadership",
+        "Corrective action plans approved by top management"
+      ]
+    },
+    {
+      "controlId": "5.2.a",
+      "title": "AI Policy Framework for Objectives",
+      "section": "Leadership",
+      "purpose": "Ensure the AI policy provides a clear framework for establishing and reviewing AI objectives that align with organizational strategy and responsible AI principles.",
+      "implementationGuidance": "The AI policy framework should: (1) Define process for setting measurable AI objectives; (2) Align AI objectives with organizational strategic goals; (3) Incorporate responsible AI principles (fairness, transparency, accountability, safety); (4) Establish criteria for evaluating AI use cases; (5) Define acceptable and unacceptable AI applications; (6) Set parameters for AI risk tolerance; (7) Specify stakeholder engagement requirements. The framework should enable cascading objectives from strategic to operational levels.",
+      "aiLifecycleStages": [
+        "Planning and Design",
+        "Verification and Validation",
+        "Continuous Improvement"
+      ],
+      "riskCategories": [
+        "Accountability and Governance",
+        "Ethical Considerations",
+        "Transparency and Explainability",
+        "Legal and Regulatory Compliance"
+      ],
+      "nistAiRmfMappings": [
+        {
+          "function": "GOVERN",
+          "category": "GV-1.3",
+          "categoryTitle": "Organizational AI Risk Tolerance",
+          "mappingRationale": "Policy framework establishes risk tolerance levels and criteria for acceptable AI use cases.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "GOVERN",
+          "category": "GV-1.5",
+          "categoryTitle": "Values and Principles",
+          "mappingRationale": "Framework codifies organizational values and responsible AI principles that guide objective-setting.",
+          "alignmentStrength": "Direct"
+        },
+        {
+          "function": "MAP",
+          "category": "MP-1.1",
+          "categoryTitle": "Context Establishment",
+          "mappingRationale": "Policy framework provides context for identifying and categorizing AI use cases against organizational objectives.",
+          "alignmentStrength": "Supporting"
+        }
+      ],
+      "relatedControls": ["5.2", "6.2", "6.2.1"],
+      "implementationNotes": [
+        "Link AI objectives to specific business outcomes and KPIs",
+        "Create template for documenting AI use case proposals aligned with policy",
+        "Establish governance review process for proposed AI objectives",
+        "Define measurable criteria for responsible AI principles",
+        "Ensure objectives are SMART (Specific, Measurable, Achievable, Relevant, Time-bound)"
+      ],
+      "evidenceExamples": [
+        "AI objectives documentation with links to organizational strategy",
+        "AI use case evaluation criteria and scorecards",
+        "Approved and rejected AI use case records with rationale",
+        "Quarterly objectives review reports",
+        "Stakeholder consultation records for AI objectives"
+      ]
+    }
+  ]
+}
