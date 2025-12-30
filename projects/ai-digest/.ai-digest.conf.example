@@ -1,0 +1,12 @@
+# AI Digest Configuration File
+# Copy this file to .ai-digest.conf and customize as needed
+
+# Anthropic API Key for AI-powered summaries
+# Get your key from: https://console.anthropic.com/
+# ANTHROPIC_API_KEY="your-api-key-here"
+
+# How many hours back to fetch news (default: 24)
+HOURS_BACK=24
+
+# Output format: console or json
+OUTPUT_FORMAT=console
