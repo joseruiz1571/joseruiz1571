@@ -1,0 +1,140 @@
+{
+  "control_mappings": [
+    {
+      "id": "MAP-001",
+      "category": "Risk Management",
+      "description": "Establish and maintain an AI risk management framework",
+      "nist_ai_rmf": {
+        "control_id": "GOVERN 1.1",
+        "control_text": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:4.1",
+        "control_text": "Understanding the organization and its context for AI management system",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 9",
+        "control_text": "Risk management system to identify, analyze and mitigate risks",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["risk", "management", "framework", "governance", "regulatory"]
+    },
+    {
+      "id": "MAP-002",
+      "category": "Data Governance",
+      "description": "Ensure data quality, integrity, and appropriate handling",
+      "nist_ai_rmf": {
+        "control_id": "MAP 3.1",
+        "control_text": "Data quality is evaluated and documented for AI training and operation",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:7.4",
+        "control_text": "Data management for AI systems including quality and governance",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 10",
+        "control_text": "Data and data governance requirements for training, validation and testing",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["data", "quality", "governance", "training", "integrity", "dataset"]
+    },
+    {
+      "id": "MAP-003",
+      "category": "Transparency & Documentation",
+      "description": "Document AI system capabilities, limitations, and operational context",
+      "nist_ai_rmf": {
+        "control_id": "MAP 1.1",
+        "control_text": "Context and purpose of the AI system is documented and understood",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:7.2",
+        "control_text": "Documentation requirements for AI system lifecycle and decisions",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 11",
+        "control_text": "Technical documentation providing information to demonstrate compliance",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["documentation", "transparency", "context", "purpose", "capabilities", "limitations"]
+    },
+    {
+      "id": "MAP-004",
+      "category": "Bias & Fairness",
+      "description": "Identify, measure, and mitigate bias and ensure fairness",
+      "nist_ai_rmf": {
+        "control_id": "MEASURE 2.1",
+        "control_text": "AI systems are evaluated for harmful bias and discrimination",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:6.2.3",
+        "control_text": "Objectives for fairness and bias mitigation in AI systems",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 10(2)(f)",
+        "control_text": "Training data examined for possible biases and mitigation measures",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["bias", "fairness", "discrimination", "equity", "harmful", "mitigation"]
+    },
+    {
+      "id": "MAP-005",
+      "category": "Human Oversight",
+      "description": "Ensure appropriate human oversight and intervention capabilities",
+      "nist_ai_rmf": {
+        "control_id": "MANAGE 1.1",
+        "control_text": "Human-AI configurations are developed and refined to enable appropriate human oversight",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:6.3",
+        "control_text": "Planning and roles for human oversight in AI system operations",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 14",
+        "control_text": "Human oversight measures to prevent or minimize risks to safety and fundamental rights",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["human", "oversight", "intervention", "monitoring", "control", "supervision"]
+    },
+    {
+      "id": "MAP-006",
+      "category": "Model Validation & Testing",
+      "description": "Validate and test AI models for performance and safety",
+      "nist_ai_rmf": {
+        "control_id": "MEASURE 2.3",
+        "control_text": "AI system performance is evaluated and validated against defined metrics",
+        "framework": "NIST AI RMF"
+      },
+      "iso_42001": {
+        "control_id": "ISO 42001:8.2",
+        "control_text": "Verification and validation of AI system requirements and performance",
+        "framework": "ISO/IEC 42001"
+      },
+      "eu_ai_act": {
+        "control_id": "Article 15",
+        "control_text": "Accuracy, robustness and cybersecurity testing requirements",
+        "framework": "EU AI Act"
+      },
+      "keywords": ["testing", "validation", "performance", "metrics", "evaluation", "accuracy", "robustness"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-12-31",
+    "frameworks_included": [
+      "NIST AI RMF (AI Risk Management Framework)",
+      "ISO/IEC 42001:2023 (AI Management System)",
+      "EU AI Act"
+    ],
+    "description": "Control mappings for AI governance frameworks"
+  }
+}
