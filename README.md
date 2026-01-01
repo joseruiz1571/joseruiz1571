@@ -23,6 +23,11 @@ Python script mapping ISO/IEC 42001:2023 AI Management System controls to 52 AWS
 
 **Skills:** ISO 42001 · AWS Architecture · Cloud Compliance · AI Governance · Python
 
+### [Home Network Security Scanner](projects/home-network-security-scanner)
+Python tool for home network security assessment. Discovers devices via ARP scanning, identifies IoT devices and risky services (Telnet, SMB, RDP), performs quantitative risk scoring (CRITICAL/HIGH/MEDIUM/LOW), and provides prioritized remediation recommendations. Exports results in JSON/CSV formats for tracking and analysis.
+
+**Skills:** Network Security · Vulnerability Assessment · Python · Risk Scoring · Security Operations
+
 ### [Cybersecurity Program Design – NIST Framework](projects/nist-program-design)
 Three-year security program roadmap built on NIST CSF to mature governance, risk, and incident response capabilities. Strategic planning for SIEM implementation, MFA deployment, and CISO role creation.
 

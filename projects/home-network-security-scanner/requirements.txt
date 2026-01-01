@@ -1,0 +1,20 @@
+# Home Network Security Scanner - Requirements
+# Python 3.6+ required
+
+# No external Python packages required for MVP!
+# The script uses only Python standard library for maximum compatibility
+
+# Optional system tools (recommended for best results):
+# - nmap: Network discovery and port scanning
+# - arp-scan: Fast ARP-based device discovery (requires sudo)
+#
+# Installation on different platforms:
+#
+# Ubuntu/Debian:
+#   sudo apt-get install nmap arp-scan
+#
+# macOS (using Homebrew):
+#   brew install nmap arp-scan
+#
+# The script will work with just the 'arp' command (built into most systems)
+# but results will be limited to devices in the ARP cache.
