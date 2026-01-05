@@ -13,6 +13,11 @@ With 15+ years in information governance and operations leadership, I help organ
 
 ## 📁 Featured Projects
 
+### [AI Governance Scanner – Automated Compliance Tool](projects/ai-governance-scanner/README.md)
+Command-line tool that bridges technical reality with executive governance by scanning AWS AI services (Bedrock, SageMaker) for compliance gaps. Creates an "evidence chain" from technical vulnerabilities to NIST AI RMF, ISO 42001, and MITRE ATLAS frameworks. Features AI-generated executive summaries and interactive HTML dashboards for audit documentation.
+
+**Skills:** Python · AWS Bedrock/SageMaker · NIST AI RMF · ISO 42001 · MITRE ATLAS · Security Automation · GRC Tool Development
+
 ### [AI Chatbot Risk Assessment – Financial Services](projects/ai-chatbot-risk-assessment/README.md)
 Comprehensive risk assessment for customer-facing AI chatbot using TIAG methodology. Integrates NIST AI RMF, ISO 42001, MITRE ATLAS threat modeling, and financial services regulatory requirements (GLBA, SOX, FCRA). Includes data flow diagrams, threat identification, control gap analysis, and residual risk evaluation.
 
