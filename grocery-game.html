@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Grocery Trip 🏠🛒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2d2d2d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+            color: #f0f0f0;
+        }
+
+        #gameContainer {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        #gameCanvas {
+            border: 4px solid #4a4a4a;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            display: block;
+            background: #87ceeb;
+        }
+
+        #ui {
+            margin-top: 15px;
+            padding: 15px;
+            background: #333;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+
+        #recipe {
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        #inventory {
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background: #666;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
+        .item.complete {
+            background: #5a9;
+            color: #fff;
+        }
+
+        h3 {
+            color: #ffd700;
+            margin-bottom: 8px;
+        }
+
+        #controls {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        #message {
+            text-align: center;
+            padding: 10px;
+            background: #555;
+            border-radius: 5px;
+            margin-top: 10px;
+            min-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="640" height="480"></canvas>
+        <div id="ui">
+            <div id="recipe">
+                <h3>Today's Recipe</h3>
+                <div id="recipeContent"></div>
+            </div>
+            <div id="inventory">
+                <h3>Inventory</h3>
+                <div id="inventoryContent">Empty</div>
+            </div>
+            <div id="message"></div>
+        </div>
+        <div id="controls">
+            Arrow Keys or WASD to move | SPACE to interact
+        </div>
+    </div>
+
+    <script>
+        // Game configuration
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        const TILE_SIZE = 32;
+        const SCALE = 2;
+
+        // Game state
+        const game = {
+            state: 'HOME', // HOME, WALKING_TO_STORE, STORE, WALKING_HOME, COOKING, COMPLETE
+            player: {
+                x: 3,
+                y: 3,
+                sprite: 0,
+                animFrame: 0,
+                facing: 'down'
+            },
+            recipe: null,
+            inventory: [],
+            shoppingList: [],
+            day: 1,
+            keys: {},
+            lastMove: 0,
+            moveDelay: 150,
+            animSpeed: 200,
+            lastAnim: 0
+        };
+
+        // Recipe database
+        const recipes = [
+            {
+                name: "Spaghetti Bolognese",
+                ingredients: ["pasta", "tomatoes", "beef", "onion", "garlic"]
+            },
+            {
+                name: "Vegetable Stir Fry",
+                ingredients: ["broccoli", "carrots", "soy sauce", "rice", "ginger"]
+            },
+            {
+                name: "Chicken Curry",
+                ingredients: ["chicken", "curry powder", "coconut milk", "rice", "onion"]
+            },
+            {
+                name: "Mushroom Risotto",
+                ingredients: ["rice", "mushrooms", "butter", "cheese", "wine"]
+            },
+            {
+                name: "Fish Tacos",
+                ingredients: ["fish", "tortillas", "cabbage", "lime", "cilantro"]
+            },
+            {
+                name: "Vegetable Soup",
+                ingredients: ["carrots", "celery", "potatoes", "broth", "herbs"]
+            }
+        ];
+
+        // Store items with positions
+        const storeItems = [
+            { name: "pasta", x: 2, y: 2 },
+            { name: "tomatoes", x: 4, y: 2 },
+            { name: "beef", x: 6, y: 2 },
+            { name: "onion", x: 8, y: 2 },
+            { name: "garlic", x: 10, y: 2 },
+            { name: "broccoli", x: 2, y: 4 },
+            { name: "carrots", x: 4, y: 4 },
+            { name: "soy sauce", x: 6, y: 4 },
+            { name: "rice", x: 8, y: 4 },
+            { name: "ginger", x: 10, y: 4 },
+            { name: "chicken", x: 2, y: 6 },
+            { name: "curry powder", x: 4, y: 6 },
+            { name: "coconut milk", x: 6, y: 6 },
+            { name: "mushrooms", x: 8, y: 6 },
+            { name: "butter", x: 10, y: 6 },
+            { name: "cheese", x: 2, y: 8 },
+            { name: "wine", x: 4, y: 8 },
+            { name: "fish", x: 6, y: 8 },
+            { name: "tortillas", x: 8, y: 8 },
+            { name: "cabbage", x: 10, y: 8 },
+            { name: "lime", x: 2, y: 10 },
+            { name: "cilantro", x: 4, y: 10 },
+            { name: "celery", x: 6, y: 10 },
+            { name: "potatoes", x: 8, y: 10 },
+            { name: "broth", x: 10, y: 10 },
+            { name: "herbs", x: 12, y: 10 }
+        ];
+
+        // Initialize game
+        function init() {
+            selectDailyRecipe();
+            updateUI();
+            setMessage("Walk to the grocery store to get ingredients!");
+
+            // Keyboard events
+            document.addEventListener('keydown', (e) => {
+                game.keys[e.key.toLowerCase()] = true;
+                if (e.key === ' ') {
+                    handleInteraction();
+                }
+            });
+
+            document.addEventListener('keyup', (e) => {
+                game.keys[e.key.toLowerCase()] = false;
+            });
+
+            gameLoop();
+        }
+
+        function selectDailyRecipe() {
+            game.recipe = recipes[Math.floor(Math.random() * recipes.length)];
+            game.shoppingList = [...game.recipe.ingredients];
+            game.inventory = [];
+        }
+
+        function setMessage(msg) {
+            document.getElementById('message').textContent = msg;
+        }
+
+        function updateUI() {
+            // Update recipe
+            const recipeEl = document.getElementById('recipeContent');
+            recipeEl.innerHTML = `<strong>${game.recipe.name}</strong><br>`;
+            game.recipe.ingredients.forEach(item => {
+                const collected = game.inventory.includes(item);
+                recipeEl.innerHTML += `<span class="item ${collected ? 'complete' : ''}">${item}</span>`;
+            });
+
+            // Update inventory
+            const invEl = document.getElementById('inventoryContent');
+            if (game.inventory.length === 0) {
+                invEl.textContent = 'Empty';
+            } else {
+                invEl.innerHTML = game.inventory.map(item =>
+                    `<span class="item complete">${item}</span>`
+                ).join('');
+            }
+        }
+
+        function handleMovement() {
+            const now = Date.now();
+            if (now - game.lastMove < game.moveDelay) return;
+
+            let newX = game.player.x;
+            let newY = game.player.y;
+            let moved = false;
+
+            if (game.keys['arrowup'] || game.keys['w']) {
+                newY--;
+                game.player.facing = 'up';
+                moved = true;
+            } else if (game.keys['arrowdown'] || game.keys['s']) {
+                newY++;
+                game.player.facing = 'down';
+                moved = true;
+            } else if (game.keys['arrowleft'] || game.keys['a']) {
+                newX--;
+                game.player.facing = 'left';
+                moved = true;
+            } else if (game.keys['arrowright'] || game.keys['d']) {
+                newX++;
+                game.player.facing = 'right';
+                moved = true;
+            }
+
+            if (moved) {
+                // Check bounds and collisions
+                if (isValidMove(newX, newY)) {
+                    game.player.x = newX;
+                    game.player.y = newY;
+                    game.lastMove = now;
+                    checkGameStateTransitions();
+                }
+            }
+        }
+
+        function isValidMove(x, y) {
+            if (game.state === 'HOME') {
+                return x >= 0 && x < 8 && y >= 0 && y < 8;
+            } else if (game.state === 'STORE') {
+                return x >= 0 && x < 14 && y >= 0 && y < 12;
+            } else if (game.state === 'WALKING_TO_STORE' || game.state === 'WALKING_HOME') {
+                return x >= 0 && x < 20 && y >= 0 && y < 15;
+            }
+            return true;
+        }
+
+        function checkGameStateTransitions() {
+            if (game.state === 'HOME') {
+                // Check if player reaches door (exit)
+                if (game.player.x === 7 && game.player.y === 4) {
+                    game.state = 'WALKING_TO_STORE';
+                    game.player.x = 1;
+                    game.player.y = 7;
+                    setMessage("Walking to the store... Enjoy the scenery!");
+                }
+            } else if (game.state === 'WALKING_TO_STORE') {
+                // Check if player reaches store entrance
+                if (game.player.x >= 18 && game.player.y >= 6 && game.player.y <= 8) {
+                    game.state = 'STORE';
+                    game.player.x = 1;
+                    game.player.y = 6;
+                    setMessage("You're at the store! Walk to items and press SPACE to collect them.");
+                }
+            } else if (game.state === 'STORE') {
+                // Check if player is done shopping and reaches exit
+                if (game.player.x === 0 && game.inventory.length === game.recipe.ingredients.length) {
+                    game.state = 'WALKING_HOME';
+                    game.player.x = 18;
+                    game.player.y = 7;
+                    setMessage("Got everything! Walking back home...");
+                }
+            } else if (game.state === 'WALKING_HOME') {
+                // Check if player reaches home entrance
+                if (game.player.x <= 1 && game.player.y >= 6 && game.player.y <= 8) {
+                    game.state = 'COOKING';
+                    game.player.x = 4;
+                    game.player.y = 4;
+                    setMessage("Time to cook! Press SPACE at the stove to start cooking.");
+                }
+            }
+        }
+
+        function handleInteraction() {
+            if (game.state === 'STORE') {
+                // Check if near any items
+                storeItems.forEach(item => {
+                    const dist = Math.abs(game.player.x - item.x) + Math.abs(game.player.y - item.y);
+                    if (dist <= 1 && game.shoppingList.includes(item.name) && !game.inventory.includes(item.name)) {
+                        game.inventory.push(item.name);
+                        updateUI();
+                        setMessage(`Picked up ${item.name}! (${game.inventory.length}/${game.recipe.ingredients.length})`);
+                    }
+                });
+            } else if (game.state === 'COOKING') {
+                // Check if at stove
+                if (game.player.x === 2 && game.player.y === 2) {
+                    startCooking();
+                }
+            }
+        }
+
+        function startCooking() {
+            game.state = 'COMPLETE';
+            setMessage(`🎉 You cooked ${game.recipe.name}! Delicious! Press R to play again.`);
+            document.addEventListener('keydown', function restart(e) {
+                if (e.key.toLowerCase() === 'r') {
+                    game.state = 'HOME';
+                    game.player.x = 3;
+                    game.player.y = 3;
+                    game.day++;
+                    selectDailyRecipe();
+                    updateUI();
+                    setMessage(`Day ${game.day}: Time for a new recipe!`);
+                    document.removeEventListener('keydown', restart);
+                }
+            });
+        }
+
+        // Drawing functions
+        function drawPixelRect(x, y, w, h, color) {
+            ctx.fillStyle = color;
+            ctx.fillRect(x, y, w, h);
+        }
+
+        function drawPlayer(x, y) {
+            const px = x * TILE_SIZE;
+            const py = y * TILE_SIZE;
+
+            // Skin color
+            drawPixelRect(px + 10, py + 8, 12, 12, '#ffdbac');
+
+            // Hair
+            drawPixelRect(px + 8, py + 6, 16, 4, '#3d2817');
+
+            // Eyes
+            drawPixelRect(px + 12, py + 14, 3, 3, '#000');
+            drawPixelRect(px + 17, py + 14, 3, 3, '#000');
+
+            // Body (shirt)
+            drawPixelRect(px + 8, py + 20, 16, 8, '#4a90e2');
+
+            // Legs
+            drawPixelRect(px + 10, py + 28, 5, 4, '#2c3e50');
+            drawPixelRect(px + 17, py + 28, 5, 4, '#2c3e50');
+        }
+
+        function drawHome() {
+            // Floor
+            for (let y = 0; y < 8; y++) {
+                for (let x = 0; x < 8; x++) {
+                    const color = (x + y) % 2 === 0 ? '#d4a574' : '#c19a6b';
+                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
+                }
+            }
+
+            // Walls
+            drawPixelRect(0, 0, canvas.width, 4, '#8b6f47');
+            drawPixelRect(0, 0, 4, canvas.height, '#8b6f47');
+
+            // Furniture - bed
+            drawPixelRect(1 * TILE_SIZE, 1 * TILE_SIZE, TILE_SIZE * 2, TILE_SIZE, '#c8553d');
+
+            // Stove
+            drawPixelRect(2 * TILE_SIZE, 2 * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#666');
+            drawPixelRect(2 * TILE_SIZE + 8, 2 * TILE_SIZE + 8, 6, 6, '#333');
+            drawPixelRect(2 * TILE_SIZE + 18, 2 * TILE_SIZE + 8, 6, 6, '#333');
+
+            // Table
+            drawPixelRect(5 * TILE_SIZE, 2 * TILE_SIZE, TILE_SIZE * 2, TILE_SIZE, '#8b4513');
+
+            // Door
+            drawPixelRect(7 * TILE_SIZE, 4 * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#654321');
+            drawPixelRect(7 * TILE_SIZE + 20, 4 * TILE_SIZE + 12, 4, 8, '#daa520');
+        }
+
+        function drawStore() {
+            // Floor
+            for (let y = 0; y < 12; y++) {
+                for (let x = 0; x < 14; x++) {
+                    const color = (x + y) % 2 === 0 ? '#e8e8e8' : '#f5f5f5';
+                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
+                }
+            }
+
+            // Shelves and items
+            storeItems.forEach(item => {
+                const color = game.inventory.includes(item.name) ? '#999' : '#8b4513';
+                drawPixelRect(item.x * TILE_SIZE, item.y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
+
+                if (!game.inventory.includes(item.name) && game.shoppingList.includes(item.name)) {
+                    // Highlight needed items
+                    drawPixelRect(item.x * TILE_SIZE + 4, item.y * TILE_SIZE + 4, 24, 24, '#5a9');
+                } else if (!game.inventory.includes(item.name)) {
+                    // Other items
+                    drawPixelRect(item.x * TILE_SIZE + 4, item.y * TILE_SIZE + 4, 24, 24, '#e74c3c');
+                }
+            });
+
+            // Exit door
+            drawPixelRect(0, 5 * TILE_SIZE, 4, TILE_SIZE * 2, '#654321');
+        }
+
+        function drawPath() {
+            // Sky
+            ctx.fillStyle = '#87ceeb';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Grass
+            for (let y = 0; y < 15; y++) {
+                for (let x = 0; x < 20; x++) {
+                    if (y < 5 || y > 10) {
+                        drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#7cb342');
+                    }
+                }
+            }
+
+            // Path
+            for (let y = 5; y <= 10; y++) {
+                for (let x = 0; x < 20; x++) {
+                    const color = (x + y) % 2 === 0 ? '#b5b5b5' : '#a8a8a8';
+                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
+                }
+            }
+
+            // Trees
+            const trees = [[3, 2], [7, 1], [11, 3], [15, 2], [4, 12], [9, 13], [14, 11]];
+            trees.forEach(([tx, ty]) => {
+                // Trunk
+                drawPixelRect(tx * TILE_SIZE + 12, ty * TILE_SIZE + 16, 8, 12, '#6b4423');
+                // Leaves
+                drawPixelRect(tx * TILE_SIZE + 4, ty * TILE_SIZE + 4, 24, 16, '#2d5016');
+            });
+
+            // House at start
+            if (game.state === 'WALKING_TO_STORE') {
+                drawPixelRect(0, 5 * TILE_SIZE, 2 * TILE_SIZE, 3 * TILE_SIZE, '#8b6f47');
+                drawPixelRect(2, 6 * TILE_SIZE, 2 * TILE_SIZE - 4, TILE_SIZE, '#654321');
+            }
+
+            // Store at end
+            if (game.state === 'WALKING_TO_STORE') {
+                drawPixelRect(18 * TILE_SIZE, 4 * TILE_SIZE, 2 * TILE_SIZE, 5 * TILE_SIZE, '#c0c0c0');
+                drawPixelRect(18 * TILE_SIZE + 4, 6 * TILE_SIZE, 2 * TILE_SIZE - 8, TILE_SIZE, '#654321');
+            }
+
+            // House at end
+            if (game.state === 'WALKING_HOME') {
+                drawPixelRect(0, 5 * TILE_SIZE, 2 * TILE_SIZE, 3 * TILE_SIZE, '#8b6f47');
+                drawPixelRect(2, 6 * TILE_SIZE, 2 * TILE_SIZE - 4, TILE_SIZE, '#654321');
+            }
+
+            // Store at start
+            if (game.state === 'WALKING_HOME') {
+                drawPixelRect(18 * TILE_SIZE, 4 * TILE_SIZE, 2 * TILE_SIZE, 5 * TILE_SIZE, '#c0c0c0');
+                drawPixelRect(18 * TILE_SIZE + 4, 6 * TILE_SIZE, 2 * TILE_SIZE - 8, TILE_SIZE, '#654321');
+            }
+        }
+
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw based on state
+            if (game.state === 'HOME' || game.state === 'COOKING' || game.state === 'COMPLETE') {
+                drawHome();
+            } else if (game.state === 'STORE') {
+                drawStore();
+            } else if (game.state === 'WALKING_TO_STORE' || game.state === 'WALKING_HOME') {
+                drawPath();
+            }
+
+            // Draw player
+            drawPlayer(game.player.x, game.player.y);
+        }
+
+        function gameLoop() {
+            handleMovement();
+            draw();
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Start game
+        init();
+    </script>
+</body>
+</html>
