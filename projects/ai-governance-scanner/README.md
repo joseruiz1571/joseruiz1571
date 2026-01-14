@@ -155,7 +155,8 @@ FINDINGS DETAIL
 ```
 
 ### Dashboard Format
-![Dashboard Preview](https://via.placeholder.com/800x600.png?text=Interactive+HTML+Dashboard)
+
+**[View Sample Dashboard →](examples/sample_dashboard.html)** | **[Generate Your Own](examples/generate_dashboard.py)**
 
 The HTML dashboard includes:
 - ✅ Executive summary cards (Critical/High/Medium/Low counts)

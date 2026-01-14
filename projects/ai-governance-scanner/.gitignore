@@ -34,6 +34,7 @@ wheels/
 *.json
 *.html
 !examples/*.json
+!examples/*.html
 !outputs/templates/*.html
 
 # AWS
