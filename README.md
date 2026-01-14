@@ -1,64 +1,38 @@
-# Jose Ruiz-Vazquez
-**AI Governance & Risk Professional | Threat-Informed AI Governance (TIAG)**
+# Hey, I'm Jose
 
-I design AI governance frameworks that balance innovation with risk management.
+I'm a librarian-turned-GRC engineer based in Austin, Texas. After 15+ years in information governance and operations, I'm now focused on **AI security and governance**—helping organizations deploy AI responsibly.
 
-With 15+ years in information governance and operations leadership, I help organizations deploy AI responsibly through systematic risk assessment, control design, and regulatory alignment. My approach integrates threat modeling (MITRE ATLAS) with AI risk frameworks (NIST AI RMF, ISO 42001) to identify and mitigate AI risks before deployment.
+## What I'm Working On
 
-## 🎯 Current Focus
-- AI governance roles in financial services, healthcare, or technology sectors
-- Building risk management programs that enable safe AI adoption
-- Part-time AI Trainer at DataAnnotation (evaluating LLM outputs for safety and accuracy)
-- Austin Public Library AI Implementation Team (Oct 2025) - establishing AI adoption guidelines
+I'm developing a methodology I call **Threat-Informed AI Governance (TIAG)**—combining threat modeling frameworks like MITRE ATLAS with AI risk standards (NIST AI RMF, ISO 42001) to identify vulnerabilities before systems go live.
 
-## 📁 Featured Projects
+This GitHub is where I build tools and learn in public.
 
-### [AI Governance Scanner – Automated Compliance Tool](projects/ai-governance-scanner/README.md)
-Command-line tool that bridges technical reality with executive governance by scanning AWS AI services (Bedrock, SageMaker) for compliance gaps. Creates an "evidence chain" from technical vulnerabilities to NIST AI RMF, ISO 42001, and MITRE ATLAS frameworks. Features AI-generated executive summaries and interactive HTML dashboards for audit documentation.
+## Projects
 
-**Skills:** Python · AWS Bedrock/SageMaker · NIST AI RMF · ISO 42001 · MITRE ATLAS · Security Automation · GRC Tool Development
+| Project | Description |
+|---------|-------------|
+| [grc-automation-tools](https://github.com/joseruiz1571/grc-automation-tools) | Python tools for automating GRC workflows |
+| [ai-governance-scanner](./projects/ai-governance-scanner) | Compliance scanner for AWS AI services |
+| [ai-grc-explainability-dashboard](./ai-grc-explainability-dashboard) | Dashboard for AI model governance |
 
-### [AI Chatbot Risk Assessment – Financial Services](projects/ai-chatbot-risk-assessment/README.md)
-Comprehensive risk assessment for customer-facing AI chatbot using TIAG methodology. Integrates NIST AI RMF, ISO 42001, MITRE ATLAS threat modeling, and financial services regulatory requirements (GLBA, SOX, FCRA). Includes data flow diagrams, threat identification, control gap analysis, and residual risk evaluation.
+## Certifications
 
-**Skills:** AI Risk Management · NIST AI RMF · ISO 42001 · Threat Modeling · Financial Services Compliance
+| Certification | Focus |
+|---------------|-------|
+| ISO 42001:2023 Lead Auditor | AI Management Systems |
+| ISO 27001:2022 Lead Auditor | Information Security |
+| SANS AI Security Essentials | AI Security for Business |
+| CompTIA Security+ | Security Fundamentals |
 
-### [Cybersecurity Program Design – NIST Framework](projects/nist-program-design)
-Three-year security program roadmap built on NIST CSF to mature governance, risk, and incident response capabilities. Strategic planning for SIEM implementation, MFA deployment, and CISO role creation.
+## Currently
 
-**Skills:** Program Design · NIST CSF · Risk Assessment · Strategic Planning
+- Building GRC automation tools with Python and Claude Code
+- Part-time AI trainer at DataAnnotation (evaluating LLM outputs)
+- Austin Public Library AI Implementation Team
 
-### [Third-Party Risk Management (TPRM) Assessment](projects/tprm-assessment)
-Vendor risk assessment applying NIST CSF and CIS Controls to evaluate SaaS provider security posture, with focus on identity and access management controls.
+## Connect
 
-**Skills:** Vendor Due Diligence · TPRM · Risk Reporting
-
-### [ISO 27001 ISMS Development](projects/iso27001-isms)
-Complete Information Security Management System including risk register, Statement of Applicability, security policies, and internal audit program.
-
-**Skills:** ISO 27001 · Audit Readiness · Compliance Documentation
-
-## 🎓 Certifications
-- **ISO/IEC 42001:2023 Lead Auditor** – AI Management Systems
-- **Threat Modeling for AI/ML Systems** – LinkedIn Learning
-- **Auditing Generative AI** – ISACA
-- **ISO/IEC 27001:2022 Lead Auditor** – Information Security
-- **CompTIA Security+**
-- **SANS AIS247** – AI Security Essentials for Business Leaders
-- **SANS SEC366** – CIS Implementation Group 1
-
-## 🧠 Core Expertise
-**AI Governance & Risk:** NIST AI RMF · ISO 42001 · MITRE ATLAS · Threat Modeling · Responsible AI · AI Security
-
-**GRC Foundation:** NIST CSF · ISO 27001 · Risk Assessment · Policy Development · Audit Planning · Compliance Management
-
-**Strategic Skills:** Security Program Development · Vendor Risk Assessment · Executive Reporting · Leadership Communication
-
-## 📫 Connect
-**LinkedIn:** [linkedin.com/in/joseruiz1571](https://linkedin.com/in/joseruiz1571)  
-**Location:** Austin, Texas  
-**Email:** joseruiz1571@gmail.com
-
----
-
-*Building trust through systematic AI governance and risk management.*
+- **Email:** joseruiz1571@gmail.com
+- **LinkedIn:** [linkedin.com/in/joseruiz1571](https://linkedin.com/in/joseruiz1571)
+- **Location:** Austin, Texas
