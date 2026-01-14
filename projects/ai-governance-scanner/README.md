@@ -36,6 +36,27 @@ Uses AWS Bedrock (Claude) to translate technical findings into business impact:
 - **Summary**: Human-readable terminal output for quick review
 - **Dashboard**: Interactive HTML report for executive presentations
 
+### 4. Framework Crosswalk - The Implementation Guide
+The scanner detects *what's wrong*. The **[Framework Crosswalk](crosswalk/)** shows *how to fix it* while satisfying multiple frameworks simultaneously.
+
+**Includes**:
+- **Master Crosswalk**: Row-by-row mapping of ISO 42001, NIST AI RMF, EU AI Act, and SOC 2 requirements
+- **Executive Summary**: Business case for integrated governance (67% faster, 60% cost reduction, 827% Year 1 ROI)
+- **Unified Controls**: 22 implementation-ready controls (TIAG-R-001 through TIAG-I-003) with AWS code examples
+
+**Example Integration**:
+```
+Scanner Finding → "No Bedrock Guardrail attached"
+         ↓
+Crosswalk Impact → Violates ISO 42001 Annex A.8.1, NIST MANAGE 1.1,
+                   EU AI Act Article 15, SOC 2 CC6.8
+         ↓
+Unified Controls → TIAG-S-005 provides Bedrock Guardrail implementation
+                   that satisfies all four frameworks at once
+```
+
+👉 **[Explore the Framework Crosswalk →](crosswalk/)**
+
 ## 📦 Installation
 
 ```bash
@@ -134,7 +155,8 @@ FINDINGS DETAIL
 ```
 
 ### Dashboard Format
-![Dashboard Preview](https://via.placeholder.com/800x600.png?text=Interactive+HTML+Dashboard)
+
+**[View Sample Dashboard →](examples/sample_dashboard.html)** | **[Generate Your Own](examples/generate_dashboard.py)**
 
 The HTML dashboard includes:
 - ✅ Executive summary cards (Critical/High/Medium/Low counts)
