@@ -14,7 +14,6 @@ This GitHub is where I build tools and learn in public.
 |---------|-------------|
 | [grc-automation-tools](https://github.com/joseruiz1571/grc-automation-tools) | Python tools for automating GRC workflows |
 | [ai-governance-scanner](./projects/ai-governance-scanner) | Compliance scanner for AWS AI services |
-| [ai-grc-explainability-dashboard](./ai-grc-explainability-dashboard) | Dashboard for AI model governance |
 
 ## Certifications
 
