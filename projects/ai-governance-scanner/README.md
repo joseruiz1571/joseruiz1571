@@ -76,8 +76,17 @@ aws configure
 
 | Scan | Service | Checks | Frameworks |
 |------|---------|--------|-----------|
-| **bedrock-guardrails** | AWS Bedrock | Guardrail attachment and configuration | NIST AI RMF MEASURE 2.4<br>ISO 42001 Annex A.8.2<br>MITRE AML.T0051/T0054 |
+| **bedrock-guardrails** | AWS Bedrock | Guardrail configuration audit (content filters, PII detection, filter strengths, production readiness) | NIST AI RMF MEASURE 2.4, MANAGE 1.1<br>ISO 42001 Annex A.8.2, Clause 8.2<br>MITRE AML.T0051/T0054 |
 | **sagemaker-model-cards** | SageMaker | Model documentation completeness | NIST AI RMF MAP 1.2, MEASURE 2.1<br>ISO 42001 Clause 7.2, 8.3<br>MITRE AML.T0020 |
+
+### Guardrail Configuration Checks (AWS-BEDROCK-003 through AWS-BEDROCK-007)
+
+The bedrock-guardrails scan audits guardrail configurations for:
+- **Missing guardrails** (HIGH) - No guardrails configured in account
+- **Incomplete content filters** (MEDIUM) - Missing HATE, VIOLENCE, SEXUAL, or MISCONDUCT filters
+- **Weak filter strengths** (MEDIUM) - LOW strength filters that may miss sophisticated attacks
+- **No PII detection** (HIGH) - Missing sensitive information policy
+- **DRAFT status** (LOW) - Guardrails not versioned for production
 
 ### Roadmap (Remaining 3 Core Scans)
 
@@ -126,37 +135,50 @@ python scanner.py --scan all --no-ai-narrator
 
 ## 📊 Output Examples
 
-### Summary Format
+### Summary Format (Real Output)
 ```
 ================================================================================
 AI GOVERNANCE SCAN REPORT
 ================================================================================
-Scan Time:    2025-01-15T14:30:00Z
-AWS Account:  123456789012
+Scan Time:    2026-01-16T02:36:30.652206Z
+AWS Account:  161057983289
 AWS Region:   us-east-1
 
 SUMMARY
 --------------------------------------------------------------------------------
-Total Findings: 3
+Total Findings: 4
 
-  Critical    : 0
   High        : 2
-  Medium      : 1
+  Medium      : 2
 
 FINDINGS DETAIL
 --------------------------------------------------------------------------------
 
-[1] AWS-BEDROCK-001 - High
-    Resource: arn:aws:bedrock:us-east-1:123456789012:provisioned-model/prod-chatbot
-    Issue:    No Bedrock Guardrail attached to production model...
+[1] AWS-BEDROCK-004 - Medium
+    Resource: arn:aws:bedrock:us-east-1:161057983289:guardrail/2gzyj60ily2t
+    Issue:    Guardrail 'weak-guardrail-demo' is missing content filters for:
+              MISCONDUCT, SEXUAL, VIOLENCE. Incomplete content filtering allows
+              harmful content in unprotected categories.
+    Fix:      Recommended: Add content filters for MISCONDUCT, SEXUAL, VIOLENCE
+              with MEDIUM or HIGH strength.
 
     Executive Summary:
-    The absence of guardrails creates regulatory exposure under the EU AI Act...
+    The business impact of this vulnerability is the potential for harmful content
+    to be displayed to users, exposing the organization to legal and reputational
+    risks. Specifically, the lack of content filters enables the "LLM Jailbreaking"
+    and "Societal Harm" attack vectors, as described in the MITRE ATLAS. Addressing
+    this finding would fulfill the "Harmful Output Prevention" requirements of the
+    NIST AI RMF, as well as the "AI System Safety" clauses of ISO 42001.
+
+    Compliance Mappings:
+      NIST AI RMF: MANAGE 2.2 (Harmful Output Prevention), MEASURE 2.6 (Content Safety)
+      ISO 42001:   Annex A.5.4 (AI System Safety), Clause 8.2 (Risk Treatment)
+      MITRE ATLAS: AML.T0054 (LLM Jailbreaking), AML.T0048 (Societal Harm)
 ```
 
 ### Dashboard Format
 
-**[View Sample Dashboard →](examples/sample_dashboard.html)** | **[Generate Your Own](examples/generate_dashboard.py)**
+**[View Sample Dashboard →](examples/sample-dashboard.html)** *(generated from real scan)*
 
 The HTML dashboard includes:
 - ✅ Executive summary cards (Critical/High/Medium/Low counts)
@@ -230,6 +252,8 @@ The scanner requires read-only permissions:
     {
       "Effect": "Allow",
       "Action": [
+        "bedrock:ListGuardrails",
+        "bedrock:GetGuardrail",
         "bedrock:ListProvisionedModelThroughputs",
         "bedrock:GetProvisionedModelThroughput",
         "bedrock:ListCustomModels",

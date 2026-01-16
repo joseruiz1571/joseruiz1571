@@ -30,13 +30,13 @@ Sentence 3: How fixing this fulfills specific requirements of NIST AI RMF and IS
 
 Use professional, non-alarmist language. Focus on liability, regulatory compliance, and operational risk."""
 
-    def __init__(self, session: boto3.Session, model_id: str = "anthropic.claude-3-5-sonnet-20241022-v2:0"):
+    def __init__(self, session: boto3.Session, model_id: str = "anthropic.claude-3-haiku-20240307-v1:0"):
         """
         Initialize narrator with AWS Bedrock client
 
         Args:
             session: Configured boto3 Session
-            model_id: Bedrock model ID (default: Claude 3.5 Sonnet)
+            model_id: Bedrock model ID (default: Claude 3 Haiku - fast and cost-effective)
         """
         self.session = session
         self.model_id = model_id
