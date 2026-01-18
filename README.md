@@ -1,6 +1,6 @@
 # Hey, I'm Jose
 
-I'm a librarian-turned-GRC engineer based in Austin, Texas. After 15+ years in information governance and operations, I'm now focused on **AI security and governance**—helping organizations deploy AI responsibly.
+I'm a librarian based in Austin, Texas. After 15+ years in information governance and operations, I'm now focused on **AI security and governance**—helping organizations deploy AI responsibly.
 
 ## What I'm Working On
 
@@ -20,8 +20,7 @@ This GitHub is where I build tools and learn in public.
 | Certification | Focus |
 |---------------|-------|
 | ISO 42001:2023 Lead Auditor | AI Management Systems |
-| ISO 27001:2022 Lead Auditor | Information Security |
-| SANS AI Security Essentials | AI Security for Business |
+| ISO 27001:2022 Lead Auditor | Information Security Management Systems |
 | CompTIA Security+ | Security Fundamentals |
 
 ## Currently
@@ -32,6 +31,5 @@ This GitHub is where I build tools and learn in public.
 
 ## Connect
 
-- **Email:** joseruiz1571@gmail.com
 - **LinkedIn:** [linkedin.com/in/joseruiz1571](https://linkedin.com/in/joseruiz1571)
 - **Location:** Austin, Texas
