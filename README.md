@@ -13,7 +13,7 @@ This GitHub is where I build and learn in public.
 | Project | Description |
 |---------|-------------|
 | [mltrack](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance (NIST AI RMF, ISO 42001, SR 11-7) |
-| [ai-governance-scanner](https://github.com/joseruiz1571ai-governance-scanner) | Compliance scanner for AWS AI services |
+| [ai-governance-scanner](https://github.com/joseruiz1571/ai-governance-scanner) | Compliance scanner for AWS AI services |
 | [ai-chatbot-risk-assessment](https://github.com/joseruiz1571/ai-chatbot-risk-assessment) | Threat-informed risk assessment for financial services AI chatbot (NIST AI RMF, ISO 42001, MITRE ATLAS) |
 | [grc-automation-tools](https://github.com/joseruiz1571/grc-automation-tools) | Python tools for automating GRC workflows |
 
