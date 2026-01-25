@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cozy Grocery Trip 🏠🛒</title>
+    <title>Cozy Global Kitchen 🌍🍳</title>
     <style>
         * {
             margin: 0;
@@ -12,202 +12,265 @@
         }
 
         body {
-            background: #2d2d2d;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            font-family: 'Courier New', monospace;
-            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #2c3e50;
         }
 
         #gameContainer {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            background: #f8f5f2;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1400px;
         }
 
         #gameCanvas {
-            border: 4px solid #4a4a4a;
-            image-rendering: pixelated;
-            image-rendering: crisp-edges;
+            border: 6px solid #8b7355;
+            border-radius: 10px;
             display: block;
-            background: #87ceeb;
+            background: #c8e6c9;
+            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #ui {
-            margin-top: 15px;
-            padding: 15px;
-            background: #333;
-            border-radius: 5px;
-            min-height: 100px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
         }
 
-        #recipe {
-            background: #444;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        #inventory {
-            background: #444;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .item {
-            display: inline-block;
-            margin: 5px;
-            padding: 5px 10px;
-            background: #666;
-            border-radius: 3px;
-            font-size: 12px;
-        }
-
-        .item.complete {
-            background: #5a9;
-            color: #fff;
+        .panel {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         h3 {
-            color: #ffd700;
-            margin-bottom: 8px;
+            color: #e67e22;
+            margin-bottom: 12px;
+            font-size: 20px;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 8px;
         }
 
-        #controls {
-            margin-top: 10px;
-            text-align: center;
-            font-size: 12px;
-            color: #999;
+        .dish-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .origin {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .ingredient {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px 16px;
+            background: #ecf0f1;
+            border-radius: 20px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7;
+        }
+
+        .ingredient.collected {
+            background: #2ecc71;
+            color: white;
+            border-color: #27ae60;
         }
 
         #message {
+            grid-column: 1 / -1;
             text-align: center;
-            padding: 10px;
-            background: #555;
-            border-radius: 5px;
+            padding: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        #controls {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        .fact {
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #f39c12;
             margin-top: 10px;
-            min-height: 40px;
+            font-style: italic;
+        }
+
+        /* Cooking Animation */
+        #cookingOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cookingOverlay.active {
+            display: flex;
+        }
+
+        .cooking-panel {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 500px;
+        }
+
+        .pan {
+            width: 300px;
+            height: 200px;
+            background: #34495e;
+            border-radius: 50% 50% 45% 45%;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-30px) rotate(10deg); }
+            50% { transform: translateY(-50px) rotate(-10deg); }
+            75% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .ingredient-particle {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+
+        .btn {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
     <div id="gameContainer">
-        <canvas id="gameCanvas" width="640" height="480"></canvas>
+        <canvas id="gameCanvas" width="1200" height="600"></canvas>
         <div id="ui">
-            <div id="recipe">
-                <h3>Today's Recipe</h3>
-                <div id="recipeContent"></div>
+            <div class="panel">
+                <h3>📅 Day <span id="dayNumber">1</span> Recipe</h3>
+                <div class="dish-name" id="dishName">Margherita Pizza</div>
+                <div class="origin" id="dishOrigin">🇮🇹 Italy</div>
+                <div id="ingredients"></div>
+                <div class="fact" id="fact"></div>
             </div>
-            <div id="inventory">
-                <h3>Inventory</h3>
-                <div id="inventoryContent">Empty</div>
+            <div class="panel">
+                <h3>🎒 Your Basket</h3>
+                <div id="inventory">Empty</div>
             </div>
-            <div id="message"></div>
+            <div id="message">Welcome! Check your recipe and head to the store!</div>
         </div>
         <div id="controls">
-            Arrow Keys or WASD to move | SPACE to interact
+            WASD or Arrow Keys to move | SPACE or E to interact
+        </div>
+    </div>
+
+    <!-- Cooking Animation Overlay -->
+    <div id="cookingOverlay">
+        <div class="cooking-panel">
+            <h2 style="color: #e67e22;">🍳 Cooking...</h2>
+            <div class="pan" id="pan"></div>
+            <p id="cookingStatus">Sizzle sizzle...</p>
         </div>
     </div>
 
     <script>
-        // Game configuration
         const canvas = document.getElementById('gameCanvas');
         const ctx = canvas.getContext('2d');
-        const TILE_SIZE = 32;
-        const SCALE = 2;
 
-        // Game state
-        const game = {
-            state: 'HOME', // HOME, WALKING_TO_STORE, STORE, WALKING_HOME, COOKING, COMPLETE
-            player: {
-                x: 3,
-                y: 3,
-                sprite: 0,
-                animFrame: 0,
-                facing: 'down'
-            },
-            recipe: null,
-            inventory: [],
-            shoppingList: [],
-            day: 1,
-            keys: {},
-            lastMove: 0,
-            moveDelay: 150,
-            animSpeed: 200,
-            lastAnim: 0
-        };
+        // Game configuration
+        const TILE_SIZE = 60;
+        const PLAYER_SIZE = 50;
+        const PLAYER_SPEED = 3;
 
         // Recipe database
         const recipes = [
-            {
-                name: "Spaghetti Bolognese",
-                ingredients: ["pasta", "tomatoes", "beef", "onion", "garlic"]
-            },
-            {
-                name: "Vegetable Stir Fry",
-                ingredients: ["broccoli", "carrots", "soy sauce", "rice", "ginger"]
-            },
-            {
-                name: "Chicken Curry",
-                ingredients: ["chicken", "curry powder", "coconut milk", "rice", "onion"]
-            },
-            {
-                name: "Mushroom Risotto",
-                ingredients: ["rice", "mushrooms", "butter", "cheese", "wine"]
-            },
-            {
-                name: "Fish Tacos",
-                ingredients: ["fish", "tortillas", "cabbage", "lime", "cilantro"]
-            },
-            {
-                name: "Vegetable Soup",
-                ingredients: ["carrots", "celery", "potatoes", "broth", "herbs"]
-            }
+            {"day": 1, "dish": "Margherita Pizza", "origin": "🇮🇹 Italy", "ingredients": ["Dough", "Tomato", "Mozzarella", "Basil"], "fact": "The colors represent the Italian flag!"},
+            {"day": 2, "dish": "Ramen", "origin": "🇯🇵 Japan", "ingredients": ["Noodles", "Broth", "Egg", "Green Onion"], "fact": "There are over 22 different styles of ramen across Japan."},
+            {"day": 3, "dish": "Chilaquiles", "origin": "🇲🇽 Mexico", "ingredients": ["Tortillas", "Salsa", "Cheese", "Fried Egg"], "fact": "Traditionally a way to use up leftover tortillas from the day before."},
+            {"day": 4, "dish": "Misir Wot", "origin": "🇪🇹 Ethiopia", "ingredients": ["Lentils", "Berbere Spice", "Onion", "Garlic"], "fact": "One of the most popular vegan dishes in Ethiopian cuisine."},
+            {"day": 5, "dish": "Pho", "origin": "🇻🇳 Vietnam", "ingredients": ["Rice Noodles", "Beef", "Star Anise", "Bean Sprouts"], "fact": "A breakfast staple in many parts of Vietnam."},
+            {"day": 6, "dish": "Moussaka", "origin": "🇬🇷 Greece", "ingredients": ["Eggplant", "Minced Meat", "Béchamel Sauce", "Potato"], "fact": "The modern version was created by a French-trained Greek chef in the 1920s."},
+            {"day": 7, "dish": "Feijoada", "origin": "🇧🇷 Brazil", "ingredients": ["Black Beans", "Pork", "Beef", "Orange Slice"], "fact": "It is widely considered the national dish of Brazil."}
         ];
 
-        // Store items with positions
-        const storeItems = [
-            { name: "pasta", x: 2, y: 2 },
-            { name: "tomatoes", x: 4, y: 2 },
-            { name: "beef", x: 6, y: 2 },
-            { name: "onion", x: 8, y: 2 },
-            { name: "garlic", x: 10, y: 2 },
-            { name: "broccoli", x: 2, y: 4 },
-            { name: "carrots", x: 4, y: 4 },
-            { name: "soy sauce", x: 6, y: 4 },
-            { name: "rice", x: 8, y: 4 },
-            { name: "ginger", x: 10, y: 4 },
-            { name: "chicken", x: 2, y: 6 },
-            { name: "curry powder", x: 4, y: 6 },
-            { name: "coconut milk", x: 6, y: 6 },
-            { name: "mushrooms", x: 8, y: 6 },
-            { name: "butter", x: 10, y: 6 },
-            { name: "cheese", x: 2, y: 8 },
-            { name: "wine", x: 4, y: 8 },
-            { name: "fish", x: 6, y: 8 },
-            { name: "tortillas", x: 8, y: 8 },
-            { name: "cabbage", x: 10, y: 8 },
-            { name: "lime", x: 2, y: 10 },
-            { name: "cilantro", x: 4, y: 10 },
-            { name: "celery", x: 6, y: 10 },
-            { name: "potatoes", x: 8, y: 10 },
-            { name: "broth", x: 10, y: 10 },
-            { name: "herbs", x: 12, y: 10 }
-        ];
+        // Game state
+        const game = {
+            state: 'EXPLORING', // EXPLORING, SHOPPING, COOKING, COMPLETE
+            day: parseInt(localStorage.getItem('cozyKitchenDay') || '1'),
+            player: {
+                x: 150,
+                y: 300,
+                vx: 0,
+                vy: 0
+            },
+            recipe: null,
+            inventory: [],
+            keys: {},
+            storeItems: [],
+            locations: {
+                house: { x: 50, y: 200, width: 200, height: 250 },
+                stove: { x: 80, y: 280, width: 60, height: 60 },
+                store: { x: 950, y: 150, width: 220, height: 350 },
+                pond: { x: 400, y: 100, width: 150, height: 100 },
+                garden: { x: 300, y: 350, width: 120, height: 120 }
+            }
+        };
 
         // Initialize game
         function init() {
-            selectDailyRecipe();
+            loadDay();
+            setupStoreItems();
             updateUI();
-            setMessage("Walk to the grocery store to get ingredients!");
 
             // Keyboard events
             document.addEventListener('keydown', (e) => {
                 game.keys[e.key.toLowerCase()] = true;
-                if (e.key === ' ') {
+                if (e.key === ' ' || e.key.toLowerCase() === 'e') {
+                    e.preventDefault();
                     handleInteraction();
                 }
             });
@@ -219,10 +282,20 @@
             gameLoop();
         }
 
-        function selectDailyRecipe() {
-            game.recipe = recipes[Math.floor(Math.random() * recipes.length)];
-            game.shoppingList = [...game.recipe.ingredients];
+        function loadDay() {
+            const dayIndex = (game.day - 1) % 7;
+            game.recipe = recipes[dayIndex];
             game.inventory = [];
+        }
+
+        function setupStoreItems() {
+            game.storeItems = game.recipe.ingredients.map((ingredient, i) => ({
+                name: ingredient,
+                x: 980 + (i % 2) * 90,
+                y: 200 + Math.floor(i / 2) * 80,
+                width: 70,
+                height: 60
+            }));
         }
 
         function setMessage(msg) {
@@ -230,375 +303,156 @@
         }
 
         function updateUI() {
-            // Update recipe
-            const recipeEl = document.getElementById('recipeContent');
-            recipeEl.innerHTML = `<strong>${game.recipe.name}</strong><br>`;
-            game.recipe.ingredients.forEach(item => {
-                const collected = game.inventory.includes(item);
-                recipeEl.innerHTML += `<span class="item ${collected ? 'complete' : ''}">${item}</span>`;
-            });
+            document.getElementById('dayNumber').textContent = game.day;
+            document.getElementById('dishName').textContent = game.recipe.dish;
+            document.getElementById('dishOrigin').textContent = game.recipe.origin;
+            document.getElementById('fact').textContent = `💡 ${game.recipe.fact}`;
 
-            // Update inventory
-            const invEl = document.getElementById('inventoryContent');
+            // Ingredients
+            const ingredientsEl = document.getElementById('ingredients');
+            ingredientsEl.innerHTML = game.recipe.ingredients.map(item => {
+                const collected = game.inventory.includes(item);
+                return `<span class="ingredient ${collected ? 'collected' : ''}">${item}</span>`;
+            }).join('');
+
+            // Inventory
+            const invEl = document.getElementById('inventory');
             if (game.inventory.length === 0) {
                 invEl.textContent = 'Empty';
             } else {
                 invEl.innerHTML = game.inventory.map(item =>
-                    `<span class="item complete">${item}</span>`
+                    `<span class="ingredient collected">${item}</span>`
                 ).join('');
             }
         }
 
         function handleMovement() {
-            const now = Date.now();
-            if (now - game.lastMove < game.moveDelay) return;
+            // Reset velocity
+            game.player.vx = 0;
+            game.player.vy = 0;
 
-            let newX = game.player.x;
-            let newY = game.player.y;
-            let moved = false;
+            // Check keys
+            if (game.keys['arrowup'] || game.keys['w']) game.player.vy = -PLAYER_SPEED;
+            if (game.keys['arrowdown'] || game.keys['s']) game.player.vy = PLAYER_SPEED;
+            if (game.keys['arrowleft'] || game.keys['a']) game.player.vx = -PLAYER_SPEED;
+            if (game.keys['arrowright'] || game.keys['d']) game.player.vx = PLAYER_SPEED;
 
-            if (game.keys['arrowup'] || game.keys['w']) {
-                newY--;
-                game.player.facing = 'up';
-                moved = true;
-            } else if (game.keys['arrowdown'] || game.keys['s']) {
-                newY++;
-                game.player.facing = 'down';
-                moved = true;
-            } else if (game.keys['arrowleft'] || game.keys['a']) {
-                newX--;
-                game.player.facing = 'left';
-                moved = true;
-            } else if (game.keys['arrowright'] || game.keys['d']) {
-                newX++;
-                game.player.facing = 'right';
-                moved = true;
-            }
+            // Apply movement with collision
+            const newX = game.player.x + game.player.vx;
+            const newY = game.player.y + game.player.vy;
 
-            if (moved) {
-                // Check bounds and collisions
-                if (isValidMove(newX, newY)) {
-                    game.player.x = newX;
-                    game.player.y = newY;
-                    game.lastMove = now;
-                    checkGameStateTransitions();
-                }
+            if (isValidPosition(newX, newY)) {
+                game.player.x = newX;
+                game.player.y = newY;
             }
         }
 
-        function isValidMove(x, y) {
-            if (game.state === 'HOME') {
-                return x >= 0 && x < 8 && y >= 0 && y < 8;
-            } else if (game.state === 'STORE') {
-                return x >= 0 && x < 14 && y >= 0 && y < 12;
-            } else if (game.state === 'WALKING_TO_STORE' || game.state === 'WALKING_HOME') {
-                return x >= 0 && x < 20 && y >= 0 && y < 15;
+        function isValidPosition(x, y) {
+            // Keep in bounds
+            if (x < 20 || x > canvas.width - 20 || y < 20 || y > canvas.height - 20) {
+                return false;
             }
+
+            // Check house collision (can't walk through walls except door)
+            const house = game.locations.house;
+            if (x > house.x && x < house.x + house.width &&
+                y > house.y && y < house.y + house.height) {
+                // Allow if in door area
+                if (!(x > house.x + house.width - 40 && y > house.y + house.height / 2 - 30 && y < house.y + house.height / 2 + 30)) {
+                    return false;
+                }
+            }
+
             return true;
         }
 
-        function checkGameStateTransitions() {
-            if (game.state === 'HOME') {
-                // Check if player reaches door (exit)
-                if (game.player.x === 7 && game.player.y === 4) {
-                    game.state = 'WALKING_TO_STORE';
-                    game.player.x = 1;
-                    game.player.y = 7;
-                    setMessage("Walking to the store... Enjoy the scenery!");
-                }
-            } else if (game.state === 'WALKING_TO_STORE') {
-                // Check if player reaches store entrance
-                if (game.player.x >= 18 && game.player.y >= 6 && game.player.y <= 8) {
-                    game.state = 'STORE';
-                    game.player.x = 1;
-                    game.player.y = 6;
-                    setMessage("You're at the store! Walk to items and press SPACE to collect them.");
-                }
-            } else if (game.state === 'STORE') {
-                // Check if player is done shopping and reaches exit
-                if (game.player.x === 0 && game.inventory.length === game.recipe.ingredients.length) {
-                    game.state = 'WALKING_HOME';
-                    game.player.x = 18;
-                    game.player.y = 7;
-                    setMessage("Got everything! Walking back home...");
-                }
-            } else if (game.state === 'WALKING_HOME') {
-                // Check if player reaches home entrance
-                if (game.player.x <= 1 && game.player.y >= 6 && game.player.y <= 8) {
-                    game.state = 'COOKING';
-                    game.player.x = 4;
-                    game.player.y = 4;
-                    setMessage("Time to cook! Press SPACE at the stove to start cooking.");
-                }
-            }
-        }
-
         function handleInteraction() {
-            if (game.state === 'STORE') {
-                // Check if near any items
-                storeItems.forEach(item => {
-                    const dist = Math.abs(game.player.x - item.x) + Math.abs(game.player.y - item.y);
-                    if (dist <= 1 && game.shoppingList.includes(item.name) && !game.inventory.includes(item.name)) {
-                        game.inventory.push(item.name);
-                        updateUI();
-                        setMessage(`Picked up ${item.name}! (${game.inventory.length}/${game.recipe.ingredients.length})`);
-                    }
-                });
-            } else if (game.state === 'COOKING') {
-                // Check if at stove
-                if (game.player.x === 2 && game.player.y === 2) {
-                    startCooking();
+            // Check if at store items
+            game.storeItems.forEach(item => {
+                const dist = Math.hypot(game.player.x - (item.x + item.width/2), game.player.y - (item.y + item.height/2));
+                if (dist < 80 && !game.inventory.includes(item.name)) {
+                    game.inventory.push(item.name);
+                    updateUI();
+                    setMessage(`✓ Picked up ${item.name}! (${game.inventory.length}/${game.recipe.ingredients.length})`);
                 }
+            });
+
+            // Check if at stove
+            const stove = game.locations.stove;
+            const distToStove = Math.hypot(game.player.x - (stove.x + stove.width/2), game.player.y - (stove.y + stove.height/2));
+            if (distToStove < 80 && game.inventory.length === game.recipe.ingredients.length) {
+                startCooking();
+            } else if (distToStove < 80) {
+                setMessage(`Need all ingredients first! (${game.inventory.length}/${game.recipe.ingredients.length})`);
             }
         }
 
         function startCooking() {
-            game.state = 'COMPLETE';
-            playSizzleSound();
-            setMessage(`🎉 You cooked ${game.recipe.name}! Delicious! Press R to play again.`);
-            document.addEventListener('keydown', function restart(e) {
-                if (e.key.toLowerCase() === 'r') {
-                    game.state = 'HOME';
-                    game.player.x = 3;
-                    game.player.y = 3;
-                    game.day++;
-                    selectDailyRecipe();
-                    updateUI();
-                    setMessage(`Day ${game.day}: Time for a new recipe!`);
-                    document.removeEventListener('keydown', restart);
-                }
+            const overlay = document.getElementById('cookingOverlay');
+            overlay.classList.add('active');
+
+            // Create ingredient particles
+            const pan = document.getElementById('pan');
+            pan.innerHTML = '';
+
+            const colors = ['#e74c3c', '#f39c12', '#27ae60', '#3498db', '#9b59b6'];
+            game.recipe.ingredients.forEach((_, i) => {
+                const particle = document.createElement('div');
+                particle.className = 'ingredient-particle';
+                particle.style.backgroundColor = colors[i % colors.length];
+                particle.style.left = `${30 + i * 60}px`;
+                particle.style.top = `80px`;
+                particle.style.animationDelay = `${i * 0.2}s`;
+                pan.appendChild(particle);
             });
+
+            // Play sizzle sound
+            playSizzleSound();
+
+            // Show cooking status
+            setTimeout(() => {
+                document.getElementById('cookingStatus').textContent = '✨ Almost ready...';
+            }, 2000);
+
+            setTimeout(() => {
+                finishCooking();
+            }, 4000);
         }
 
-        // Drawing functions
-        function drawPixelRect(x, y, w, h, color) {
-            ctx.fillStyle = color;
-            ctx.fillRect(x, y, w, h);
+        function finishCooking() {
+            const overlay = document.getElementById('cookingOverlay');
+            overlay.classList.remove('active');
+
+            setMessage(`🎉 You cooked ${game.recipe.dish}! Delicious! Tomorrow: new recipe!`);
+
+            // Show sleep button
+            const messageEl = document.getElementById('message');
+            const sleepBtn = document.createElement('button');
+            sleepBtn.className = 'btn';
+            sleepBtn.textContent = '😴 Sleep until tomorrow';
+            sleepBtn.onclick = nextDay;
+            messageEl.appendChild(document.createElement('br'));
+            messageEl.appendChild(sleepBtn);
         }
 
-        function drawPlayer(x, y) {
-            const px = x * TILE_SIZE;
-            const py = y * TILE_SIZE;
+        function nextDay() {
+            game.day++;
+            localStorage.setItem('cozyKitchenDay', game.day);
 
-            // Skin color
-            drawPixelRect(px + 10, py + 8, 12, 12, '#ffdbac');
+            // Reset for new day
+            loadDay();
+            setupStoreItems();
+            updateUI();
 
-            // Hair
-            drawPixelRect(px + 8, py + 6, 16, 4, '#3d2817');
+            // Reset player position
+            game.player.x = 150;
+            game.player.y = 300;
 
-            // Eyes
-            drawPixelRect(px + 12, py + 14, 3, 3, '#000');
-            drawPixelRect(px + 17, py + 14, 3, 3, '#000');
-
-            // Body (shirt)
-            drawPixelRect(px + 8, py + 20, 16, 8, '#4a90e2');
-
-            // Legs
-            drawPixelRect(px + 10, py + 28, 5, 4, '#2c3e50');
-            drawPixelRect(px + 17, py + 28, 5, 4, '#2c3e50');
+            setMessage(`🌅 Day ${game.day}! New recipe: ${game.recipe.dish}`);
         }
 
-        // Grocery item sprites
-        function drawGroceryItem(name, x, y) {
-            const px = x * TILE_SIZE + 6;
-            const py = y * TILE_SIZE + 6;
-
-            switch(name) {
-                case 'pasta':
-                    // Yellow curly noodles
-                    drawPixelRect(px + 4, py + 6, 12, 2, '#f4d03f');
-                    drawPixelRect(px + 6, py + 8, 8, 2, '#f4d03f');
-                    drawPixelRect(px + 4, py + 10, 12, 2, '#f4d03f');
-                    drawPixelRect(px + 6, py + 12, 8, 2, '#f4d03f');
-                    break;
-
-                case 'tomatoes':
-                    // Red tomatoes
-                    drawPixelRect(px + 6, py + 8, 8, 8, '#e74c3c');
-                    drawPixelRect(px + 7, py + 6, 6, 2, '#27ae60');
-                    drawPixelRect(px + 9, py + 5, 2, 2, '#27ae60');
-                    break;
-
-                case 'beef':
-                    // Red meat
-                    drawPixelRect(px + 5, py + 7, 10, 8, '#c0392b');
-                    drawPixelRect(px + 7, py + 9, 2, 2, '#fff');
-                    drawPixelRect(px + 11, py + 11, 2, 2, '#fff');
-                    break;
-
-                case 'onion':
-                    // Purple onion
-                    drawPixelRect(px + 7, py + 7, 6, 8, '#8e44ad');
-                    drawPixelRect(px + 8, py + 6, 4, 2, '#d4ac0d');
-                    drawPixelRect(px + 9, py + 5, 2, 2, '#27ae60');
-                    break;
-
-                case 'garlic':
-                    // White garlic bulb
-                    drawPixelRect(px + 7, py + 8, 6, 7, '#ecf0f1');
-                    drawPixelRect(px + 8, py + 7, 4, 2, '#bdc3c7');
-                    drawPixelRect(px + 9, py + 15, 2, 2, '#ecf0f1');
-                    break;
-
-                case 'broccoli':
-                    // Green broccoli
-                    drawPixelRect(px + 7, py + 5, 6, 6, '#27ae60');
-                    drawPixelRect(px + 5, py + 7, 10, 4, '#229954');
-                    drawPixelRect(px + 9, py + 11, 2, 5, '#d4ac0d');
-                    break;
-
-                case 'carrots':
-                    // Orange carrots
-                    drawPixelRect(px + 8, py + 7, 4, 2, '#27ae60');
-                    drawPixelRect(px + 9, py + 9, 2, 8, '#e67e22');
-                    drawPixelRect(px + 8, py + 11, 4, 4, '#e67e22');
-                    drawPixelRect(px + 7, py + 13, 6, 2, '#e67e22');
-                    break;
-
-                case 'soy sauce':
-                    // Dark bottle
-                    drawPixelRect(px + 8, py + 6, 4, 2, '#7f8c8d');
-                    drawPixelRect(px + 7, py + 8, 6, 8, '#34495e');
-                    drawPixelRect(px + 8, py + 10, 4, 4, '#2c3e50');
-                    break;
-
-                case 'rice':
-                    // White rice bag
-                    drawPixelRect(px + 6, py + 6, 8, 10, '#ecf0f1');
-                    drawPixelRect(px + 7, py + 8, 6, 6, '#fff');
-                    drawPixelRect(px + 8, py + 7, 4, 2, '#e74c3c');
-                    break;
-
-                case 'ginger':
-                    // Tan ginger root
-                    drawPixelRect(px + 6, py + 9, 8, 4, '#d4ac0d');
-                    drawPixelRect(px + 8, py + 8, 3, 2, '#d4ac0d');
-                    drawPixelRect(px + 5, py + 11, 3, 2, '#d4ac0d');
-                    break;
-
-                case 'chicken':
-                    // Pink chicken
-                    drawPixelRect(px + 6, py + 8, 8, 6, '#f5b7b1');
-                    drawPixelRect(px + 7, py + 9, 6, 4, '#fadbd8');
-                    break;
-
-                case 'curry powder':
-                    // Yellow jar
-                    drawPixelRect(px + 7, py + 6, 6, 2, '#95a5a6');
-                    drawPixelRect(px + 7, py + 8, 6, 7, '#f4d03f');
-                    drawPixelRect(px + 8, py + 9, 4, 4, '#f39c12');
-                    break;
-
-                case 'coconut milk':
-                    // White can
-                    drawPixelRect(px + 7, py + 7, 6, 9, '#ecf0f1');
-                    drawPixelRect(px + 8, py + 9, 4, 2, '#3498db');
-                    drawPixelRect(px + 8, py + 12, 4, 2, '#fff');
-                    break;
-
-                case 'mushrooms':
-                    // Brown mushrooms
-                    drawPixelRect(px + 6, py + 7, 5, 4, '#a0522d');
-                    drawPixelRect(px + 7, py + 11, 3, 4, '#d2b48c');
-                    drawPixelRect(px + 11, py + 9, 4, 3, '#8b4513');
-                    drawPixelRect(px + 12, py + 12, 2, 3, '#d2b48c');
-                    break;
-
-                case 'butter':
-                    // Yellow butter stick
-                    drawPixelRect(px + 6, py + 9, 8, 5, '#f4d03f');
-                    drawPixelRect(px + 7, py + 10, 6, 3, '#f9e79f');
-                    break;
-
-                case 'cheese':
-                    // Yellow cheese wedge
-                    drawPixelRect(px + 6, py + 8, 8, 7, '#f4d03f');
-                    drawPixelRect(px + 7, py + 9, 6, 5, '#f9e79f');
-                    drawPixelRect(px + 9, py + 11, 2, 2, '#f39c12');
-                    drawPixelRect(px + 12, py + 13, 2, 2, '#f39c12');
-                    break;
-
-                case 'wine':
-                    // Purple wine bottle
-                    drawPixelRect(px + 8, py + 5, 4, 3, '#7f8c8d');
-                    drawPixelRect(px + 7, py + 8, 6, 8, '#6c3483');
-                    drawPixelRect(px + 8, py + 10, 4, 4, '#5b2c6f');
-                    break;
-
-                case 'fish':
-                    // Blue/silver fish
-                    drawPixelRect(px + 5, py + 9, 10, 5, '#5dade2');
-                    drawPixelRect(px + 6, py + 10, 8, 3, '#aed6f1');
-                    drawPixelRect(px + 13, py + 11, 2, 1, '#5dade2');
-                    drawPixelRect(px + 7, py + 10, 2, 2, '#34495e');
-                    break;
-
-                case 'tortillas':
-                    // Tan tortillas
-                    drawPixelRect(px + 6, py + 8, 8, 8, '#f4d03f');
-                    drawPixelRect(px + 7, py + 9, 6, 6, '#f9e79f');
-                    drawPixelRect(px + 8, py + 10, 4, 4, '#f4d03f');
-                    break;
-
-                case 'cabbage':
-                    // Green cabbage
-                    drawPixelRect(px + 6, py + 7, 8, 8, '#27ae60');
-                    drawPixelRect(px + 7, py + 8, 6, 6, '#52be80');
-                    drawPixelRect(px + 8, py + 9, 4, 4, '#27ae60');
-                    break;
-
-                case 'lime':
-                    // Green lime
-                    drawPixelRect(px + 7, py + 8, 6, 6, '#52be80');
-                    drawPixelRect(px + 8, py + 9, 4, 4, '#a9dfbf');
-                    break;
-
-                case 'cilantro':
-                    // Green herbs
-                    drawPixelRect(px + 7, py + 6, 2, 4, '#27ae60');
-                    drawPixelRect(px + 5, py + 5, 4, 3, '#52be80');
-                    drawPixelRect(px + 11, py + 8, 2, 4, '#27ae60');
-                    drawPixelRect(px + 11, py + 7, 4, 3, '#52be80');
-                    drawPixelRect(px + 9, py + 11, 2, 3, '#27ae60');
-                    drawPixelRect(px + 8, py + 10, 4, 2, '#52be80');
-                    break;
-
-                case 'celery':
-                    // Green celery stalks
-                    drawPixelRect(px + 7, py + 7, 2, 9, '#52be80');
-                    drawPixelRect(px + 10, py + 8, 2, 8, '#52be80');
-                    drawPixelRect(px + 6, py + 6, 3, 3, '#27ae60');
-                    drawPixelRect(px + 10, py + 7, 3, 3, '#27ae60');
-                    break;
-
-                case 'potatoes':
-                    // Brown potatoes
-                    drawPixelRect(px + 6, py + 8, 6, 5, '#a0522d');
-                    drawPixelRect(px + 10, py + 11, 5, 4, '#8b4513');
-                    break;
-
-                case 'broth':
-                    // Broth box/can
-                    drawPixelRect(px + 7, py + 7, 6, 9, '#e67e22');
-                    drawPixelRect(px + 8, py + 9, 4, 2, '#f39c12');
-                    drawPixelRect(px + 8, py + 12, 4, 2, '#d35400');
-                    break;
-
-                case 'herbs':
-                    // Mixed herbs
-                    drawPixelRect(px + 6, py + 7, 3, 5, '#27ae60');
-                    drawPixelRect(px + 5, py + 6, 4, 3, '#52be80');
-                    drawPixelRect(px + 11, py + 9, 3, 5, '#27ae60');
-                    drawPixelRect(px + 11, py + 8, 4, 3, '#52be80');
-                    break;
-            }
-        }
-
-        // Sound effect for cooking
         function playSizzleSound() {
             const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-
-            // Create white noise for sizzle effect
             const bufferSize = audioContext.sampleRate * 2;
             const noiseBuffer = audioContext.createBuffer(1, bufferSize, audioContext.sampleRate);
             const output = noiseBuffer.getChannelData(0);
@@ -610,161 +464,120 @@
             const whiteNoise = audioContext.createBufferSource();
             whiteNoise.buffer = noiseBuffer;
 
-            // Filter to make it sound more like sizzling
             const bandpass = audioContext.createBiquadFilter();
             bandpass.type = 'bandpass';
             bandpass.frequency.value = 3000;
             bandpass.Q.value = 1;
 
-            // Add some low frequency for depth
             const lowpass = audioContext.createBiquadFilter();
             lowpass.type = 'lowpass';
             lowpass.frequency.value = 5000;
 
-            // Volume control with fade out
             const gainNode = audioContext.createGain();
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.setValueAtTime(0.2, audioContext.currentTime);
             gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 1.8);
 
-            // Connect the nodes
             whiteNoise.connect(bandpass);
             bandpass.connect(lowpass);
             lowpass.connect(gainNode);
             gainNode.connect(audioContext.destination);
 
-            // Play the sound
             whiteNoise.start(audioContext.currentTime);
             whiteNoise.stop(audioContext.currentTime + 2);
         }
 
-        function drawHome() {
-            // Floor
-            for (let y = 0; y < 8; y++) {
-                for (let x = 0; x < 8; x++) {
-                    const color = (x + y) % 2 === 0 ? '#d4a574' : '#c19a6b';
-                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
-                }
+        // Drawing functions
+        function drawRect(x, y, w, h, color, radius = 0) {
+            ctx.fillStyle = color;
+            if (radius) {
+                ctx.beginPath();
+                ctx.roundRect(x, y, w, h, radius);
+                ctx.fill();
+            } else {
+                ctx.fillRect(x, y, w, h);
             }
-
-            // Walls
-            drawPixelRect(0, 0, canvas.width, 4, '#8b6f47');
-            drawPixelRect(0, 0, 4, canvas.height, '#8b6f47');
-
-            // Furniture - bed
-            drawPixelRect(1 * TILE_SIZE, 1 * TILE_SIZE, TILE_SIZE * 2, TILE_SIZE, '#c8553d');
-
-            // Stove
-            drawPixelRect(2 * TILE_SIZE, 2 * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#666');
-            drawPixelRect(2 * TILE_SIZE + 8, 2 * TILE_SIZE + 8, 6, 6, '#333');
-            drawPixelRect(2 * TILE_SIZE + 18, 2 * TILE_SIZE + 8, 6, 6, '#333');
-
-            // Table
-            drawPixelRect(5 * TILE_SIZE, 2 * TILE_SIZE, TILE_SIZE * 2, TILE_SIZE, '#8b4513');
-
-            // Door
-            drawPixelRect(7 * TILE_SIZE, 4 * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#654321');
-            drawPixelRect(7 * TILE_SIZE + 20, 4 * TILE_SIZE + 12, 4, 8, '#daa520');
         }
 
-        function drawStore() {
-            // Floor
-            for (let y = 0; y < 12; y++) {
-                for (let x = 0; x < 14; x++) {
-                    const color = (x + y) % 2 === 0 ? '#e8e8e8' : '#f5f5f5';
-                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
-                }
-            }
-
-            // Shelves and items
-            storeItems.forEach(item => {
-                const color = game.inventory.includes(item.name) ? '#999' : '#8b4513';
-                drawPixelRect(item.x * TILE_SIZE, item.y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
-
-                if (!game.inventory.includes(item.name)) {
-                    // Draw highlight background for needed items
-                    if (game.shoppingList.includes(item.name)) {
-                        drawPixelRect(item.x * TILE_SIZE + 2, item.y * TILE_SIZE + 2, 28, 28, '#5a9');
-                    }
-                    // Draw the actual grocery item sprite
-                    drawGroceryItem(item.name, item.x, item.y);
-                }
-            });
-
-            // Exit door
-            drawPixelRect(0, 5 * TILE_SIZE, 4, TILE_SIZE * 2, '#654321');
+        function drawCircle(x, y, r, color) {
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fill();
         }
 
-        function drawPath() {
-            // Sky
-            ctx.fillStyle = '#87ceeb';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            // Grass
-            for (let y = 0; y < 15; y++) {
-                for (let x = 0; x < 20; x++) {
-                    if (y < 5 || y > 10) {
-                        drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, '#7cb342');
-                    }
-                }
-            }
-
-            // Path
-            for (let y = 5; y <= 10; y++) {
-                for (let x = 0; x < 20; x++) {
-                    const color = (x + y) % 2 === 0 ? '#b5b5b5' : '#a8a8a8';
-                    drawPixelRect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE, color);
-                }
-            }
-
-            // Trees
-            const trees = [[3, 2], [7, 1], [11, 3], [15, 2], [4, 12], [9, 13], [14, 11]];
-            trees.forEach(([tx, ty]) => {
-                // Trunk
-                drawPixelRect(tx * TILE_SIZE + 12, ty * TILE_SIZE + 16, 8, 12, '#6b4423');
-                // Leaves
-                drawPixelRect(tx * TILE_SIZE + 4, ty * TILE_SIZE + 4, 24, 16, '#2d5016');
-            });
-
-            // House at start
-            if (game.state === 'WALKING_TO_STORE') {
-                drawPixelRect(0, 5 * TILE_SIZE, 2 * TILE_SIZE, 3 * TILE_SIZE, '#8b6f47');
-                drawPixelRect(2, 6 * TILE_SIZE, 2 * TILE_SIZE - 4, TILE_SIZE, '#654321');
-            }
-
-            // Store at end
-            if (game.state === 'WALKING_TO_STORE') {
-                drawPixelRect(18 * TILE_SIZE, 4 * TILE_SIZE, 2 * TILE_SIZE, 5 * TILE_SIZE, '#c0c0c0');
-                drawPixelRect(18 * TILE_SIZE + 4, 6 * TILE_SIZE, 2 * TILE_SIZE - 8, TILE_SIZE, '#654321');
-            }
-
-            // House at end
-            if (game.state === 'WALKING_HOME') {
-                drawPixelRect(0, 5 * TILE_SIZE, 2 * TILE_SIZE, 3 * TILE_SIZE, '#8b6f47');
-                drawPixelRect(2, 6 * TILE_SIZE, 2 * TILE_SIZE - 4, TILE_SIZE, '#654321');
-            }
-
-            // Store at start
-            if (game.state === 'WALKING_HOME') {
-                drawPixelRect(18 * TILE_SIZE, 4 * TILE_SIZE, 2 * TILE_SIZE, 5 * TILE_SIZE, '#c0c0c0');
-                drawPixelRect(18 * TILE_SIZE + 4, 6 * TILE_SIZE, 2 * TILE_SIZE - 8, TILE_SIZE, '#654321');
-            }
+        function drawText(text, x, y, size = 16, color = '#2c3e50', align = 'center') {
+            ctx.fillStyle = color;
+            ctx.font = `${size}px 'Segoe UI', sans-serif`;
+            ctx.textAlign = align;
+            ctx.fillText(text, x, y);
         }
 
         function draw() {
             // Clear canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // Draw based on state
-            if (game.state === 'HOME' || game.state === 'COOKING' || game.state === 'COMPLETE') {
-                drawHome();
-            } else if (game.state === 'STORE') {
-                drawStore();
-            } else if (game.state === 'WALKING_TO_STORE' || game.state === 'WALKING_HOME') {
-                drawPath();
+            // Draw grass background
+            ctx.fillStyle = '#c8e6c9';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw path
+            drawRect(0, 250, canvas.width, 150, '#d4c5a9');
+
+            // Path details (stones)
+            ctx.fillStyle = '#bca68a';
+            for (let i = 0; i < 20; i++) {
+                drawCircle(i * 60 + 30, 280 + (i % 3) * 40, 8, '#bca68a');
             }
 
+            // Draw house
+            const house = game.locations.house;
+            drawRect(house.x, house.y, house.width, house.height, '#f4e4d7', 10);
+            drawRect(house.x + 10, house.y + 10, house.width - 20, 60, '#c19a6b'); // Roof
+
+            // Windows
+            drawRect(house.x + 30, house.y + 90, 50, 50, '#87ceeb');
+            drawRect(house.x + 120, house.y + 90, 50, 50, '#87ceeb');
+
+            // Door
+            drawRect(house.x + house.width - 35, house.y + house.height / 2 - 30, 30, 60, '#8b4513', 5);
+            drawCircle(house.x + house.width - 15, house.y + house.height / 2, 3, '#f39c12');
+
+            // Stove inside (visible through window)
+            const stove = game.locations.stove;
+            drawRect(stove.x, stove.y, stove.width, stove.height, '#5a6268', 5);
+            drawCircle(stove.x + 15, stove.y + 15, 8, '#2c3e50');
+            drawCircle(stove.x + 45, stove.y + 15, 8, '#2c3e50');
+
+            // Draw store
+            const store = game.locations.store;
+            drawRect(store.x, store.y, store.width, store.height, '#fff8e1', 10);
+            drawRect(store.x + 10, store.y + 10, store.width - 20, 40, '#ff6f61'); // Awning
+            drawText('🛒 STORE', store.x + store.width / 2, store.y + 35, 20, 'white');
+
+            // Store items
+            game.storeItems.forEach(item => {
+                if (!game.inventory.includes(item.name)) {
+                    const isNeeded = game.recipe.ingredients.includes(item.name);
+                    drawRect(item.x, item.y, item.width, item.height, isNeeded ? '#81c784' : '#e0e0e0', 8);
+                    drawText(item.name, item.x + item.width / 2, item.y + item.height / 2 + 5, 12, '#2c3e50');
+                }
+            });
+
+            // Draw pond (placeholder)
+            const pond = game.locations.pond;
+            drawRect(pond.x, pond.y, pond.width, pond.height, '#64b5f6', 50);
+            drawText('🎣', pond.x + pond.width / 2, pond.y + pond.height / 2 + 10, 30);
+
+            // Draw garden (placeholder)
+            const garden = game.locations.garden;
+            drawRect(garden.x, garden.y, garden.width, garden.height, '#8d6e63', 10);
+            drawText('🌱', garden.x + garden.width / 2, garden.y + garden.height / 2 + 10, 30);
+
             // Draw player
-            drawPlayer(game.player.x, game.player.y);
+            drawCircle(game.player.x, game.player.y, PLAYER_SIZE / 2, '#ffcc80');
+            drawCircle(game.player.x - 8, game.player.y - 5, 4, '#3e2723'); // Eye
+            drawCircle(game.player.x + 8, game.player.y - 5, 4, '#3e2723'); // Eye
+            drawCircle(game.player.x, game.player.y + 5, 8, '#ff7043'); // Smile
         }
 
         function gameLoop() {
