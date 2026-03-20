@@ -25,7 +25,7 @@ This project covers the formal risk acceptance process for a known vulnerability
 | [templates/risk-acceptance-form.md](./templates/risk-acceptance-form.md) | Full risk acceptance form with 7 sections |
 | [templates/executive-summary-template.md](./templates/executive-summary-template.md) | One-page plain-language version for non-technical leadership |
 | [examples/annotated-reasoning-example.md](./examples/annotated-reasoning-example.md) | Complete risk acceptance form for this scenario with reasoning annotations |
-| [deliverables/](./deliverables/) | Signed risk acceptance outputs (populated by the practitioner) |
+| [deliverables/](./deliverables/) | Signed risk acceptance form (RA-WJSS-2024-001) and executive summary |
 
 ## What the Auditor Will Challenge
 

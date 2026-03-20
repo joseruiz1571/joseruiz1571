@@ -47,6 +47,31 @@ The mental model shift is this: in enterprise GRC, security optimizes for protec
 
 ---
 
+## Intended Audience
+
+This portfolio is relevant across two distinct hiring contexts within Texas critical infrastructure:
+
+### ERCOT and Texas Transmission Utilities
+
+ERCOT operates the Texas grid and is itself a registered NERC entity subject to CIP compliance. Transmission operators like CPS Energy, Oncor, AEP Texas, and Lone Star (the fictional anchor here) are registered Responsible Entities under NERC. For roles at ERCOT or at transmission-owning utilities, the core competencies in this portfolio are directly applicable:
+
+- **Projects 01–04** reflect the compliance analyst and OT security practitioner work that feeds a CIP compliance program: asset classification, patch management documentation, supply chain vendor assessment
+- **Project 05** reflects the governance maturity a senior analyst or program lead at a grid operator needs to build — not just following a checklist, but designing the policy that others follow
+- The scenario is written specifically around a Texas transmission utility operating under ERCOT reliability standards
+
+### City of Austin — Austin Energy, Austin Water, and Operational Technology Programs
+
+The City of Austin operates critical infrastructure across multiple sectors: Austin Energy (a municipally-owned electric utility with BES-connected assets), Austin Water (a drinking water system that uses SCADA-controlled pumping and treatment infrastructure), and operational technology across traffic management and Austin-Bergstrom International Airport.
+
+For roles within Austin's OT security or GRC programs:
+- **NERC CIP (Projects 01, 02, 04)**: Austin Energy holds NERC registrations and has CIP compliance obligations for its transmission and generation assets
+- **IEC 62443 (Project 03)**: The zone and conduit methodology applies directly to Austin Water, traffic management systems, and any OT environment — not only BES entities. IEC 62443 is the framework CISA recommends for critical infrastructure sectors beyond the electric grid
+- **IT/OT convergence governance (Project 05)**: The policy and risk analysis work applies to any organization where OT data is flowing toward enterprise IT or cloud analytics platforms — a challenge Austin Water, Austin Energy, and Austin's smart-city programs share equally
+
+The work in this portfolio transfers across sectors because the underlying governance questions — how do you classify assets, accept risk when patching is impossible, evaluate vendors with no security certifications, and govern data flows that bypassed your approval process — are the same regardless of whether the asset is a 345 kV relay or a water treatment SCADA controller.
+
+---
+
 ## Regulatory Landscape
 
 ### NERC CIP

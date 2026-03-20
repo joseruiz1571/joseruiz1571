@@ -22,13 +22,13 @@ This project walks through the classification exercise for Lone Star Transmissio
 | [scenario.md](./scenario.md) | Organization description, asset inventory, classification context |
 | [templates/asset-classification-worksheet.md](./templates/asset-classification-worksheet.md) | Classification table with 4 pre-filled rows and 8 for completion |
 | [examples/annotated-reasoning-example.md](./examples/annotated-reasoning-example.md) | Step-by-step Attachment 1 analysis for three representative assets |
-| [deliverables/](./deliverables/) | Completed classification outputs (populated by the practitioner) |
+| [deliverables/](./deliverables/) | Completed classification worksheet with all 12 assets assessed and signed |
 
 ## What the Auditor Will Challenge
 
 1. **Why was Asset WJSS-004 (substation automation controller) rated Medium instead of High?** Walk me through your Attachment 1 analysis and explain at what criterion you stopped.
 
-2. **You excluded Asset BJSS-007 (network time protocol server) — walk me through the Attachment 1 analysis.** What is the argument for inclusion, and why did you reject it?
+2. **You excluded Asset BJSS-004 (network time protocol server) — walk me through the Attachment 1 analysis.** What is the argument for inclusion, and why did you reject it?
 
 3. **If Waco Junction Substation lost all inter-substation communication, what would the reliability impact be on the transmission system?** Can you demonstrate that your High-impact classifications reflect that analysis?
 
