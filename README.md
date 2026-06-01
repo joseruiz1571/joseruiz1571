@@ -19,20 +19,34 @@ I call the working synthesis the **Governance Card Stack** — Model, System, an
 
 ## Credentials
 
-| Certification | Focus |
-|---------------|-------|
-| Certified AI Governance Professional — BABL AI | AI Governance |
-| ISO 42001:2023 Lead Auditor | AI Management Systems |
-| ISO 27001:2022 Lead Auditor | Information Security Management Systems |
-| CGE-P — Certified GRC Engineer Practitioner | GRC Engineering |
-| AI Security Fundamentals L1 — Mileva | AI Security |
-| CompTIA Security+ | Security Fundamentals |
+| Certification | Issuer |
+|---------------|--------|
+| Certified AI Governance Professional (CAIGP) | BABL AI |
+| ISO 42001 Lead Auditor | Mastermind |
+| ISO 27001 Lead Auditor | Mastermind |
+| ISO 27701 Lead Auditor *(in progress)* | Mastermind |
+| Fellow of Management Systems Auditing *(in progress)* | Mastermind |
+| Certified GRC Engineer - Practitioner (CGE-P) | GRC Engineering Club |
+| CompTIA Security+ | CompTIA |
+| ISC2 Certified in Cybersecurity (CC) | ISC2 |
 
-## Now
+**Selected training** — SANS AIS247 (AI Security Essentials) · SANS SEC366 (CIS IG1) · AI Security Fundamentals L1 (Mileva) · Auditing Generative AI (ISACA) · The GRC Engineering Masterclass
 
-- **Building the Governance Card Stack** — a machine-readable synthesis of Model, System, and Agent Cards, mapped to MITRE ATLAS and NIST AI RMF, exported in OSCAL
-- **Extending mltrack** — model registry discovery and Card-format export in development
-- **Mapping the CRI Financial Services AI RMF** (230 controls, 4 functions) against MITRE ATLAS realized threats — feeding the Card Stack's threat-to-control crosswalk
+## Now / Next / Later
+
+**Now**
+- Building the Governance Card Stack — the OSCAL spine for Model, System, and Agent Cards
+- Extending mltrack — model-registry discovery and Card-format export
+- Facilitating AI Security Fundamentals at Mileva Security Labs
+
+**Next**
+- Completing ISO 27701 → Mastermind's Fellow of Management Systems Auditing
+- Mapping the CRI Financial Services AI RMF (230 controls) to MITRE ATLAS realized threats
+- Shipping mltrack's Card-format export
+
+**Later**
+- The Governance Card Stack as a published, adoptable spec — something pipelines, auditors, and agents can run on
+- Authority records for agent governance — writing the heading the field doesn't have yet
 
 ## Connect
 
