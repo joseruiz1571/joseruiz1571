@@ -4,14 +4,14 @@
 
 AI governance today produces documents — Model Cards, System Cards, risk assessments, control narratives — when it should produce **data**. These artifacts live in PDFs and wiki pages that no pipeline can read, no auditor can query, and no agent can consume. I'm an information professional (MLIS) treating that gap as a cataloging problem: structured schemas, stable identifiers, and crosswalks between threats (MITRE ATLAS) and controls (NIST AI RMF, ISO 42001, SR 11-7), exported in machine-readable formats (OSCAL) so governance becomes something CI/CD gates, GRC platforms, and agents can actually run on.
 
-I call the working synthesis the **Governance Card Stack** — Model, System, and Agent Cards as a unified, machine-readable spine.
+The work is one mechanism in four layers: a **spec layer** (the Governance Card Stack — Model, System, and Agent Cards as machine-readable governance records), an **inventory layer** (mltrack), an **evidence layer** (a signed, retained artifact pipeline), and — currently in build — an **assurance layer**: an agentic tool that assesses AI controls and is only allowed to assert what it actually retrieved.
 
 ## Featured
 
 | Project | What it is |
 |---------|------------|
-| [**governance-card-stack**](https://github.com/joseruiz1571/governance-card-stack) | OSCAL-compatible Agent Card schema (JSON Schema, draft 2020-12) — the *assurance* layer for agentic AI: autonomy levels, MITRE ATLAS threat mappings, signed-evidence references. v0.1 ships with a validated worked example. |
-| [**mltrack**](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance tracking. Maps model metadata to NIST AI RMF, ISO 42001, and SR 11-7 controls. |
+| [**governance-card-stack**](https://github.com/joseruiz1571/governance-card-stack) | OSCAL-compatible Agent Card schema (JSON Schema, draft 2020-12) — the *assurance* layer for agentic AI: autonomy levels, MITRE ATLAS threat mappings, signed-evidence references. v0.1.1 ships with a validated worked example and an OPA/Conftest CI gate that fails closed. |
+| [**mltrack**](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance tracking. Maps model metadata to NIST AI RMF, ISO 42001, and SR 11-7 controls. 615 tests. |
 | [**cgep-capstone**](https://github.com/joseruiz1571/cgep-capstone) | CMMC L2 / NIST 800-171 compliance-as-code pipeline. Terraform + OPA/Rego + OSCAL + cosign-signed evidence vault. CI gate fails closed on non-compliant commits. |
 
 ## Writing
@@ -29,20 +29,21 @@ I call the working synthesis the **Governance Card Stack** — Model, System, an
 | Certified GRC Engineer - Practitioner | GRC Engineering Club |
 | Security+ | CompTIA |
 
-**Selected training** — AI Security Fundamentals Level 1 | Mileva Security Labs · AIS247: AI Security Essentials for Business Leaders | SANS Institute 
+**Selected training** — AI Security Fundamentals Level 1 | Mileva Security Labs · AIS247: AI Security Essentials for Business Leaders | SANS Institute
 
 ## Now / Next / Later
 
 **Now**
-- Shipping the Governance Card Stack — v0.1 Agent Card schema validated; building the Conftest/OPA gate that fails CI when an agent ships without a current Card
+- Building **mlassure** — agentic AI-control assurance: deterministic evidence collectors over AWS, an LLM judgment loop that runs only where judgment is genuinely required, and a citation guard enforcing the core invariant: *the agent may only assert what it actually retrieved*. First demo: one control assessed end-to-end, every claim citing its evidence. OSCAL Assessment Results out.
 - Facilitating AI Security Fundamentals Level 1 at Mileva Security Labs
 
 **Next**
-- Stubbing Model and System Card schemas — making the Stack visibly three-card
-- Mapping the CRI Financial Services AI RMF (230 controls) to MITRE ATLAS realized threats
-- Completing AWS Certified Cloud Practitioner → AI Practitioner → Solutions Architect - Associate
+- One shared `evidence` schema across the Card Stack and mlassure — the stack's layers joined by format, not prose
+- `mltrack card export` / `card validate` — an inventory entry plus an evidence bundle becomes a validated Card
+- Field-testing the autonomy vocabulary ([autonomy-levels](https://github.com/joseruiz1571/governance-card-stack/blob/main/docs/autonomy-levels.md)) against real public agent systems — and revising it in public where it fails
 
 **Later**
+- Agent provenance records — chain of custody for agentic systems, extracted as a spec from mlassure's running implementation
 - The Governance Card Stack as an adopted spec — something other teams' pipelines and auditors run on, not just mine
 - Authority records for agent governance — writing the heading the field doesn't have yet
 
