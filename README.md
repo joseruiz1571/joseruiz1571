@@ -4,13 +4,14 @@
 
 AI governance today produces documents — Model Cards, System Cards, risk assessments, control narratives — when it should produce **data**. These artifacts live in PDFs and wiki pages that no pipeline can read, no auditor can query, and no agent can consume. I'm an information professional (MLIS) treating that gap as a cataloging problem: structured schemas, stable identifiers, and crosswalks between threats (MITRE ATLAS) and controls (NIST AI RMF, ISO 42001, SR 11-7), exported in machine-readable formats (OSCAL) so governance becomes something CI/CD gates, GRC platforms, and agents can actually run on.
 
-The work is one mechanism in four layers: a **spec layer** (the Governance Card Stack — Model, System, and Agent Cards as machine-readable governance records), an **inventory layer** (mltrack), an **evidence layer** (a signed, retained artifact pipeline), and — currently in build — an **assurance layer**: an agentic tool that assesses AI controls and is only allowed to assert what it actually retrieved.
+The work is one mechanism in four layers: a **spec layer** (the Governance Card Stack — Model, System, and Agent Cards as machine-readable governance records), an **inventory layer** (mltrack), an **evidence layer** (a signed, retained artifact pipeline), and an **assurance layer** (**mlassure**): an agentic tool that assesses AI controls and is only allowed to assert what it actually retrieved.
 
 ## Featured
 
 | Project | What it is |
 |---------|------------|
-| [**governance-card-stack**](https://github.com/joseruiz1571/governance-card-stack) | OSCAL-compatible Agent Card schema (JSON Schema, draft 2020-12) — the *assurance* layer for agentic AI: autonomy levels, MITRE ATLAS threat mappings, signed-evidence references. v0.1.1 ships with a validated worked example and an OPA/Conftest CI gate that fails closed. |
+| [**mlassure**](https://github.com/joseruiz1571/mlassure) | Agentic AI-control assurance. Deterministic evidence collectors over AWS; an LLM judgment loop that runs only where judgment is required; a citation guard that enforces the core invariant: *the agent may only assert what it actually retrieved*. v0.1.0 ships one control assessed end-to-end against fixtures. OSCAL Assessment Results out. |
+| [**governance-card-stack**](https://github.com/joseruiz1571/governance-card-stack) | OSCAL-compatible Agent Card schema (JSON Schema, draft 2020-12) — autonomy levels, MITRE ATLAS threat mappings, signed-evidence references. v0.1.1 ships with a validated worked example and an OPA/Conftest CI gate that fails closed. |
 | [**mltrack**](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance tracking. Maps model metadata to NIST AI RMF, ISO 42001, and SR 11-7 controls. 615 tests. |
 | [**cgep-capstone**](https://github.com/joseruiz1571/cgep-capstone) | CMMC L2 / NIST 800-171 compliance-as-code pipeline. Terraform + OPA/Rego + OSCAL + cosign-signed evidence vault. CI gate fails closed on non-compliant commits. |
 
