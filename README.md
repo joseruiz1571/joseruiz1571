@@ -16,6 +16,12 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 | [**mltrack**](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance tracking. Maps model metadata to NIST AI RMF, ISO 42001, and SR 11-7 controls. 615 tests. |
 | [**cgep-capstone**](https://github.com/joseruiz1571/cgep-capstone) | CMMC L2 / NIST 800-171 compliance-as-code pipeline. Terraform + OPA/Rego + OSCAL + cosign-signed evidence vault. CI gate fails closed on non-compliant commits. |
 
+## Supporting Projects
+
+| Project | What it is |
+|---------|------------|
+| [**Drift Sentinel**](https://github.com/joseruiz1571/drift-sentinel) | Cloudflare Workers compliance scanner. Scans zone settings every 6 hours against a declared baseline, stores results in append-only D1 audit trail. Maps 6 controls to SOC 2 CC6.x and ISO 27001 A.8.x. Point-in-time queries. Free tier. |
+
 ## Writing
 
 **[Controlled Vocabulary](https://controlledvocabulary.substack.com)** — AI governance and safety through a library and information science lens. The thinking behind the code above.
