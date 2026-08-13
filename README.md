@@ -11,7 +11,7 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 | Project | What it is |
 |---------|------------|
 | [**grc-pipeline-challenge**](https://github.com/joseruiz1571/grc-pipeline-challenge) | The 6-Week GRC Pipeline Challenge (GRC Engineering Club), implemented on GCP. Terraform controls, Rego policies with a fail-closed CI gate, Cosign keyless-signed evidence with a vault-backed chain of custody, an entitlement-drift gate built from a live SCC tier-drift incident, and OSCAL claims an assessor can traverse to signed bundles. Full write-up: [case study](https://github.com/joseruiz1571/grc-pipeline-challenge/blob/main/PORTFOLIO-CASE-STUDY.md). |
-| [**mlassure**](https://github.com/joseruiz1571/mlassure) | Agentic AI-control assurance. Deterministic evidence collectors over AWS; an LLM judgment loop that runs only where judgment is required; a citation guard that enforces the core invariant: *the agent may only assert what it actually retrieved*. v0.1.0 ships one control assessed end-to-end against fixtures. OSCAL Assessment Results out. |
+| [**mlassure**](https://github.com/joseruiz1571/mlassure) | Agentic AI-control assurance. Deterministic evidence collectors over AWS; an LLM judgment loop that runs only where judgment is required; a citation guard that enforces the core invariant: *the agent may only assert what it actually retrieved*. M3: eight controls, deterministic patterns that bypass the LLM loop entirely, tamper-evident evidence bundles with a Cosign-signed chain of custody, schema-validated OSCAL Assessment Results, Docker-packaged. |
 | [**governance-card-stack**](https://github.com/joseruiz1571/governance-card-stack) | OSCAL-compatible Agent Card schema (JSON Schema, draft 2020-12) — autonomy levels, MITRE ATLAS threat mappings, signed-evidence references. v0.1.1 ships with a validated worked example and an OPA/Conftest CI gate that fails closed. |
 | [**mltrack**](https://github.com/joseruiz1571/mltrack) | CLI for AI model inventory & compliance tracking. Maps model metadata to NIST AI RMF, ISO 42001, and SR 11-7 controls. 615 tests. |
 | [**cgep-capstone**](https://github.com/joseruiz1571/cgep-capstone) | CMMC L2 / NIST 800-171 compliance-as-code pipeline. Terraform + OPA/Rego + OSCAL + cosign-signed evidence vault. CI gate fails closed on non-compliant commits. |
@@ -22,9 +22,21 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 |---------|------------|
 | [**Drift Sentinel**](https://github.com/joseruiz1571/drift-sentinel) | Cloudflare Workers compliance scanner. Scans zone settings every 6 hours against a declared baseline, stores results in append-only D1 audit trail. Maps 6 controls to SOC 2 CC6.x and ISO 27001 A.8.x. Point-in-time queries. Free tier. |
 
+## Contributions
+
+| Project | What I contributed |
+|---------|--------------------|
+| [**claude-grc-engineering**](https://github.com/GRCEngClub/claude-grc-engineering) | GRC Engineering Club framework registry. [NIST AI RMF 1.0 framework plugin](https://github.com/GRCEngClub/claude-grc-engineering/pull/213) — merged. NIST AI 600-1 GenAI Profile plugin and scaffold-template cleanup PRs in review. |
+
 ## Writing
 
 **[Controlled Vocabulary](https://controlledvocabulary.substack.com)** — AI governance and safety through a library and information science lens. The thinking behind the code above.
+
+Selected:
+
+- [Forcing an LLM to Cite Its Evidence](https://controlledvocabulary.substack.com/p/forcing-an-llm-to-cite-its-evidence) — the citation-guard invariant mlassure enforces, in essay form
+- [Why AI Governance Stays in Prose](https://controlledvocabulary.substack.com/p/why-ai-governance-stays-in-prose) — why the field ships documents instead of data
+- [How Library Science Principles Power Community AI Literacy](https://publiclibrariesonline.org/2026/07/how-library-science-principles-power-community-ai-literacy/) — *Public Libraries*, May/June 2026
 
 ## Credentials
 
@@ -35,6 +47,7 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 | ISO 27701 Lead Auditor | Mastermind |
 | ISO 27001 Lead Auditor | Mastermind |
 | Certified GRC Engineer - Practitioner | GRC Engineering Club |
+| Certified GRC Engineer - Auditor Specialty | GRC Engineering Club |
 | Security+ | CompTIA |
 
 **Selected training** — AI Security Fundamentals Level 1 | Mileva Security Labs · AIS247: AI Security Essentials for Business Leaders | SANS Institute
@@ -42,7 +55,8 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 ## Now / Next / Later
 
 **Now**
-- Building **mlassure** — agentic AI-control assurance: deterministic evidence collectors over AWS, an LLM judgment loop that runs only where judgment is genuinely required, and a citation guard enforcing the core invariant: *the agent may only assert what it actually retrieved*. First demo: one control assessed end-to-end, every claim citing its evidence. OSCAL Assessment Results out.
+- Building **mlassure** — agentic AI-control assurance; M3 shipped: chain of custody, Cosign signing, schema-validated OSCAL Assessment Results. Details in Featured above.
+- Contributing to the [GRC Engineering Club framework registry](https://github.com/GRCEngClub/claude-grc-engineering) — NIST AI RMF plugin merged, two more PRs in review
 - Facilitating AI Security Fundamentals Level 1 at Mileva Security Labs
 
 **Next**
@@ -59,4 +73,5 @@ The work is one mechanism in four layers: a **spec layer** (the Governance Card 
 
 - **Substack:** [controlledvocabulary.substack.com](https://controlledvocabulary.substack.com)
 - **LinkedIn:** [linkedin.com/in/joseruiz1571](https://linkedin.com/in/joseruiz1571)
+- **GRC Engineering Club:** Vice President, Austin Chapter
 - **Location:** Austin, Texas
